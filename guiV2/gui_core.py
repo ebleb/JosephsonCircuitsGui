@@ -115,9 +115,9 @@ def blank_cell(name: str, cell_type: str = "schematic") -> dict[str, Any]:
         "pins": [],
         "labels": [],
         "variables": [],
-        "z0": 50.0,
         "simulation": {
             "mode": "s",
+            "z0": 50.0,
             "input_ports": [],
             "output_ports": [],
             "freq_start": 2.0,

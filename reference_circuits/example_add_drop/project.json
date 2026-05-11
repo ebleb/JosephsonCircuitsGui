@@ -3,7 +3,6 @@
   "path": "/home/benedikte/userdata/urop/app_v2_pub/data/example_add_drop",
   "version": 1,
   "default_cell": "new_test_cell",
-  "default_z0": 50.0,
   "recent_cells": [
     "add_drop",
     "input_module",

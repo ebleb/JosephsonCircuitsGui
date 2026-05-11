@@ -290,13 +290,6 @@
     }
   ],
   "labels": [],
-  "variables": [
-    {
-      "name": "z0",
-      "default": "1.0"
-    }
-  ],
-  "z0": 50.0,
   "simulation_input_ports": [
     "P_in"
   ],
@@ -304,26 +297,6 @@
     "P_out"
   ],
   "simulation_figure_title": "twpa",
-  "hb_top_block": true,
-  "hb_pump_ports": [
-    1
-  ],
-  "hb_pump_frequencies": [
-    7.12
-  ],
-  "hb_pump_currents": [
-    1.85e-06
-  ],
-  "hb_dc_ports": [],
-  "hb_dc_currents": [],
-  "hb_modulation_harmonics": [
-    10
-  ],
-  "hb_pump_harmonics": [
-    20
-  ],
-  "hb_threewave_mixing": true,
-  "hb_fourwave_mixing": true,
   "gui": {
     "version": 1,
     "viewport": {
@@ -641,5 +614,31 @@
     20
   ],
   "x_threewave_mixing": true,
-  "x_fourwave_mixing": true
+  "x_fourwave_mixing": true,
+  "simulation": {
+    "z0": 50.0,
+    "hb": {
+      "top_block": true,
+      "pump_ports": [
+        1
+      ],
+      "pump_frequencies": [
+        7.12
+      ],
+      "pump_currents": [
+        1.85e-06
+      ],
+      "dc_ports": [],
+      "dc_currents": [],
+      "modulation_harmonics": [
+        10
+      ],
+      "pump_harmonics": [
+        20
+      ],
+      "threewave_mixing": true,
+      "fourwave_mixing": true
+    }
+  },
+  "x_params": true
 }

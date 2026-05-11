@@ -1,1113 +1,1116 @@
 {
-  "name": "subcell",
-  "type": "schematic",
-  "instances": [
-    {
-      "type_name": "twpa_core_mod",
-      "uid": "TCM1",
-      "parameters": {
-        "Cg": "45.0e-15",
-        "Cj": "55e-15",
-        "Lj": "IctoLj(3.4e-6)",
-        "Cc": "30.0e-15",
-        "Cr": "2.8153e-12",
-        "Lr": "1.70e-10"
-      },
-      "parameter_order": [
-        "Cg",
-        "Cc",
-        "Lj",
-        "Cj",
-        "Cr",
-        "Lr"
-      ],
-      "parameter_kinds": {
-        "Cg": "keyword",
-        "Cc": "keyword",
-        "Lj": "keyword",
-        "Cj": "keyword",
-        "Cr": "keyword",
-        "Lr": "keyword"
-      },
-      "position": [
-        -380.0,
-        -220.0
-      ],
-      "port_count": 3,
-      "port_names": [
-        "P_j",
-        "P_0",
-        "P_j+2"
-      ],
-      "rotation_degrees": 0.0,
-      "repeat_count": 1,
-      "repeat_connections": [],
-      "symbol_port_layout": [
+    "name": "subcell",
+    "type": "schematic",
+    "instances": [
         {
-          "port": "P_j",
-          "side": "left",
-          "position": 0.5
+            "type_name": "twpa_core_mod",
+            "uid": "TCM1",
+            "parameters": {
+                "Cg": "45.0e-15",
+                "Cj": "55e-15",
+                "Lj": "IctoLj(3.4e-6)",
+                "Cc": "30.0e-15",
+                "Cr": "2.8153e-12",
+                "Lr": "1.70e-10"
+            },
+            "parameter_order": [
+                "Cg",
+                "Cc",
+                "Lj",
+                "Cj",
+                "Cr",
+                "Lr"
+            ],
+            "parameter_kinds": {
+                "Cg": "keyword",
+                "Cc": "keyword",
+                "Lj": "keyword",
+                "Cj": "keyword",
+                "Cr": "keyword",
+                "Lr": "keyword"
+            },
+            "position": [
+                -380.0,
+                -220.0
+            ],
+            "port_count": 3,
+            "port_names": [
+                "P_j",
+                "P_0",
+                "P_j+2"
+            ],
+            "rotation_degrees": 0.0,
+            "repeat_count": 1,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "P_j",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "P_0",
+                    "side": "bottom",
+                    "position": 0.5
+                },
+                {
+                    "port": "P_j+2",
+                    "side": "left",
+                    "position": 0.75
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "P_j",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "P_0",
+                        "side": "bottom",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "P_j+2",
+                        "side": "left",
+                        "position": 0.75,
+                        "label_visible": true
+                    }
+                ]
+            }
         },
         {
-          "port": "P_0",
-          "side": "bottom",
-          "position": 0.5
+            "type_name": "tpwa_core",
+            "uid": "TC1",
+            "parameters": {
+                "Cg": "45.0e-15",
+                "Cj": "55e-15",
+                "Lj": "IctoLj(3.4e-6)"
+            },
+            "parameter_order": [
+                "Cg",
+                "Lj",
+                "Cj"
+            ],
+            "parameter_kinds": {
+                "Cg": "keyword",
+                "Lj": "keyword",
+                "Cj": "keyword"
+            },
+            "position": [
+                -100.0,
+                -160.0
+            ],
+            "port_count": 3,
+            "port_names": [
+                "P_0",
+                "P_j",
+                "P_j+1"
+            ],
+            "rotation_degrees": 0.0,
+            "repeat_count": 1,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "P_0",
+                    "side": "bottom",
+                    "position": 0.5
+                },
+                {
+                    "port": "P_j",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "P_j+1",
+                    "side": "left",
+                    "position": 0.75
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "P_0",
+                        "side": "bottom",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "P_j",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "P_j+1",
+                        "side": "left",
+                        "position": 0.75,
+                        "label_visible": true
+                    }
+                ]
+            }
         },
         {
-          "port": "P_j+2",
-          "side": "left",
-          "position": 0.75
+            "type_name": "tpwa_core",
+            "uid": "TC2",
+            "parameters": {
+                "Cg": "45.0e-15",
+                "Cj": "55e-15",
+                "Lj": "IctoLj(3.4e-6)"
+            },
+            "parameter_order": [
+                "Cg",
+                "Lj",
+                "Cj"
+            ],
+            "parameter_kinds": {
+                "Cg": "keyword",
+                "Lj": "keyword",
+                "Cj": "keyword"
+            },
+            "position": [
+                140.0,
+                -160.0
+            ],
+            "port_count": 3,
+            "port_names": [
+                "P_0",
+                "P_j",
+                "P_j+1"
+            ],
+            "rotation_degrees": 0.0,
+            "repeat_count": 1,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "P_0",
+                    "side": "bottom",
+                    "position": 0.5
+                },
+                {
+                    "port": "P_j",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "P_j+1",
+                    "side": "left",
+                    "position": 0.75
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "P_0",
+                        "side": "bottom",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "P_j",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "P_j+1",
+                        "side": "left",
+                        "position": 0.75,
+                        "label_visible": true
+                    }
+                ]
+            }
+        },
+        {
+            "type_name": "tpwa_core",
+            "uid": "TC3",
+            "parameters": {
+                "Cg": "45.0e-15",
+                "Cj": "55e-15",
+                "Lj": "IctoLj(3.4e-6)"
+            },
+            "parameter_order": [
+                "Cg",
+                "Lj",
+                "Cj"
+            ],
+            "parameter_kinds": {
+                "Cg": "keyword",
+                "Lj": "keyword",
+                "Cj": "keyword"
+            },
+            "position": [
+                400.0,
+                -160.0
+            ],
+            "port_count": 3,
+            "port_names": [
+                "P_0",
+                "P_j",
+                "P_j+1"
+            ],
+            "rotation_degrees": 0.0,
+            "repeat_count": 1,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "P_0",
+                    "side": "bottom",
+                    "position": 0.5
+                },
+                {
+                    "port": "P_j",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "P_j+1",
+                    "side": "left",
+                    "position": 0.75
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "P_0",
+                        "side": "bottom",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "P_j",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "P_j+1",
+                        "side": "left",
+                        "position": 0.75,
+                        "label_visible": true
+                    }
+                ]
+            }
         }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "P_j",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "P_0",
-            "side": "bottom",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "P_j+2",
-            "side": "left",
-            "position": 0.75,
-            "label_visible": true
-          }
-        ]
-      }
-    },
-    {
-      "type_name": "tpwa_core",
-      "uid": "TC1",
-      "parameters": {
-        "Cg": "45.0e-15",
-        "Cj": "55e-15",
-        "Lj": "IctoLj(3.4e-6)"
-      },
-      "parameter_order": [
-        "Cg",
-        "Lj",
-        "Cj"
-      ],
-      "parameter_kinds": {
-        "Cg": "keyword",
-        "Lj": "keyword",
-        "Cj": "keyword"
-      },
-      "position": [
-        -100.0,
-        -160.0
-      ],
-      "port_count": 3,
-      "port_names": [
-        "P_0",
-        "P_j",
-        "P_j+1"
-      ],
-      "rotation_degrees": 0.0,
-      "repeat_count": 1,
-      "repeat_connections": [],
-      "symbol_port_layout": [
-        {
-          "port": "P_0",
-          "side": "bottom",
-          "position": 0.5
-        },
-        {
-          "port": "P_j",
-          "side": "left",
-          "position": 0.5
-        },
-        {
-          "port": "P_j+1",
-          "side": "left",
-          "position": 0.75
-        }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "P_0",
-            "side": "bottom",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "P_j",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "P_j+1",
-            "side": "left",
-            "position": 0.75,
-            "label_visible": true
-          }
-        ]
-      }
-    },
-    {
-      "type_name": "tpwa_core",
-      "uid": "TC2",
-      "parameters": {
-        "Cg": "45.0e-15",
-        "Cj": "55e-15",
-        "Lj": "IctoLj(3.4e-6)"
-      },
-      "parameter_order": [
-        "Cg",
-        "Lj",
-        "Cj"
-      ],
-      "parameter_kinds": {
-        "Cg": "keyword",
-        "Lj": "keyword",
-        "Cj": "keyword"
-      },
-      "position": [
-        140.0,
-        -160.0
-      ],
-      "port_count": 3,
-      "port_names": [
-        "P_0",
-        "P_j",
-        "P_j+1"
-      ],
-      "rotation_degrees": 0.0,
-      "repeat_count": 1,
-      "repeat_connections": [],
-      "symbol_port_layout": [
-        {
-          "port": "P_0",
-          "side": "bottom",
-          "position": 0.5
-        },
-        {
-          "port": "P_j",
-          "side": "left",
-          "position": 0.5
-        },
-        {
-          "port": "P_j+1",
-          "side": "left",
-          "position": 0.75
-        }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "P_0",
-            "side": "bottom",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "P_j",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "P_j+1",
-            "side": "left",
-            "position": 0.75,
-            "label_visible": true
-          }
-        ]
-      }
-    },
-    {
-      "type_name": "tpwa_core",
-      "uid": "TC3",
-      "parameters": {
-        "Cg": "45.0e-15",
-        "Cj": "55e-15",
-        "Lj": "IctoLj(3.4e-6)"
-      },
-      "parameter_order": [
-        "Cg",
-        "Lj",
-        "Cj"
-      ],
-      "parameter_kinds": {
-        "Cg": "keyword",
-        "Lj": "keyword",
-        "Cj": "keyword"
-      },
-      "position": [
-        400.0,
-        -160.0
-      ],
-      "port_count": 3,
-      "port_names": [
-        "P_0",
-        "P_j",
-        "P_j+1"
-      ],
-      "rotation_degrees": 0.0,
-      "repeat_count": 1,
-      "repeat_connections": [],
-      "symbol_port_layout": [
-        {
-          "port": "P_0",
-          "side": "bottom",
-          "position": 0.5
-        },
-        {
-          "port": "P_j",
-          "side": "left",
-          "position": 0.5
-        },
-        {
-          "port": "P_j+1",
-          "side": "left",
-          "position": 0.75
-        }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "P_0",
-            "side": "bottom",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "P_j",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "P_j+1",
-            "side": "left",
-            "position": 0.75,
-            "label_visible": true
-          }
-        ]
-      }
-    }
-  ],
-  "wires": [
-    {
-      "source_instance_uid": "TCM1",
-      "source_port": "P_j+2",
-      "target_instance_uid": "TC1",
-      "target_port": "P_j",
-      "name": "",
-      "gui_wire_id": "wire_1"
-    },
-    {
-      "source_instance_uid": "TCM1",
-      "source_port": "P_0",
-      "target_instance_uid": "TC1",
-      "target_port": "P_0",
-      "name": "",
-      "gui_wire_id": "wire_2"
-    },
-    {
-      "source_instance_uid": "TC1",
-      "source_port": "P_0",
-      "target_instance_uid": "TC2",
-      "target_port": "P_0",
-      "name": "",
-      "gui_wire_id": "wire_4"
-    },
-    {
-      "source_instance_uid": "TC2",
-      "source_port": "P_0",
-      "target_instance_uid": "TC3",
-      "target_port": "P_0",
-      "name": "",
-      "gui_wire_id": "wire_6"
-    },
-    {
-      "source_instance_uid": "TC1",
-      "source_port": "P_j+1",
-      "target_instance_uid": "TC2",
-      "target_port": "P_j",
-      "name": "",
-      "gui_wire_id": "wire_3"
-    },
-    {
-      "source_instance_uid": "TC2",
-      "source_port": "P_j+1",
-      "target_instance_uid": "TC3",
-      "target_port": "P_j",
-      "name": "",
-      "gui_wire_id": "wire_5"
-    }
-  ],
-  "pins": [
-    {
-      "name": "P_j",
-      "instance_uid": "TCM1",
-      "port": "P_j"
-    },
-    {
-      "name": "P_j+5",
-      "instance_uid": "TC3",
-      "port": "P_j+1"
-    }
-  ],
-  "labels": [],
-  "variables": [],
-  "z0": 50.0,
-  "simulation_input_ports": [],
-  "simulation_output_ports": [],
-  "simulation_freq_start": 2.0,
-  "simulation_freq_stop": 20.0,
-  "simulation_freq_points": 200,
-  "simulation_sweep_type": "linear",
-  "simulation_figure_title": "subcell",
-  "hb_top_block": false,
-  "hb_pump_ports": [],
-  "hb_pump_frequencies": [],
-  "hb_pump_currents": [],
-  "hb_dc_ports": [],
-  "hb_dc_currents": [],
-  "hb_modulation_harmonics": [
-    10
-  ],
-  "hb_pump_harmonics": [
-    20
-  ],
-  "hb_threewave_mixing": true,
-  "hb_fourwave_mixing": true,
-  "gui": {
-    "version": 1,
-    "viewport": {
-      "zoom": 1,
-      "pan": [
-        0,
-        0
-      ]
-    },
-    "wire_routes": [
-      {
-        "net_id": "net_1",
-        "wire_id": "wire_1",
-        "source": {
-          "instance_uid": "TCM1",
-          "port": "P_j+2"
-        },
-        "target": {
-          "instance_uid": "TC1",
-          "port": "P_j"
-        },
-        "points": [
-          [
-            -440.0,
-            -202.5
-          ],
-          [
-            -468.0,
-            -202.5
-          ],
-          [
-            -468.0,
-            -185.0
-          ],
-          [
-            -468.0,
-            -178.0
-          ],
-          [
-            -468.0,
-            -160.5
-          ],
-          [
-            -398.0,
-            -160.5
-          ],
-          [
-            -380.0,
-            -160.5
-          ],
-          [
-            -367.0,
-            -160.5
-          ],
-          [
-            -362.0,
-            -160.5
-          ],
-          [
-            -285.0,
-            -160.5
-          ],
-          [
-            -280.0,
-            -160.5
-          ],
-          [
-            -242.0,
-            -160.5
-          ],
-          [
-            -224.0,
-            -160.5
-          ],
-          [
-            -224.0,
-            -160.0
-          ],
-          [
-            -160.0,
-            -160.0
-          ]
-        ],
-        "auto": true
-      },
-      {
-        "net_id": "net_2",
-        "wire_id": "wire_2",
-        "source": {
-          "instance_uid": "TCM1",
-          "port": "P_0"
-        },
-        "target": {
-          "instance_uid": "TC1",
-          "port": "P_0"
-        },
-        "points": [
-          [
-            -380.0,
-            -185.0
-          ],
-          [
-            -380.0,
-            -121.0
-          ],
-          [
-            -367.0,
-            -121.0
-          ],
-          [
-            -362.0,
-            -121.0
-          ],
-          [
-            -285.0,
-            -121.0
-          ],
-          [
-            -280.0,
-            -121.0
-          ],
-          [
-            -242.0,
-            -121.0
-          ],
-          [
-            -224.0,
-            -121.0
-          ],
-          [
-            -206.0,
-            -121.0
-          ],
-          [
-            -200.0,
-            -121.0
-          ],
-          [
-            -188.0,
-            -121.0
-          ],
-          [
-            -188.0,
-            -120.0
-          ],
-          [
-            -188.0,
-            -115.0
-          ],
-          [
-            -188.0,
-            -109.0
-          ],
-          [
-            -188.0,
-            -103.0
-          ],
-          [
-            -182.0,
-            -103.0
-          ],
-          [
-            -170.0,
-            -103.0
-          ],
-          [
-            -164.0,
-            -103.0
-          ],
-          [
-            -160.0,
-            -103.0
-          ],
-          [
-            -118.0,
-            -103.0
-          ],
-          [
-            -100.0,
-            -103.0
-          ],
-          [
-            -100.0,
-            -97.0
-          ],
-          [
-            -100.0,
-            -125.0
-          ]
-        ],
-        "auto": true
-      },
-      {
-        "net_id": "net_2",
-        "wire_id": "wire_4",
-        "source": {
-          "instance_uid": "TC1",
-          "port": "P_0"
-        },
-        "target": {
-          "instance_uid": "TC2",
-          "port": "P_0"
-        },
-        "points": [
-          [
-            -100.0,
-            -125.0
-          ],
-          [
-            -100.0,
-            -97.0
-          ],
-          [
-            -82.0,
-            -97.0
-          ],
-          [
-            -2.0,
-            -97.0
-          ],
-          [
-            0.0,
-            -97.0
-          ],
-          [
-            8.0,
-            -97.0
-          ],
-          [
-            16.0,
-            -97.0
-          ],
-          [
-            34.0,
-            -97.0
-          ],
-          [
-            40.0,
-            -97.0
-          ],
-          [
-            122.0,
-            -97.0
-          ],
-          [
-            140.0,
-            -97.0
-          ],
-          [
-            140.0,
-            -125.0
-          ]
-        ],
-        "auto": true
-      },
-      {
-        "net_id": "net_2",
-        "wire_id": "wire_6",
-        "source": {
-          "instance_uid": "TC2",
-          "port": "P_0"
-        },
-        "target": {
-          "instance_uid": "TC3",
-          "port": "P_0"
-        },
-        "points": [
-          [
-            140.0,
-            -125.0
-          ],
-          [
-            140.0,
-            -97.0
-          ],
-          [
-            150.0,
-            -97.0
-          ],
-          [
-            158.0,
-            -97.0
-          ],
-          [
-            168.0,
-            -97.0
-          ],
-          [
-            240.0,
-            -97.0
-          ],
-          [
-            250.0,
-            -97.0
-          ],
-          [
-            258.0,
-            -97.0
-          ],
-          [
-            276.0,
-            -97.0
-          ],
-          [
-            294.0,
-            -97.0
-          ],
-          [
-            300.0,
-            -97.0
-          ],
-          [
-            400.0,
-            -97.0
-          ],
-          [
-            400.0,
-            -125.0
-          ]
-        ],
-        "auto": true
-      },
-      {
-        "net_id": "net_3",
-        "wire_id": "wire_3",
-        "source": {
-          "instance_uid": "TC1",
-          "port": "P_j+1"
-        },
-        "target": {
-          "instance_uid": "TC2",
-          "port": "P_j"
-        },
-        "points": [
-          [
-            -160.0,
-            -142.5
-          ],
-          [
-            -188.0,
-            -142.5
-          ],
-          [
-            -182.0,
-            -142.5
-          ],
-          [
-            -182.0,
-            -142.0
-          ],
-          [
-            -182.0,
-            -139.0
-          ],
-          [
-            -182.0,
-            -138.0
-          ],
-          [
-            -182.0,
-            -131.0
-          ],
-          [
-            -182.0,
-            -130.5
-          ],
-          [
-            -182.0,
-            -127.0
-          ],
-          [
-            -182.0,
-            -125.0
-          ],
-          [
-            -182.0,
-            -124.5
-          ],
-          [
-            -182.0,
-            -121.0
-          ],
-          [
-            -182.0,
-            -120.0
-          ],
-          [
-            -182.0,
-            -115.0
-          ],
-          [
-            -182.0,
-            -109.0
-          ],
-          [
-            -182.0,
-            -103.0
-          ],
-          [
-            -182.0,
-            -97.0
-          ],
-          [
-            -170.0,
-            -97.0
-          ],
-          [
-            -164.0,
-            -97.0
-          ],
-          [
-            -160.0,
-            -97.0
-          ],
-          [
-            -118.0,
-            -97.0
-          ],
-          [
-            -100.0,
-            -97.0
-          ],
-          [
-            -100.0,
-            -85.0
-          ],
-          [
-            -82.0,
-            -85.0
-          ],
-          [
-            -2.0,
-            -85.0
-          ],
-          [
-            0.0,
-            -85.0
-          ],
-          [
-            8.0,
-            -85.0
-          ],
-          [
-            16.0,
-            -85.0
-          ],
-          [
-            16.0,
-            -97.0
-          ],
-          [
-            16.0,
-            -103.0
-          ],
-          [
-            16.0,
-            -109.0
-          ],
-          [
-            16.0,
-            -115.0
-          ],
-          [
-            16.0,
-            -120.0
-          ],
-          [
-            16.0,
-            -121.0
-          ],
-          [
-            16.0,
-            -124.5
-          ],
-          [
-            16.0,
-            -125.0
-          ],
-          [
-            16.0,
-            -127.0
-          ],
-          [
-            16.0,
-            -130.5
-          ],
-          [
-            16.0,
-            -131.0
-          ],
-          [
-            16.0,
-            -138.0
-          ],
-          [
-            16.0,
-            -139.0
-          ],
-          [
-            16.0,
-            -142.0
-          ],
-          [
-            16.0,
-            -142.5
-          ],
-          [
-            16.0,
-            -145.0
-          ],
-          [
-            16.0,
-            -160.0
-          ],
-          [
-            80.0,
-            -160.0
-          ]
-        ],
-        "auto": true
-      },
-      {
-        "net_id": "net_4",
-        "wire_id": "wire_5",
-        "source": {
-          "instance_uid": "TC2",
-          "port": "P_j+1"
-        },
-        "target": {
-          "instance_uid": "TC3",
-          "port": "P_j"
-        },
-        "points": [
-          [
-            80.0,
-            -142.5
-          ],
-          [
-            52.0,
-            -142.5
-          ],
-          [
-            52.0,
-            -142.0
-          ],
-          [
-            52.0,
-            -139.0
-          ],
-          [
-            52.0,
-            -138.0
-          ],
-          [
-            52.0,
-            -131.0
-          ],
-          [
-            52.0,
-            -130.5
-          ],
-          [
-            52.0,
-            -127.0
-          ],
-          [
-            52.0,
-            -125.0
-          ],
-          [
-            52.0,
-            -124.5
-          ],
-          [
-            52.0,
-            -121.0
-          ],
-          [
-            52.0,
-            -120.0
-          ],
-          [
-            52.0,
-            -115.0
-          ],
-          [
-            52.0,
-            -109.0
-          ],
-          [
-            52.0,
-            -103.0
-          ],
-          [
-            80.0,
-            -103.0
-          ],
-          [
-            122.0,
-            -103.0
-          ],
-          [
-            140.0,
-            -103.0
-          ],
-          [
-            150.0,
-            -103.0
-          ],
-          [
-            158.0,
-            -103.0
-          ],
-          [
-            168.0,
-            -103.0
-          ],
-          [
-            240.0,
-            -103.0
-          ],
-          [
-            250.0,
-            -103.0
-          ],
-          [
-            258.0,
-            -103.0
-          ],
-          [
-            276.0,
-            -103.0
-          ],
-          [
-            276.0,
-            -109.0
-          ],
-          [
-            276.0,
-            -115.0
-          ],
-          [
-            276.0,
-            -120.0
-          ],
-          [
-            276.0,
-            -121.0
-          ],
-          [
-            276.0,
-            -124.5
-          ],
-          [
-            276.0,
-            -125.0
-          ],
-          [
-            276.0,
-            -127.0
-          ],
-          [
-            276.0,
-            -130.5
-          ],
-          [
-            276.0,
-            -131.0
-          ],
-          [
-            276.0,
-            -138.0
-          ],
-          [
-            276.0,
-            -139.0
-          ],
-          [
-            276.0,
-            -142.0
-          ],
-          [
-            276.0,
-            -142.5
-          ],
-          [
-            276.0,
-            -145.0
-          ],
-          [
-            276.0,
-            -160.0
-          ],
-          [
-            340.0,
-            -160.0
-          ]
-        ],
-        "auto": true
-      }
     ],
-    "last_selected": []
-  },
-  "reference": false
+    "wires": [
+        {
+            "source_instance_uid": "TCM1",
+            "source_port": "P_j+2",
+            "target_instance_uid": "TC1",
+            "target_port": "P_j",
+            "name": "",
+            "gui_wire_id": "wire_1"
+        },
+        {
+            "source_instance_uid": "TCM1",
+            "source_port": "P_0",
+            "target_instance_uid": "TC1",
+            "target_port": "P_0",
+            "name": "",
+            "gui_wire_id": "wire_2"
+        },
+        {
+            "source_instance_uid": "TC1",
+            "source_port": "P_0",
+            "target_instance_uid": "TC2",
+            "target_port": "P_0",
+            "name": "",
+            "gui_wire_id": "wire_4"
+        },
+        {
+            "source_instance_uid": "TC2",
+            "source_port": "P_0",
+            "target_instance_uid": "TC3",
+            "target_port": "P_0",
+            "name": "",
+            "gui_wire_id": "wire_6"
+        },
+        {
+            "source_instance_uid": "TC1",
+            "source_port": "P_j+1",
+            "target_instance_uid": "TC2",
+            "target_port": "P_j",
+            "name": "",
+            "gui_wire_id": "wire_3"
+        },
+        {
+            "source_instance_uid": "TC2",
+            "source_port": "P_j+1",
+            "target_instance_uid": "TC3",
+            "target_port": "P_j",
+            "name": "",
+            "gui_wire_id": "wire_5"
+        }
+    ],
+    "pins": [
+        {
+            "name": "P_j",
+            "instance_uid": "TCM1",
+            "port": "P_j"
+        },
+        {
+            "name": "P_j+5",
+            "instance_uid": "TC3",
+            "port": "P_j+1"
+        }
+    ],
+    "labels": [],
+    "simulation_input_ports": [],
+    "simulation_output_ports": [],
+    "simulation_freq_start": 2.0,
+    "simulation_freq_stop": 20.0,
+    "simulation_freq_points": 200,
+    "simulation_sweep_type": "linear",
+    "simulation_figure_title": "subcell",
+    "gui": {
+        "version": 1,
+        "viewport": {
+            "zoom": 1,
+            "pan": [
+                0,
+                0
+            ]
+        },
+        "wire_routes": [
+            {
+                "net_id": "net_1",
+                "wire_id": "wire_1",
+                "source": {
+                    "instance_uid": "TCM1",
+                    "port": "P_j+2"
+                },
+                "target": {
+                    "instance_uid": "TC1",
+                    "port": "P_j"
+                },
+                "points": [
+                    [
+                        -440.0,
+                        -202.5
+                    ],
+                    [
+                        -468.0,
+                        -202.5
+                    ],
+                    [
+                        -468.0,
+                        -185.0
+                    ],
+                    [
+                        -468.0,
+                        -178.0
+                    ],
+                    [
+                        -468.0,
+                        -160.5
+                    ],
+                    [
+                        -398.0,
+                        -160.5
+                    ],
+                    [
+                        -380.0,
+                        -160.5
+                    ],
+                    [
+                        -367.0,
+                        -160.5
+                    ],
+                    [
+                        -362.0,
+                        -160.5
+                    ],
+                    [
+                        -285.0,
+                        -160.5
+                    ],
+                    [
+                        -280.0,
+                        -160.5
+                    ],
+                    [
+                        -242.0,
+                        -160.5
+                    ],
+                    [
+                        -224.0,
+                        -160.5
+                    ],
+                    [
+                        -224.0,
+                        -160.0
+                    ],
+                    [
+                        -160.0,
+                        -160.0
+                    ]
+                ],
+                "auto": true
+            },
+            {
+                "net_id": "net_2",
+                "wire_id": "wire_2",
+                "source": {
+                    "instance_uid": "TCM1",
+                    "port": "P_0"
+                },
+                "target": {
+                    "instance_uid": "TC1",
+                    "port": "P_0"
+                },
+                "points": [
+                    [
+                        -380.0,
+                        -185.0
+                    ],
+                    [
+                        -380.0,
+                        -121.0
+                    ],
+                    [
+                        -367.0,
+                        -121.0
+                    ],
+                    [
+                        -362.0,
+                        -121.0
+                    ],
+                    [
+                        -285.0,
+                        -121.0
+                    ],
+                    [
+                        -280.0,
+                        -121.0
+                    ],
+                    [
+                        -242.0,
+                        -121.0
+                    ],
+                    [
+                        -224.0,
+                        -121.0
+                    ],
+                    [
+                        -206.0,
+                        -121.0
+                    ],
+                    [
+                        -200.0,
+                        -121.0
+                    ],
+                    [
+                        -188.0,
+                        -121.0
+                    ],
+                    [
+                        -188.0,
+                        -120.0
+                    ],
+                    [
+                        -188.0,
+                        -115.0
+                    ],
+                    [
+                        -188.0,
+                        -109.0
+                    ],
+                    [
+                        -188.0,
+                        -103.0
+                    ],
+                    [
+                        -182.0,
+                        -103.0
+                    ],
+                    [
+                        -170.0,
+                        -103.0
+                    ],
+                    [
+                        -164.0,
+                        -103.0
+                    ],
+                    [
+                        -160.0,
+                        -103.0
+                    ],
+                    [
+                        -118.0,
+                        -103.0
+                    ],
+                    [
+                        -100.0,
+                        -103.0
+                    ],
+                    [
+                        -100.0,
+                        -97.0
+                    ],
+                    [
+                        -100.0,
+                        -125.0
+                    ]
+                ],
+                "auto": true
+            },
+            {
+                "net_id": "net_2",
+                "wire_id": "wire_4",
+                "source": {
+                    "instance_uid": "TC1",
+                    "port": "P_0"
+                },
+                "target": {
+                    "instance_uid": "TC2",
+                    "port": "P_0"
+                },
+                "points": [
+                    [
+                        -100.0,
+                        -125.0
+                    ],
+                    [
+                        -100.0,
+                        -97.0
+                    ],
+                    [
+                        -82.0,
+                        -97.0
+                    ],
+                    [
+                        -2.0,
+                        -97.0
+                    ],
+                    [
+                        0.0,
+                        -97.0
+                    ],
+                    [
+                        8.0,
+                        -97.0
+                    ],
+                    [
+                        16.0,
+                        -97.0
+                    ],
+                    [
+                        34.0,
+                        -97.0
+                    ],
+                    [
+                        40.0,
+                        -97.0
+                    ],
+                    [
+                        122.0,
+                        -97.0
+                    ],
+                    [
+                        140.0,
+                        -97.0
+                    ],
+                    [
+                        140.0,
+                        -125.0
+                    ]
+                ],
+                "auto": true
+            },
+            {
+                "net_id": "net_2",
+                "wire_id": "wire_6",
+                "source": {
+                    "instance_uid": "TC2",
+                    "port": "P_0"
+                },
+                "target": {
+                    "instance_uid": "TC3",
+                    "port": "P_0"
+                },
+                "points": [
+                    [
+                        140.0,
+                        -125.0
+                    ],
+                    [
+                        140.0,
+                        -97.0
+                    ],
+                    [
+                        150.0,
+                        -97.0
+                    ],
+                    [
+                        158.0,
+                        -97.0
+                    ],
+                    [
+                        168.0,
+                        -97.0
+                    ],
+                    [
+                        240.0,
+                        -97.0
+                    ],
+                    [
+                        250.0,
+                        -97.0
+                    ],
+                    [
+                        258.0,
+                        -97.0
+                    ],
+                    [
+                        276.0,
+                        -97.0
+                    ],
+                    [
+                        294.0,
+                        -97.0
+                    ],
+                    [
+                        300.0,
+                        -97.0
+                    ],
+                    [
+                        400.0,
+                        -97.0
+                    ],
+                    [
+                        400.0,
+                        -125.0
+                    ]
+                ],
+                "auto": true
+            },
+            {
+                "net_id": "net_3",
+                "wire_id": "wire_3",
+                "source": {
+                    "instance_uid": "TC1",
+                    "port": "P_j+1"
+                },
+                "target": {
+                    "instance_uid": "TC2",
+                    "port": "P_j"
+                },
+                "points": [
+                    [
+                        -160.0,
+                        -142.5
+                    ],
+                    [
+                        -188.0,
+                        -142.5
+                    ],
+                    [
+                        -182.0,
+                        -142.5
+                    ],
+                    [
+                        -182.0,
+                        -142.0
+                    ],
+                    [
+                        -182.0,
+                        -139.0
+                    ],
+                    [
+                        -182.0,
+                        -138.0
+                    ],
+                    [
+                        -182.0,
+                        -131.0
+                    ],
+                    [
+                        -182.0,
+                        -130.5
+                    ],
+                    [
+                        -182.0,
+                        -127.0
+                    ],
+                    [
+                        -182.0,
+                        -125.0
+                    ],
+                    [
+                        -182.0,
+                        -124.5
+                    ],
+                    [
+                        -182.0,
+                        -121.0
+                    ],
+                    [
+                        -182.0,
+                        -120.0
+                    ],
+                    [
+                        -182.0,
+                        -115.0
+                    ],
+                    [
+                        -182.0,
+                        -109.0
+                    ],
+                    [
+                        -182.0,
+                        -103.0
+                    ],
+                    [
+                        -182.0,
+                        -97.0
+                    ],
+                    [
+                        -170.0,
+                        -97.0
+                    ],
+                    [
+                        -164.0,
+                        -97.0
+                    ],
+                    [
+                        -160.0,
+                        -97.0
+                    ],
+                    [
+                        -118.0,
+                        -97.0
+                    ],
+                    [
+                        -100.0,
+                        -97.0
+                    ],
+                    [
+                        -100.0,
+                        -85.0
+                    ],
+                    [
+                        -82.0,
+                        -85.0
+                    ],
+                    [
+                        -2.0,
+                        -85.0
+                    ],
+                    [
+                        0.0,
+                        -85.0
+                    ],
+                    [
+                        8.0,
+                        -85.0
+                    ],
+                    [
+                        16.0,
+                        -85.0
+                    ],
+                    [
+                        16.0,
+                        -97.0
+                    ],
+                    [
+                        16.0,
+                        -103.0
+                    ],
+                    [
+                        16.0,
+                        -109.0
+                    ],
+                    [
+                        16.0,
+                        -115.0
+                    ],
+                    [
+                        16.0,
+                        -120.0
+                    ],
+                    [
+                        16.0,
+                        -121.0
+                    ],
+                    [
+                        16.0,
+                        -124.5
+                    ],
+                    [
+                        16.0,
+                        -125.0
+                    ],
+                    [
+                        16.0,
+                        -127.0
+                    ],
+                    [
+                        16.0,
+                        -130.5
+                    ],
+                    [
+                        16.0,
+                        -131.0
+                    ],
+                    [
+                        16.0,
+                        -138.0
+                    ],
+                    [
+                        16.0,
+                        -139.0
+                    ],
+                    [
+                        16.0,
+                        -142.0
+                    ],
+                    [
+                        16.0,
+                        -142.5
+                    ],
+                    [
+                        16.0,
+                        -145.0
+                    ],
+                    [
+                        16.0,
+                        -160.0
+                    ],
+                    [
+                        80.0,
+                        -160.0
+                    ]
+                ],
+                "auto": true
+            },
+            {
+                "net_id": "net_4",
+                "wire_id": "wire_5",
+                "source": {
+                    "instance_uid": "TC2",
+                    "port": "P_j+1"
+                },
+                "target": {
+                    "instance_uid": "TC3",
+                    "port": "P_j"
+                },
+                "points": [
+                    [
+                        80.0,
+                        -142.5
+                    ],
+                    [
+                        52.0,
+                        -142.5
+                    ],
+                    [
+                        52.0,
+                        -142.0
+                    ],
+                    [
+                        52.0,
+                        -139.0
+                    ],
+                    [
+                        52.0,
+                        -138.0
+                    ],
+                    [
+                        52.0,
+                        -131.0
+                    ],
+                    [
+                        52.0,
+                        -130.5
+                    ],
+                    [
+                        52.0,
+                        -127.0
+                    ],
+                    [
+                        52.0,
+                        -125.0
+                    ],
+                    [
+                        52.0,
+                        -124.5
+                    ],
+                    [
+                        52.0,
+                        -121.0
+                    ],
+                    [
+                        52.0,
+                        -120.0
+                    ],
+                    [
+                        52.0,
+                        -115.0
+                    ],
+                    [
+                        52.0,
+                        -109.0
+                    ],
+                    [
+                        52.0,
+                        -103.0
+                    ],
+                    [
+                        80.0,
+                        -103.0
+                    ],
+                    [
+                        122.0,
+                        -103.0
+                    ],
+                    [
+                        140.0,
+                        -103.0
+                    ],
+                    [
+                        150.0,
+                        -103.0
+                    ],
+                    [
+                        158.0,
+                        -103.0
+                    ],
+                    [
+                        168.0,
+                        -103.0
+                    ],
+                    [
+                        240.0,
+                        -103.0
+                    ],
+                    [
+                        250.0,
+                        -103.0
+                    ],
+                    [
+                        258.0,
+                        -103.0
+                    ],
+                    [
+                        276.0,
+                        -103.0
+                    ],
+                    [
+                        276.0,
+                        -109.0
+                    ],
+                    [
+                        276.0,
+                        -115.0
+                    ],
+                    [
+                        276.0,
+                        -120.0
+                    ],
+                    [
+                        276.0,
+                        -121.0
+                    ],
+                    [
+                        276.0,
+                        -124.5
+                    ],
+                    [
+                        276.0,
+                        -125.0
+                    ],
+                    [
+                        276.0,
+                        -127.0
+                    ],
+                    [
+                        276.0,
+                        -130.5
+                    ],
+                    [
+                        276.0,
+                        -131.0
+                    ],
+                    [
+                        276.0,
+                        -138.0
+                    ],
+                    [
+                        276.0,
+                        -139.0
+                    ],
+                    [
+                        276.0,
+                        -142.0
+                    ],
+                    [
+                        276.0,
+                        -142.5
+                    ],
+                    [
+                        276.0,
+                        -145.0
+                    ],
+                    [
+                        276.0,
+                        -160.0
+                    ],
+                    [
+                        340.0,
+                        -160.0
+                    ]
+                ],
+                "auto": true
+            }
+        ],
+        "last_selected": []
+    },
+    "reference": false,
+    "simulation": {
+        "z0": 50.0,
+        "hb": {
+            "top_block": false,
+            "pump_ports": [],
+            "pump_frequencies": [],
+            "pump_currents": [],
+            "dc_ports": [],
+            "dc_currents": [],
+            "modulation_harmonics": [
+                10
+            ],
+            "pump_harmonics": [
+                20
+            ],
+            "threewave_mixing": true,
+            "fourwave_mixing": true
+        }
+    }
 }

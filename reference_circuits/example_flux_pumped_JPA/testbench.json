@@ -1,186 +1,189 @@
 {
-  "name": "testbench",
-  "type": "schematic",
-  "instances": [
-    {
-      "type_name": "flux_pumped_JPA",
-      "uid": "FL1",
-      "parameters": {
-        "Cc": "16.0e-15",
-        "Cj": "10.0e-15",
-        "Lj": "219.63e-12",
-        "Lr": "0.4264e-9",
-        "Lg": "100.0e-9",
-        "Cr": "0.4e-12",
-        "R": "50",
-        "Ll": "34e-12",
-        "K": "0.999",
-        "Ldc": "0.74e-12"
-      },
-      "parameter_order": [
-        "Cc",
-        "Cj",
-        "Cr",
-        "K",
-        "Ldc",
-        "Lg",
-        "Lj",
-        "Ll",
-        "Lr",
-        "R"
-      ],
-      "parameter_kinds": {
-        "Cc": "positional",
-        "Cj": "positional",
-        "Cr": "positional",
-        "K": "positional",
-        "Ldc": "positional",
-        "Lg": "positional",
-        "Lj": "positional",
-        "Ll": "positional",
-        "Lr": "positional",
-        "R": "positional"
-      },
-      "position": [
-        -80.0,
-        -80.0
-      ],
-      "port_count": 2,
-      "port_names": [
-        "P_out",
-        "P_in"
-      ],
-      "rotation_degrees": 0,
-      "repeat_count": 1,
-      "repeat_connections": [],
-      "symbol_port_layout": [
+    "name": "testbench",
+    "type": "schematic",
+    "instances": [
         {
-          "port": "P_out",
-          "side": "right",
-          "position": 0.5
+            "type_name": "flux_pumped_JPA",
+            "uid": "FL1",
+            "parameters": {
+                "Cc": "16.0e-15",
+                "Cj": "10.0e-15",
+                "Lj": "219.63e-12",
+                "Lr": "0.4264e-9",
+                "Lg": "100.0e-9",
+                "Cr": "0.4e-12",
+                "R": "50",
+                "Ll": "34e-12",
+                "K": "0.999",
+                "Ldc": "0.74e-12"
+            },
+            "parameter_order": [
+                "Cc",
+                "Cj",
+                "Cr",
+                "K",
+                "Ldc",
+                "Lg",
+                "Lj",
+                "Ll",
+                "Lr",
+                "R"
+            ],
+            "parameter_kinds": {
+                "Cc": "positional",
+                "Cj": "positional",
+                "Cr": "positional",
+                "K": "positional",
+                "Ldc": "positional",
+                "Lg": "positional",
+                "Lj": "positional",
+                "Ll": "positional",
+                "Lr": "positional",
+                "R": "positional"
+            },
+            "position": [
+                -80.0,
+                -80.0
+            ],
+            "port_count": 2,
+            "port_names": [
+                "P_out",
+                "P_in"
+            ],
+            "rotation_degrees": 0,
+            "repeat_count": 1,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "P_out",
+                    "side": "right",
+                    "position": 0.5
+                },
+                {
+                    "port": "P_in",
+                    "side": "left",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 200.0,
+                "height": 100.0,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "P_out",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "P_in",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            }
+        }
+    ],
+    "wires": [],
+    "pins": [
+        {
+            "name": "P_in",
+            "instance_uid": "FL1",
+            "port": "P_in"
         },
         {
-          "port": "P_in",
-          "side": "left",
-          "position": 0.5
+            "name": "P_out",
+            "instance_uid": "FL1",
+            "port": "P_out"
         }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 200.0,
-        "height": 100.0,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "P_out",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "P_in",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      }
-    }
-  ],
-  "wires": [],
-  "pins": [
-    {
-      "name": "P_in",
-      "instance_uid": "FL1",
-      "port": "P_in"
+    ],
+    "labels": [],
+    "simulation_input_ports": [
+        "P_in"
+    ],
+    "simulation_output_ports": [
+        "P_out"
+    ],
+    "simulation_freq_start": 9.7,
+    "simulation_freq_stop": 9.8,
+    "simulation_freq_points": 2000,
+    "simulation_sweep_type": "linear",
+    "simulation_figure_title": "testbench",
+    "gui": {
+        "version": 1,
+        "viewport": {
+            "zoom": 1,
+            "pan": [
+                0,
+                0
+            ]
+        },
+        "wire_routes": [],
+        "last_selected": []
     },
-    {
-      "name": "P_out",
-      "instance_uid": "FL1",
-      "port": "P_out"
+    "reference": false,
+    "x-params": true,
+    "x_input_ports": [
+        "P_in"
+    ],
+    "x_output_ports": [
+        "P_out"
+    ],
+    "x_pump_ports": [
+        "P_out"
+    ],
+    "x_pump_frequencies": [
+        19.5
+    ],
+    "x_pump_currents": [
+        "0.7e-6"
+    ],
+    "x_dc_ports": [
+        "P_out"
+    ],
+    "x_dc_currents": [
+        "140.3e-6"
+    ],
+    "x_modulation_harmonics": [
+        8
+    ],
+    "x_pump_harmonics": [
+        16
+    ],
+    "x_threewave_mixing": true,
+    "x_fourwave_mixing": true,
+    "simulation": {
+        "z0": 50.0,
+        "hb": {
+            "top_block": true,
+            "pump_ports": [
+                "2"
+            ],
+            "pump_frequencies": [
+                19.5
+            ],
+            "pump_currents": [
+                "0.7e-6"
+            ],
+            "dc_ports": [
+                "2"
+            ],
+            "dc_currents": [
+                "140.3e-6"
+            ],
+            "modulation_harmonics": [
+                8
+            ],
+            "pump_harmonics": [
+                16
+            ],
+            "threewave_mixing": true,
+            "fourwave_mixing": true
+        }
     }
-  ],
-  "labels": [],
-  "variables": [],
-  "z0": 50.0,
-  "simulation_input_ports": [
-    "P_in"
-  ],
-  "simulation_output_ports": [
-    "P_out"
-  ],
-  "simulation_freq_start": 9.7,
-  "simulation_freq_stop": 9.8,
-  "simulation_freq_points": 2000,
-  "simulation_sweep_type": "linear",
-  "simulation_figure_title": "testbench",
-  "hb_top_block": true,
-  "hb_pump_ports": [
-    "2"
-  ],
-  "hb_pump_frequencies": [
-    19.5
-  ],
-  "hb_pump_currents": [
-    "0.7e-6"
-  ],
-  "hb_dc_ports": [
-    "2"
-  ],
-  "hb_dc_currents": [
-    "140.3e-6"
-  ],
-  "hb_modulation_harmonics": [
-    8
-  ],
-  "hb_pump_harmonics": [
-    16
-  ],
-  "hb_threewave_mixing": true,
-  "hb_fourwave_mixing": true,
-  "gui": {
-    "version": 1,
-    "viewport": {
-      "zoom": 1,
-      "pan": [
-        0,
-        0
-      ]
-    },
-    "wire_routes": [],
-    "last_selected": []
-  },
-  "reference": false,
-  "x-params": true,
-  "x_input_ports": [
-    "P_in"
-  ],
-  "x_output_ports": [
-    "P_out"
-  ],
-  "x_pump_ports": [
-    "P_out"
-  ],
-  "x_pump_frequencies": [
-    19.5
-  ],
-  "x_pump_currents": [
-    "0.7e-6"
-  ],
-  "x_dc_ports": [
-    "P_out"
-  ],
-  "x_dc_currents": [
-    "140.3e-6"
-  ],
-  "x_modulation_harmonics": [
-    8
-  ],
-  "x_pump_harmonics": [
-    16
-  ],
-  "x_threewave_mixing": true,
-  "x_fourwave_mixing": true
 }

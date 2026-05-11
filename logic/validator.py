@@ -6,7 +6,10 @@ from pathlib import Path
 from path_utils import resolve_source_target
 
 
-GROUND_LABELS = {"0", "P_0", "GND", "gnd", "ground"}
+# The merger normalises all ground connections to label "0" before this stage.
+# Only "0" is recognised here; any other ground-like name surviving to validation
+# indicates a pipeline bug and should NOT be silently treated as ground.
+GROUND_LABELS = {"0"}
 
 
 def get_project_output_dir(script_dir, project_name):
@@ -568,29 +571,32 @@ def update_hb_io_fields(data):
         output_pin_names,
     )
 
-    if input_p_number is None and pin_to_p:
-        input_pin, info = next(iter(pin_to_p.items()))
-        input_p_number = int(info["p_port_number"])
+    if input_p_number is None:
+        if not input_pin_names:
+            raise ValueError(
+                "HB circuit has no simulation_input_ports (or x_input_ports) configured. "
+                "Set at least one input port in the simulation settings."
+            )
+        raise ValueError(
+            f"HB circuit simulation_input_ports {input_pin_names!r} could not be resolved "
+            f"to any P block. Available P-connected pins: {list(pin_to_p.keys()) or 'none'}."
+        )
 
-    if output_p_number is None and pin_to_p:
-        for pin_name, info in pin_to_p.items():
-            candidate_p = int(info["p_port_number"])
-            if input_p_number is None or candidate_p != input_p_number:
-                output_pin = pin_name
-                output_p_number = candidate_p
-                break
+    if output_p_number is None:
+        if not output_pin_names:
+            raise ValueError(
+                "HB circuit has no simulation_output_ports (or x_output_ports) configured. "
+                "Set at least one output port in the simulation settings."
+            )
+        raise ValueError(
+            f"HB circuit simulation_output_ports {output_pin_names!r} could not be resolved "
+            f"to any P block. Available P-connected pins: {list(pin_to_p.keys()) or 'none'}."
+        )
 
-    if output_p_number is None and pin_to_p:
-        output_pin, info = next(iter(pin_to_p.items()))
-        output_p_number = int(info["p_port_number"])
-
-    if input_p_number is not None:
-        data["hb_input_field"] = input_p_number
-        data["hb_input_pin_name"] = input_pin
-
-    if output_p_number is not None:
-        data["hb_output_field"] = output_p_number
-        data["hb_output_pin_name"] = output_pin
+    data["hb_input_field"] = input_p_number
+    data["hb_input_pin_name"] = input_pin
+    data["hb_output_field"] = output_p_number
+    data["hb_output_pin_name"] = output_pin
 
     return {
         "pin_to_p": pin_to_p,

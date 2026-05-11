@@ -1,17 +1,21 @@
 {
-  "name": "ABCD_thru",
-  "type": "built-in",
-  "subtype": "sSolve",
-  "hb_top_block": false,
-  "variables": [],
-  "port_count": 2,
-  "port_names": [
-    "p1",
-    "p2"
-  ],
-  "about": "Ideal 2-port through connection.",
-  "sketch": "o----------o\n\n\no----------o",
-  "matrix_type": "ABCD",
-  "matrix_is_code": true,
-  "matrix_code": "ComplexF64[1 0; 0 1]"
+    "name": "ABCD_thru",
+    "type": "built-in",
+    "subtype": "sSolve",
+    "variables": [],
+    "port_count": 2,
+    "port_names": [
+        "p1",
+        "p2"
+    ],
+    "about": "Ideal 2-port through connection.",
+    "sketch": "o----------o\n\n\no----------o",
+    "matrix_type": "ABCD",
+    "matrix_is_code": true,
+    "matrix_code": "ComplexF64[1 0; 0 1]",
+    "simulation": {
+        "hb": {
+            "top_block": false
+        }
+    }
 }

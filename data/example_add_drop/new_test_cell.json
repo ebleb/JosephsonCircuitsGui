@@ -1,217 +1,220 @@
 {
-  "name": "new_test_cell",
-  "type": "schematic",
-  "instances": [
-    {
-      "type_name": "ABCD_PiY",
-      "uid": "AB1",
-      "parameters": {
-        "Y1": "1.0",
-        "Y2": "2.0",
-        "Y3": "4.0"
-      },
-      "parameter_order": [
-        "Y1",
-        "Y2",
-        "Y3"
-      ],
-      "parameter_kinds": {
-        "Y1": "positional",
-        "Y2": "positional",
-        "Y3": "positional"
-      },
-      "position": [
-        -120.0,
-        40.0
-      ],
-      "port_count": 2,
-      "port_names": [
-        "p1",
-        "p2"
-      ],
-      "rotation_degrees": 0,
-      "repeat_count": 1,
-      "repeat_connections": [],
-      "symbol_port_layout": [
+    "name": "new_test_cell",
+    "type": "schematic",
+    "instances": [
         {
-          "port": "p1",
-          "side": "left",
-          "position": 0.5
+            "type_name": "ABCD_PiY",
+            "uid": "AB1",
+            "parameters": {
+                "Y1": "1.0",
+                "Y2": "2.0",
+                "Y3": "4.0"
+            },
+            "parameter_order": [
+                "Y1",
+                "Y2",
+                "Y3"
+            ],
+            "parameter_kinds": {
+                "Y1": "positional",
+                "Y2": "positional",
+                "Y3": "positional"
+            },
+            "position": [
+                -120.0,
+                40.0
+            ],
+            "port_count": 2,
+            "port_names": [
+                "p1",
+                "p2"
+            ],
+            "rotation_degrees": 0,
+            "repeat_count": 1,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "p1",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "p2",
+                    "side": "right",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "p1",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "p2",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            }
         },
         {
-          "port": "p2",
-          "side": "right",
-          "position": 0.5
+            "type_name": "ABCD_tline",
+            "uid": "AB2",
+            "parameters": {
+                "Z0": "50.0",
+                "theta": "pi/4"
+            },
+            "parameter_order": [
+                "Z0",
+                "theta"
+            ],
+            "parameter_kinds": {
+                "Z0": "positional",
+                "theta": "positional"
+            },
+            "position": [
+                240.0,
+                80.0
+            ],
+            "port_count": 2,
+            "port_names": [
+                "p1",
+                "p2"
+            ],
+            "rotation_degrees": 0,
+            "repeat_count": 1,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "p1",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "p2",
+                    "side": "right",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "p1",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "p2",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            }
         }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "p1",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "p2",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      }
-    },
-    {
-      "type_name": "ABCD_tline",
-      "uid": "AB2",
-      "parameters": {
-        "Z0": "50.0",
-        "theta": "pi/4"
-      },
-      "parameter_order": [
-        "Z0",
-        "theta"
-      ],
-      "parameter_kinds": {
-        "Z0": "positional",
-        "theta": "positional"
-      },
-      "position": [
-        240.0,
-        80.0
-      ],
-      "port_count": 2,
-      "port_names": [
-        "p1",
-        "p2"
-      ],
-      "rotation_degrees": 0,
-      "repeat_count": 1,
-      "repeat_connections": [],
-      "symbol_port_layout": [
-        {
-          "port": "p1",
-          "side": "left",
-          "position": 0.5
-        },
-        {
-          "port": "p2",
-          "side": "right",
-          "position": 0.5
-        }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "p1",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "p2",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      }
-    }
-  ],
-  "wires": [
-    {
-      "source_instance_uid": "AB1",
-      "source_port": "p2",
-      "target_instance_uid": "AB2",
-      "target_port": "p1",
-      "name": "",
-      "gui_wire_id": "wire_6a91f933"
-    }
-  ],
-  "pins": [],
-  "labels": [],
-  "variables": [],
-  "z0": 50.0,
-  "simulation_input_ports": [],
-  "simulation_output_ports": [],
-  "simulation_freq_start": 2.0,
-  "simulation_freq_stop": 20.0,
-  "simulation_freq_points": 200,
-  "simulation_sweep_type": "linear",
-  "simulation_figure_title": "new_test_cell",
-  "hb_top_block": false,
-  "hb_pump_ports": [],
-  "hb_pump_frequencies": [],
-  "hb_pump_currents": [],
-  "hb_dc_ports": [],
-  "hb_dc_currents": [],
-  "hb_modulation_harmonics": [
-    10
-  ],
-  "hb_pump_harmonics": [
-    20
-  ],
-  "hb_threewave_mixing": true,
-  "hb_fourwave_mixing": true,
-  "gui": {
-    "version": 1,
-    "viewport": {
-      "zoom": 1,
-      "pan": [
-        0,
-        0
-      ]
-    },
-    "wire_routes": [
-      {
-        "net_id": "net_1",
-        "wire_id": "wire_6a91f933",
-        "source": {
-          "instance_uid": "AB1",
-          "port": "p2"
-        },
-        "target": {
-          "instance_uid": "AB2",
-          "port": "p1"
-        },
-        "points": [
-          [
-            -60.0,
-            40.0
-          ],
-          [
-            -14.0,
-            40.0
-          ],
-          [
-            134.0,
-            40.0
-          ],
-          [
-            134.0,
-            80.0
-          ],
-          [
-            180.0,
-            80.0
-          ]
-        ],
-        "auto": true
-      }
     ],
-    "last_selected": []
-  },
-  "reference": false
+    "wires": [
+        {
+            "source_instance_uid": "AB1",
+            "source_port": "p2",
+            "target_instance_uid": "AB2",
+            "target_port": "p1",
+            "name": "",
+            "gui_wire_id": "wire_6a91f933"
+        }
+    ],
+    "pins": [],
+    "labels": [],
+    "simulation_input_ports": [],
+    "simulation_output_ports": [],
+    "simulation_freq_start": 2.0,
+    "simulation_freq_stop": 20.0,
+    "simulation_freq_points": 200,
+    "simulation_sweep_type": "linear",
+    "simulation_figure_title": "new_test_cell",
+    "gui": {
+        "version": 1,
+        "viewport": {
+            "zoom": 1,
+            "pan": [
+                0,
+                0
+            ]
+        },
+        "wire_routes": [
+            {
+                "net_id": "net_1",
+                "wire_id": "wire_6a91f933",
+                "source": {
+                    "instance_uid": "AB1",
+                    "port": "p2"
+                },
+                "target": {
+                    "instance_uid": "AB2",
+                    "port": "p1"
+                },
+                "points": [
+                    [
+                        -60.0,
+                        40.0
+                    ],
+                    [
+                        -14.0,
+                        40.0
+                    ],
+                    [
+                        134.0,
+                        40.0
+                    ],
+                    [
+                        134.0,
+                        80.0
+                    ],
+                    [
+                        180.0,
+                        80.0
+                    ]
+                ],
+                "auto": true
+            }
+        ],
+        "last_selected": []
+    },
+    "reference": false,
+    "simulation": {
+        "z0": 50.0,
+        "hb": {
+            "top_block": false,
+            "pump_ports": [],
+            "pump_frequencies": [],
+            "pump_currents": [],
+            "dc_ports": [],
+            "dc_currents": [],
+            "modulation_harmonics": [
+                10
+            ],
+            "pump_harmonics": [
+                20
+            ],
+            "threewave_mixing": true,
+            "fourwave_mixing": true
+        }
+    }
 }

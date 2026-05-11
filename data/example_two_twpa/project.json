@@ -3,7 +3,6 @@
   "path": "/home/benedikte/userdata/urop/app_v2_pub/data/example_two_twpa",
   "version": 1,
   "default_cell": "",
-  "default_z0": 50.0,
   "recent_cells": [
     "two_twpas_series",
     "twpa",

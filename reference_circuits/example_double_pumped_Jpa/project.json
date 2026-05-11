@@ -3,7 +3,6 @@
   "path": "/home/benedikte/userdata/urop/app_v2_pub/data/example_double_pumped_Jpa",
   "version": 1,
   "default_cell": "double_pumped_JPA",
-  "default_z0": 50.0,
   "recent_cells": [],
   "imports": [
     {

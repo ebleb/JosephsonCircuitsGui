@@ -1,2244 +1,2248 @@
 {
-  "name": "twpa",
-  "type": "schematic",
-  "instances": [
-    {
-      "type_name": "C",
-      "uid": "OT1_C1",
-      "parameters": {
-        "C": "(45.0e-15)/2"
-      },
-      "parameter_order": [
-        "C"
-      ],
-      "parameter_kinds": {
-        "C": "keyword"
-      },
-      "position": [
-        -136.0,
-        -220.0
-      ],
-      "port_count": 2,
-      "port_names": [
-        "p1",
-        "p2"
-      ],
-      "rotation_degrees": 90.0,
-      "repeat_count": 1,
-      "repeat_connections": [],
-      "symbol_port_layout": [
+    "name": "twpa",
+    "type": "schematic",
+    "instances": [
         {
-          "port": "p1",
-          "side": "left",
-          "position": 0.5
+            "type_name": "C",
+            "uid": "OT1_C1",
+            "parameters": {
+                "C": "(45.0e-15)/2"
+            },
+            "parameter_order": [
+                "C"
+            ],
+            "parameter_kinds": {
+                "C": "keyword"
+            },
+            "position": [
+                -136.0,
+                -220.0
+            ],
+            "port_count": 2,
+            "port_names": [
+                "p1",
+                "p2"
+            ],
+            "rotation_degrees": 90.0,
+            "repeat_count": 1,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "p1",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "p2",
+                    "side": "right",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "p1",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "p2",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            },
+            "raw_parameters": {
+                "C": "Cg/2"
+            },
+            "resolved_parameters": {
+                "C": "(45.0e-15)/2"
+            }
         },
         {
-          "port": "p2",
-          "side": "right",
-          "position": 0.5
+            "type_name": "R",
+            "uid": "OT1_R1",
+            "parameters": {
+                "R": "(50)"
+            },
+            "parameter_order": [
+                "R"
+            ],
+            "parameter_kinds": {
+                "R": "keyword"
+            },
+            "position": [
+                -258.0,
+                -217.0
+            ],
+            "port_count": 2,
+            "port_names": [
+                "p1",
+                "p2"
+            ],
+            "rotation_degrees": 90.0,
+            "repeat_count": 1,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "p1",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "p2",
+                    "side": "right",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "p1",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "p2",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            },
+            "raw_parameters": {
+                "R": "Rright"
+            },
+            "resolved_parameters": {
+                "R": "(50)"
+            }
+        },
+        {
+            "type_name": "P",
+            "uid": "OT1_P2",
+            "parameters": {
+                "port": "2"
+            },
+            "parameter_order": [
+                "port"
+            ],
+            "parameter_kinds": {
+                "port": "keyword"
+            },
+            "position": [
+                3.0,
+                -223.0
+            ],
+            "port_count": 2,
+            "port_names": [
+                "p1",
+                "p2"
+            ],
+            "rotation_degrees": 90.0,
+            "repeat_count": 1,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "p1",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "p2",
+                    "side": "right",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "p1",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "p2",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            },
+            "raw_parameters": {
+                "port": "2"
+            },
+            "resolved_parameters": {
+                "port": "2"
+            }
+        },
+        {
+            "type_name": "C",
+            "uid": "S1_TCM1_C1",
+            "parameters": {
+                "C": "(45.0e-15) - (30.0e-15)"
+            },
+            "parameter_order": [
+                "C"
+            ],
+            "parameter_kinds": {
+                "C": "keyword"
+            },
+            "position": [
+                -645.9999999999997,
+                -172.20000000000005
+            ],
+            "port_count": 2,
+            "port_names": [
+                "p1",
+                "p2"
+            ],
+            "rotation_degrees": 90.0,
+            "repeat_count": 512,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "p1",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "p2",
+                    "side": "right",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "p1",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "p2",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            },
+            "raw_parameters": {
+                "C": "Cg - Cc"
+            },
+            "resolved_parameters": {
+                "C": "(45.0e-15) - (30.0e-15)"
+            }
+        },
+        {
+            "type_name": "C",
+            "uid": "S1_TCM1_C2",
+            "parameters": {
+                "C": "(30.0e-15)"
+            },
+            "parameter_order": [
+                "C"
+            ],
+            "parameter_kinds": {
+                "C": "keyword"
+            },
+            "position": [
+                -419.64999999999986,
+                -215.85000000000008
+            ],
+            "port_count": 2,
+            "port_names": [
+                "p1",
+                "p2"
+            ],
+            "rotation_degrees": 0.0,
+            "repeat_count": 512,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "p1",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "p2",
+                    "side": "right",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "p1",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "p2",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            },
+            "raw_parameters": {
+                "C": "Cc"
+            },
+            "resolved_parameters": {
+                "C": "(30.0e-15)"
+            }
+        },
+        {
+            "type_name": "Lj",
+            "uid": "S1_TCM1_L1",
+            "parameters": {
+                "Lj": "(IctoLj(3.4e-6))"
+            },
+            "parameter_order": [
+                "Lj"
+            ],
+            "parameter_kinds": {
+                "Lj": "keyword"
+            },
+            "position": [
+                122.70000000000002,
+                -287.95000000000005
+            ],
+            "port_count": 2,
+            "port_names": [
+                "p1",
+                "p2"
+            ],
+            "rotation_degrees": 0.0,
+            "repeat_count": 512,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "p1",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "p2",
+                    "side": "right",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "p1",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "p2",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            },
+            "raw_parameters": {
+                "Lj": "Lj"
+            },
+            "resolved_parameters": {
+                "Lj": "(IctoLj(3.4e-6))"
+            }
+        },
+        {
+            "type_name": "C",
+            "uid": "S1_TCM1_C3",
+            "parameters": {
+                "C": "(55e-15)"
+            },
+            "parameter_order": [
+                "C"
+            ],
+            "parameter_kinds": {
+                "C": "keyword"
+            },
+            "position": [
+                122.9,
+                -160.89999999999998
+            ],
+            "port_count": 2,
+            "port_names": [
+                "p1",
+                "p2"
+            ],
+            "rotation_degrees": 0.0,
+            "repeat_count": 512,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "p1",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "p2",
+                    "side": "right",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "p1",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "p2",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            },
+            "raw_parameters": {
+                "C": "Cj"
+            },
+            "resolved_parameters": {
+                "C": "(55e-15)"
+            }
+        },
+        {
+            "type_name": "C",
+            "uid": "S1_TCM1_C4",
+            "parameters": {
+                "C": "(2.8153e-12)"
+            },
+            "parameter_order": [
+                "C"
+            ],
+            "parameter_kinds": {
+                "C": "keyword"
+            },
+            "position": [
+                -119.34999999999994,
+                -99.15000000000002
+            ],
+            "port_count": 2,
+            "port_names": [
+                "p1",
+                "p2"
+            ],
+            "rotation_degrees": 90.0,
+            "repeat_count": 512,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "p1",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "p2",
+                    "side": "right",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "p1",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "p2",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            },
+            "raw_parameters": {
+                "C": "Cr"
+            },
+            "resolved_parameters": {
+                "C": "(2.8153e-12)"
+            }
+        },
+        {
+            "type_name": "L",
+            "uid": "S1_TCM1_L2",
+            "parameters": {
+                "L": "(1.70e-10)"
+            },
+            "parameter_order": [
+                "L"
+            ],
+            "parameter_kinds": {
+                "L": "keyword"
+            },
+            "position": [
+                -239.19999999999982,
+                -127.64999999999998
+            ],
+            "port_count": 2,
+            "port_names": [
+                "p1",
+                "p2"
+            ],
+            "rotation_degrees": 90.0,
+            "repeat_count": 512,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "p1",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "p2",
+                    "side": "right",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "p1",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "p2",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            },
+            "raw_parameters": {
+                "L": "Lr"
+            },
+            "resolved_parameters": {
+                "L": "(1.70e-10)"
+            }
+        },
+        {
+            "type_name": "C",
+            "uid": "S1_TC1_C1",
+            "parameters": {
+                "C": "(45.0e-15)"
+            },
+            "parameter_order": [
+                "C"
+            ],
+            "parameter_kinds": {
+                "C": "keyword"
+            },
+            "position": [
+                451.74843937499963,
+                367.0
+            ],
+            "port_count": 2,
+            "port_names": [
+                "p1",
+                "p2"
+            ],
+            "rotation_degrees": 90.0,
+            "repeat_count": 512,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "p1",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "p2",
+                    "side": "right",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "p1",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "p2",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            },
+            "raw_parameters": {
+                "C": "Cg"
+            },
+            "resolved_parameters": {
+                "C": "(45.0e-15)"
+            }
+        },
+        {
+            "type_name": "Lj",
+            "uid": "S1_TC1_L1",
+            "parameters": {
+                "Lj": "(IctoLj(3.4e-6))"
+            },
+            "parameter_order": [
+                "Lj"
+            ],
+            "parameter_kinds": {
+                "Lj": "keyword"
+            },
+            "position": [
+                656.7484393749996,
+                111.0
+            ],
+            "port_count": 2,
+            "port_names": [
+                "p1",
+                "p2"
+            ],
+            "rotation_degrees": 0.0,
+            "repeat_count": 512,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "p1",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "p2",
+                    "side": "right",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "p1",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "p2",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            },
+            "raw_parameters": {
+                "Lj": "Lj"
+            },
+            "resolved_parameters": {
+                "Lj": "(IctoLj(3.4e-6))"
+            }
+        },
+        {
+            "type_name": "C",
+            "uid": "S1_TC1_C2",
+            "parameters": {
+                "C": "(55e-15)"
+            },
+            "parameter_order": [
+                "C"
+            ],
+            "parameter_kinds": {
+                "C": "keyword"
+            },
+            "position": [
+                653.7484393749996,
+                231.0
+            ],
+            "port_count": 2,
+            "port_names": [
+                "p1",
+                "p2"
+            ],
+            "rotation_degrees": 0.0,
+            "repeat_count": 512,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "p1",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "p2",
+                    "side": "right",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "p1",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "p2",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            },
+            "raw_parameters": {
+                "C": "Cj"
+            },
+            "resolved_parameters": {
+                "C": "(55e-15)"
+            }
+        },
+        {
+            "type_name": "C",
+            "uid": "S1_TC2_C1",
+            "parameters": {
+                "C": "(45.0e-15)"
+            },
+            "parameter_order": [
+                "C"
+            ],
+            "parameter_kinds": {
+                "C": "keyword"
+            },
+            "position": [
+                451.74843937499963,
+                367.0
+            ],
+            "port_count": 2,
+            "port_names": [
+                "p1",
+                "p2"
+            ],
+            "rotation_degrees": 90.0,
+            "repeat_count": 512,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "p1",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "p2",
+                    "side": "right",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "p1",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "p2",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            },
+            "raw_parameters": {
+                "C": "Cg"
+            },
+            "resolved_parameters": {
+                "C": "(45.0e-15)"
+            }
+        },
+        {
+            "type_name": "Lj",
+            "uid": "S1_TC2_L1",
+            "parameters": {
+                "Lj": "(IctoLj(3.4e-6))"
+            },
+            "parameter_order": [
+                "Lj"
+            ],
+            "parameter_kinds": {
+                "Lj": "keyword"
+            },
+            "position": [
+                656.7484393749996,
+                111.0
+            ],
+            "port_count": 2,
+            "port_names": [
+                "p1",
+                "p2"
+            ],
+            "rotation_degrees": 0.0,
+            "repeat_count": 512,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "p1",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "p2",
+                    "side": "right",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "p1",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "p2",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            },
+            "raw_parameters": {
+                "Lj": "Lj"
+            },
+            "resolved_parameters": {
+                "Lj": "(IctoLj(3.4e-6))"
+            }
+        },
+        {
+            "type_name": "C",
+            "uid": "S1_TC2_C2",
+            "parameters": {
+                "C": "(55e-15)"
+            },
+            "parameter_order": [
+                "C"
+            ],
+            "parameter_kinds": {
+                "C": "keyword"
+            },
+            "position": [
+                653.7484393749996,
+                231.0
+            ],
+            "port_count": 2,
+            "port_names": [
+                "p1",
+                "p2"
+            ],
+            "rotation_degrees": 0.0,
+            "repeat_count": 512,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "p1",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "p2",
+                    "side": "right",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "p1",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "p2",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            },
+            "raw_parameters": {
+                "C": "Cj"
+            },
+            "resolved_parameters": {
+                "C": "(55e-15)"
+            }
+        },
+        {
+            "type_name": "C",
+            "uid": "S1_TC3_C1",
+            "parameters": {
+                "C": "(45.0e-15)"
+            },
+            "parameter_order": [
+                "C"
+            ],
+            "parameter_kinds": {
+                "C": "keyword"
+            },
+            "position": [
+                451.74843937499963,
+                367.0
+            ],
+            "port_count": 2,
+            "port_names": [
+                "p1",
+                "p2"
+            ],
+            "rotation_degrees": 90.0,
+            "repeat_count": 512,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "p1",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "p2",
+                    "side": "right",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "p1",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "p2",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            },
+            "raw_parameters": {
+                "C": "Cg"
+            },
+            "resolved_parameters": {
+                "C": "(45.0e-15)"
+            }
+        },
+        {
+            "type_name": "Lj",
+            "uid": "S1_TC3_L1",
+            "parameters": {
+                "Lj": "(IctoLj(3.4e-6))"
+            },
+            "parameter_order": [
+                "Lj"
+            ],
+            "parameter_kinds": {
+                "Lj": "keyword"
+            },
+            "position": [
+                656.7484393749996,
+                111.0
+            ],
+            "port_count": 2,
+            "port_names": [
+                "p1",
+                "p2"
+            ],
+            "rotation_degrees": 0.0,
+            "repeat_count": 512,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "p1",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "p2",
+                    "side": "right",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "p1",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "p2",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            },
+            "raw_parameters": {
+                "Lj": "Lj"
+            },
+            "resolved_parameters": {
+                "Lj": "(IctoLj(3.4e-6))"
+            }
+        },
+        {
+            "type_name": "C",
+            "uid": "S1_TC3_C2",
+            "parameters": {
+                "C": "(55e-15)"
+            },
+            "parameter_order": [
+                "C"
+            ],
+            "parameter_kinds": {
+                "C": "keyword"
+            },
+            "position": [
+                653.7484393749996,
+                231.0
+            ],
+            "port_count": 2,
+            "port_names": [
+                "p1",
+                "p2"
+            ],
+            "rotation_degrees": 0.0,
+            "repeat_count": 512,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "p1",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "p2",
+                    "side": "right",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "p1",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "p2",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            },
+            "raw_parameters": {
+                "C": "Cj"
+            },
+            "resolved_parameters": {
+                "C": "(55e-15)"
+            }
+        },
+        {
+            "type_name": "P",
+            "uid": "IT1_P1",
+            "parameters": {
+                "port": "1"
+            },
+            "parameter_order": [
+                "port"
+            ],
+            "parameter_kinds": {
+                "port": "keyword"
+            },
+            "position": [
+                -280.0,
+                140.0
+            ],
+            "port_count": 2,
+            "port_names": [
+                "p1",
+                "p2"
+            ],
+            "rotation_degrees": 270.0,
+            "repeat_count": 1,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "p1",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "p2",
+                    "side": "right",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "p1",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "p2",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            },
+            "raw_parameters": {
+                "port": "1"
+            },
+            "resolved_parameters": {
+                "port": "1"
+            }
+        },
+        {
+            "type_name": "R",
+            "uid": "IT1_R1",
+            "parameters": {
+                "R": "((50.0))"
+            },
+            "parameter_order": [
+                "R"
+            ],
+            "parameter_kinds": {
+                "R": "keyword"
+            },
+            "position": [
+                -120.0,
+                160.0
+            ],
+            "port_count": 2,
+            "port_names": [
+                "p1",
+                "p2"
+            ],
+            "rotation_degrees": 270.0,
+            "repeat_count": 1,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "p1",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "p2",
+                    "side": "right",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "p1",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "p2",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            },
+            "raw_parameters": {
+                "R": "Rleft"
+            },
+            "resolved_parameters": {
+                "R": "((50.0))"
+            }
+        },
+        {
+            "type_name": "C",
+            "uid": "IT1_C1",
+            "parameters": {
+                "C": "(45.0e-15)/2"
+            },
+            "parameter_order": [
+                "C"
+            ],
+            "parameter_kinds": {
+                "C": "keyword"
+            },
+            "position": [
+                0.0,
+                160.0
+            ],
+            "port_count": 2,
+            "port_names": [
+                "p1",
+                "p2"
+            ],
+            "rotation_degrees": 270.0,
+            "repeat_count": 1,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "p1",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "p2",
+                    "side": "right",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "p1",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "p2",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            },
+            "raw_parameters": {
+                "C": "Cg/2"
+            },
+            "resolved_parameters": {
+                "C": "(45.0e-15)/2"
+            }
+        },
+        {
+            "type_name": "Lj",
+            "uid": "IT1_L1",
+            "parameters": {
+                "Lj": "(IctoLj(3.4e-6))"
+            },
+            "parameter_order": [
+                "Lj"
+            ],
+            "parameter_kinds": {
+                "Lj": "keyword"
+            },
+            "position": [
+                185.43000000000006,
+                -53.31499999999997
+            ],
+            "port_count": 2,
+            "port_names": [
+                "p1",
+                "p2"
+            ],
+            "rotation_degrees": 0.0,
+            "repeat_count": 1,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "p1",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "p2",
+                    "side": "right",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "p1",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "p2",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            },
+            "raw_parameters": {
+                "Lj": "Lj"
+            },
+            "resolved_parameters": {
+                "Lj": "(IctoLj(3.4e-6))"
+            }
+        },
+        {
+            "type_name": "C",
+            "uid": "IT1_C2",
+            "parameters": {
+                "C": "(55e-15)"
+            },
+            "parameter_order": [
+                "C"
+            ],
+            "parameter_kinds": {
+                "C": "keyword"
+            },
+            "position": [
+                160.0,
+                -160.0
+            ],
+            "port_count": 2,
+            "port_names": [
+                "p1",
+                "p2"
+            ],
+            "rotation_degrees": 0.0,
+            "repeat_count": 1,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "p1",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "p2",
+                    "side": "right",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "p1",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "p2",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            },
+            "raw_parameters": {
+                "C": "Cj"
+            },
+            "resolved_parameters": {
+                "C": "(55e-15)"
+            }
         }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "p1",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "p2",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      },
-      "raw_parameters": {
-        "C": "Cg/2"
-      },
-      "resolved_parameters": {
-        "C": "(45.0e-15)/2"
-      }
-    },
-    {
-      "type_name": "R",
-      "uid": "OT1_R1",
-      "parameters": {
-        "R": "(50)"
-      },
-      "parameter_order": [
-        "R"
-      ],
-      "parameter_kinds": {
-        "R": "keyword"
-      },
-      "position": [
-        -258.0,
-        -217.0
-      ],
-      "port_count": 2,
-      "port_names": [
-        "p1",
-        "p2"
-      ],
-      "rotation_degrees": 90.0,
-      "repeat_count": 1,
-      "repeat_connections": [],
-      "symbol_port_layout": [
-        {
-          "port": "p1",
-          "side": "left",
-          "position": 0.5
-        },
-        {
-          "port": "p2",
-          "side": "right",
-          "position": 0.5
-        }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "p1",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "p2",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      },
-      "raw_parameters": {
-        "R": "Rright"
-      },
-      "resolved_parameters": {
-        "R": "(50)"
-      }
-    },
-    {
-      "type_name": "P",
-      "uid": "OT1_P2",
-      "parameters": {
-        "port": "2"
-      },
-      "parameter_order": [
-        "port"
-      ],
-      "parameter_kinds": {
-        "port": "keyword"
-      },
-      "position": [
-        3.0,
-        -223.0
-      ],
-      "port_count": 2,
-      "port_names": [
-        "p1",
-        "p2"
-      ],
-      "rotation_degrees": 90.0,
-      "repeat_count": 1,
-      "repeat_connections": [],
-      "symbol_port_layout": [
-        {
-          "port": "p1",
-          "side": "left",
-          "position": 0.5
-        },
-        {
-          "port": "p2",
-          "side": "right",
-          "position": 0.5
-        }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "p1",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "p2",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      },
-      "raw_parameters": {
-        "port": "2"
-      },
-      "resolved_parameters": {
-        "port": "2"
-      }
-    },
-    {
-      "type_name": "C",
-      "uid": "S1_TCM1_C1",
-      "parameters": {
-        "C": "(45.0e-15) - (30.0e-15)"
-      },
-      "parameter_order": [
-        "C"
-      ],
-      "parameter_kinds": {
-        "C": "keyword"
-      },
-      "position": [
-        -645.9999999999997,
-        -172.20000000000005
-      ],
-      "port_count": 2,
-      "port_names": [
-        "p1",
-        "p2"
-      ],
-      "rotation_degrees": 90.0,
-      "repeat_count": 512,
-      "repeat_connections": [],
-      "symbol_port_layout": [
-        {
-          "port": "p1",
-          "side": "left",
-          "position": 0.5
-        },
-        {
-          "port": "p2",
-          "side": "right",
-          "position": 0.5
-        }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "p1",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "p2",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      },
-      "raw_parameters": {
-        "C": "Cg - Cc"
-      },
-      "resolved_parameters": {
-        "C": "(45.0e-15) - (30.0e-15)"
-      }
-    },
-    {
-      "type_name": "C",
-      "uid": "S1_TCM1_C2",
-      "parameters": {
-        "C": "(30.0e-15)"
-      },
-      "parameter_order": [
-        "C"
-      ],
-      "parameter_kinds": {
-        "C": "keyword"
-      },
-      "position": [
-        -419.64999999999986,
-        -215.85000000000008
-      ],
-      "port_count": 2,
-      "port_names": [
-        "p1",
-        "p2"
-      ],
-      "rotation_degrees": 0.0,
-      "repeat_count": 512,
-      "repeat_connections": [],
-      "symbol_port_layout": [
-        {
-          "port": "p1",
-          "side": "left",
-          "position": 0.5
-        },
-        {
-          "port": "p2",
-          "side": "right",
-          "position": 0.5
-        }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "p1",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "p2",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      },
-      "raw_parameters": {
-        "C": "Cc"
-      },
-      "resolved_parameters": {
-        "C": "(30.0e-15)"
-      }
-    },
-    {
-      "type_name": "Lj",
-      "uid": "S1_TCM1_L1",
-      "parameters": {
-        "Lj": "(IctoLj(3.4e-6))"
-      },
-      "parameter_order": [
-        "Lj"
-      ],
-      "parameter_kinds": {
-        "Lj": "keyword"
-      },
-      "position": [
-        122.70000000000002,
-        -287.95000000000005
-      ],
-      "port_count": 2,
-      "port_names": [
-        "p1",
-        "p2"
-      ],
-      "rotation_degrees": 0.0,
-      "repeat_count": 512,
-      "repeat_connections": [],
-      "symbol_port_layout": [
-        {
-          "port": "p1",
-          "side": "left",
-          "position": 0.5
-        },
-        {
-          "port": "p2",
-          "side": "right",
-          "position": 0.5
-        }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "p1",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "p2",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      },
-      "raw_parameters": {
-        "Lj": "Lj"
-      },
-      "resolved_parameters": {
-        "Lj": "(IctoLj(3.4e-6))"
-      }
-    },
-    {
-      "type_name": "C",
-      "uid": "S1_TCM1_C3",
-      "parameters": {
-        "C": "(55e-15)"
-      },
-      "parameter_order": [
-        "C"
-      ],
-      "parameter_kinds": {
-        "C": "keyword"
-      },
-      "position": [
-        122.9,
-        -160.89999999999998
-      ],
-      "port_count": 2,
-      "port_names": [
-        "p1",
-        "p2"
-      ],
-      "rotation_degrees": 0.0,
-      "repeat_count": 512,
-      "repeat_connections": [],
-      "symbol_port_layout": [
-        {
-          "port": "p1",
-          "side": "left",
-          "position": 0.5
-        },
-        {
-          "port": "p2",
-          "side": "right",
-          "position": 0.5
-        }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "p1",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "p2",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      },
-      "raw_parameters": {
-        "C": "Cj"
-      },
-      "resolved_parameters": {
-        "C": "(55e-15)"
-      }
-    },
-    {
-      "type_name": "C",
-      "uid": "S1_TCM1_C4",
-      "parameters": {
-        "C": "(2.8153e-12)"
-      },
-      "parameter_order": [
-        "C"
-      ],
-      "parameter_kinds": {
-        "C": "keyword"
-      },
-      "position": [
-        -119.34999999999994,
-        -99.15000000000002
-      ],
-      "port_count": 2,
-      "port_names": [
-        "p1",
-        "p2"
-      ],
-      "rotation_degrees": 90.0,
-      "repeat_count": 512,
-      "repeat_connections": [],
-      "symbol_port_layout": [
-        {
-          "port": "p1",
-          "side": "left",
-          "position": 0.5
-        },
-        {
-          "port": "p2",
-          "side": "right",
-          "position": 0.5
-        }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "p1",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "p2",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      },
-      "raw_parameters": {
-        "C": "Cr"
-      },
-      "resolved_parameters": {
-        "C": "(2.8153e-12)"
-      }
-    },
-    {
-      "type_name": "L",
-      "uid": "S1_TCM1_L2",
-      "parameters": {
-        "L": "(1.70e-10)"
-      },
-      "parameter_order": [
-        "L"
-      ],
-      "parameter_kinds": {
-        "L": "keyword"
-      },
-      "position": [
-        -239.19999999999982,
-        -127.64999999999998
-      ],
-      "port_count": 2,
-      "port_names": [
-        "p1",
-        "p2"
-      ],
-      "rotation_degrees": 90.0,
-      "repeat_count": 512,
-      "repeat_connections": [],
-      "symbol_port_layout": [
-        {
-          "port": "p1",
-          "side": "left",
-          "position": 0.5
-        },
-        {
-          "port": "p2",
-          "side": "right",
-          "position": 0.5
-        }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "p1",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "p2",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      },
-      "raw_parameters": {
-        "L": "Lr"
-      },
-      "resolved_parameters": {
-        "L": "(1.70e-10)"
-      }
-    },
-    {
-      "type_name": "C",
-      "uid": "S1_TC1_C1",
-      "parameters": {
-        "C": "(45.0e-15)"
-      },
-      "parameter_order": [
-        "C"
-      ],
-      "parameter_kinds": {
-        "C": "keyword"
-      },
-      "position": [
-        451.74843937499963,
-        367.0
-      ],
-      "port_count": 2,
-      "port_names": [
-        "p1",
-        "p2"
-      ],
-      "rotation_degrees": 90.0,
-      "repeat_count": 512,
-      "repeat_connections": [],
-      "symbol_port_layout": [
-        {
-          "port": "p1",
-          "side": "left",
-          "position": 0.5
-        },
-        {
-          "port": "p2",
-          "side": "right",
-          "position": 0.5
-        }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "p1",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "p2",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      },
-      "raw_parameters": {
-        "C": "Cg"
-      },
-      "resolved_parameters": {
-        "C": "(45.0e-15)"
-      }
-    },
-    {
-      "type_name": "Lj",
-      "uid": "S1_TC1_L1",
-      "parameters": {
-        "Lj": "(IctoLj(3.4e-6))"
-      },
-      "parameter_order": [
-        "Lj"
-      ],
-      "parameter_kinds": {
-        "Lj": "keyword"
-      },
-      "position": [
-        656.7484393749996,
-        111.0
-      ],
-      "port_count": 2,
-      "port_names": [
-        "p1",
-        "p2"
-      ],
-      "rotation_degrees": 0.0,
-      "repeat_count": 512,
-      "repeat_connections": [],
-      "symbol_port_layout": [
-        {
-          "port": "p1",
-          "side": "left",
-          "position": 0.5
-        },
-        {
-          "port": "p2",
-          "side": "right",
-          "position": 0.5
-        }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "p1",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "p2",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      },
-      "raw_parameters": {
-        "Lj": "Lj"
-      },
-      "resolved_parameters": {
-        "Lj": "(IctoLj(3.4e-6))"
-      }
-    },
-    {
-      "type_name": "C",
-      "uid": "S1_TC1_C2",
-      "parameters": {
-        "C": "(55e-15)"
-      },
-      "parameter_order": [
-        "C"
-      ],
-      "parameter_kinds": {
-        "C": "keyword"
-      },
-      "position": [
-        653.7484393749996,
-        231.0
-      ],
-      "port_count": 2,
-      "port_names": [
-        "p1",
-        "p2"
-      ],
-      "rotation_degrees": 0.0,
-      "repeat_count": 512,
-      "repeat_connections": [],
-      "symbol_port_layout": [
-        {
-          "port": "p1",
-          "side": "left",
-          "position": 0.5
-        },
-        {
-          "port": "p2",
-          "side": "right",
-          "position": 0.5
-        }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "p1",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "p2",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      },
-      "raw_parameters": {
-        "C": "Cj"
-      },
-      "resolved_parameters": {
-        "C": "(55e-15)"
-      }
-    },
-    {
-      "type_name": "C",
-      "uid": "S1_TC2_C1",
-      "parameters": {
-        "C": "(45.0e-15)"
-      },
-      "parameter_order": [
-        "C"
-      ],
-      "parameter_kinds": {
-        "C": "keyword"
-      },
-      "position": [
-        451.74843937499963,
-        367.0
-      ],
-      "port_count": 2,
-      "port_names": [
-        "p1",
-        "p2"
-      ],
-      "rotation_degrees": 90.0,
-      "repeat_count": 512,
-      "repeat_connections": [],
-      "symbol_port_layout": [
-        {
-          "port": "p1",
-          "side": "left",
-          "position": 0.5
-        },
-        {
-          "port": "p2",
-          "side": "right",
-          "position": 0.5
-        }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "p1",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "p2",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      },
-      "raw_parameters": {
-        "C": "Cg"
-      },
-      "resolved_parameters": {
-        "C": "(45.0e-15)"
-      }
-    },
-    {
-      "type_name": "Lj",
-      "uid": "S1_TC2_L1",
-      "parameters": {
-        "Lj": "(IctoLj(3.4e-6))"
-      },
-      "parameter_order": [
-        "Lj"
-      ],
-      "parameter_kinds": {
-        "Lj": "keyword"
-      },
-      "position": [
-        656.7484393749996,
-        111.0
-      ],
-      "port_count": 2,
-      "port_names": [
-        "p1",
-        "p2"
-      ],
-      "rotation_degrees": 0.0,
-      "repeat_count": 512,
-      "repeat_connections": [],
-      "symbol_port_layout": [
-        {
-          "port": "p1",
-          "side": "left",
-          "position": 0.5
-        },
-        {
-          "port": "p2",
-          "side": "right",
-          "position": 0.5
-        }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "p1",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "p2",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      },
-      "raw_parameters": {
-        "Lj": "Lj"
-      },
-      "resolved_parameters": {
-        "Lj": "(IctoLj(3.4e-6))"
-      }
-    },
-    {
-      "type_name": "C",
-      "uid": "S1_TC2_C2",
-      "parameters": {
-        "C": "(55e-15)"
-      },
-      "parameter_order": [
-        "C"
-      ],
-      "parameter_kinds": {
-        "C": "keyword"
-      },
-      "position": [
-        653.7484393749996,
-        231.0
-      ],
-      "port_count": 2,
-      "port_names": [
-        "p1",
-        "p2"
-      ],
-      "rotation_degrees": 0.0,
-      "repeat_count": 512,
-      "repeat_connections": [],
-      "symbol_port_layout": [
-        {
-          "port": "p1",
-          "side": "left",
-          "position": 0.5
-        },
-        {
-          "port": "p2",
-          "side": "right",
-          "position": 0.5
-        }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "p1",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "p2",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      },
-      "raw_parameters": {
-        "C": "Cj"
-      },
-      "resolved_parameters": {
-        "C": "(55e-15)"
-      }
-    },
-    {
-      "type_name": "C",
-      "uid": "S1_TC3_C1",
-      "parameters": {
-        "C": "(45.0e-15)"
-      },
-      "parameter_order": [
-        "C"
-      ],
-      "parameter_kinds": {
-        "C": "keyword"
-      },
-      "position": [
-        451.74843937499963,
-        367.0
-      ],
-      "port_count": 2,
-      "port_names": [
-        "p1",
-        "p2"
-      ],
-      "rotation_degrees": 90.0,
-      "repeat_count": 512,
-      "repeat_connections": [],
-      "symbol_port_layout": [
-        {
-          "port": "p1",
-          "side": "left",
-          "position": 0.5
-        },
-        {
-          "port": "p2",
-          "side": "right",
-          "position": 0.5
-        }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "p1",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "p2",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      },
-      "raw_parameters": {
-        "C": "Cg"
-      },
-      "resolved_parameters": {
-        "C": "(45.0e-15)"
-      }
-    },
-    {
-      "type_name": "Lj",
-      "uid": "S1_TC3_L1",
-      "parameters": {
-        "Lj": "(IctoLj(3.4e-6))"
-      },
-      "parameter_order": [
-        "Lj"
-      ],
-      "parameter_kinds": {
-        "Lj": "keyword"
-      },
-      "position": [
-        656.7484393749996,
-        111.0
-      ],
-      "port_count": 2,
-      "port_names": [
-        "p1",
-        "p2"
-      ],
-      "rotation_degrees": 0.0,
-      "repeat_count": 512,
-      "repeat_connections": [],
-      "symbol_port_layout": [
-        {
-          "port": "p1",
-          "side": "left",
-          "position": 0.5
-        },
-        {
-          "port": "p2",
-          "side": "right",
-          "position": 0.5
-        }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "p1",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "p2",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      },
-      "raw_parameters": {
-        "Lj": "Lj"
-      },
-      "resolved_parameters": {
-        "Lj": "(IctoLj(3.4e-6))"
-      }
-    },
-    {
-      "type_name": "C",
-      "uid": "S1_TC3_C2",
-      "parameters": {
-        "C": "(55e-15)"
-      },
-      "parameter_order": [
-        "C"
-      ],
-      "parameter_kinds": {
-        "C": "keyword"
-      },
-      "position": [
-        653.7484393749996,
-        231.0
-      ],
-      "port_count": 2,
-      "port_names": [
-        "p1",
-        "p2"
-      ],
-      "rotation_degrees": 0.0,
-      "repeat_count": 512,
-      "repeat_connections": [],
-      "symbol_port_layout": [
-        {
-          "port": "p1",
-          "side": "left",
-          "position": 0.5
-        },
-        {
-          "port": "p2",
-          "side": "right",
-          "position": 0.5
-        }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "p1",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "p2",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      },
-      "raw_parameters": {
-        "C": "Cj"
-      },
-      "resolved_parameters": {
-        "C": "(55e-15)"
-      }
-    },
-    {
-      "type_name": "P",
-      "uid": "IT1_P1",
-      "parameters": {
-        "port": "1"
-      },
-      "parameter_order": [
-        "port"
-      ],
-      "parameter_kinds": {
-        "port": "keyword"
-      },
-      "position": [
-        -280.0,
-        140.0
-      ],
-      "port_count": 2,
-      "port_names": [
-        "p1",
-        "p2"
-      ],
-      "rotation_degrees": 270.0,
-      "repeat_count": 1,
-      "repeat_connections": [],
-      "symbol_port_layout": [
-        {
-          "port": "p1",
-          "side": "left",
-          "position": 0.5
-        },
-        {
-          "port": "p2",
-          "side": "right",
-          "position": 0.5
-        }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "p1",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "p2",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      },
-      "raw_parameters": {
-        "port": "1"
-      },
-      "resolved_parameters": {
-        "port": "1"
-      }
-    },
-    {
-      "type_name": "R",
-      "uid": "IT1_R1",
-      "parameters": {
-        "R": "((50.0))"
-      },
-      "parameter_order": [
-        "R"
-      ],
-      "parameter_kinds": {
-        "R": "keyword"
-      },
-      "position": [
-        -120.0,
-        160.0
-      ],
-      "port_count": 2,
-      "port_names": [
-        "p1",
-        "p2"
-      ],
-      "rotation_degrees": 270.0,
-      "repeat_count": 1,
-      "repeat_connections": [],
-      "symbol_port_layout": [
-        {
-          "port": "p1",
-          "side": "left",
-          "position": 0.5
-        },
-        {
-          "port": "p2",
-          "side": "right",
-          "position": 0.5
-        }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "p1",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "p2",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      },
-      "raw_parameters": {
-        "R": "Rleft"
-      },
-      "resolved_parameters": {
-        "R": "((50.0))"
-      }
-    },
-    {
-      "type_name": "C",
-      "uid": "IT1_C1",
-      "parameters": {
-        "C": "(45.0e-15)/2"
-      },
-      "parameter_order": [
-        "C"
-      ],
-      "parameter_kinds": {
-        "C": "keyword"
-      },
-      "position": [
-        0.0,
-        160.0
-      ],
-      "port_count": 2,
-      "port_names": [
-        "p1",
-        "p2"
-      ],
-      "rotation_degrees": 270.0,
-      "repeat_count": 1,
-      "repeat_connections": [],
-      "symbol_port_layout": [
-        {
-          "port": "p1",
-          "side": "left",
-          "position": 0.5
-        },
-        {
-          "port": "p2",
-          "side": "right",
-          "position": 0.5
-        }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "p1",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "p2",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      },
-      "raw_parameters": {
-        "C": "Cg/2"
-      },
-      "resolved_parameters": {
-        "C": "(45.0e-15)/2"
-      }
-    },
-    {
-      "type_name": "Lj",
-      "uid": "IT1_L1",
-      "parameters": {
-        "Lj": "(IctoLj(3.4e-6))"
-      },
-      "parameter_order": [
-        "Lj"
-      ],
-      "parameter_kinds": {
-        "Lj": "keyword"
-      },
-      "position": [
-        185.43000000000006,
-        -53.31499999999997
-      ],
-      "port_count": 2,
-      "port_names": [
-        "p1",
-        "p2"
-      ],
-      "rotation_degrees": 0.0,
-      "repeat_count": 1,
-      "repeat_connections": [],
-      "symbol_port_layout": [
-        {
-          "port": "p1",
-          "side": "left",
-          "position": 0.5
-        },
-        {
-          "port": "p2",
-          "side": "right",
-          "position": 0.5
-        }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "p1",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "p2",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      },
-      "raw_parameters": {
-        "Lj": "Lj"
-      },
-      "resolved_parameters": {
-        "Lj": "(IctoLj(3.4e-6))"
-      }
-    },
-    {
-      "type_name": "C",
-      "uid": "IT1_C2",
-      "parameters": {
-        "C": "(55e-15)"
-      },
-      "parameter_order": [
-        "C"
-      ],
-      "parameter_kinds": {
-        "C": "keyword"
-      },
-      "position": [
-        160.0,
-        -160.0
-      ],
-      "port_count": 2,
-      "port_names": [
-        "p1",
-        "p2"
-      ],
-      "rotation_degrees": 0.0,
-      "repeat_count": 1,
-      "repeat_connections": [],
-      "symbol_port_layout": [
-        {
-          "port": "p1",
-          "side": "left",
-          "position": 0.5
-        },
-        {
-          "port": "p2",
-          "side": "right",
-          "position": 0.5
-        }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "p1",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "p2",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      },
-      "raw_parameters": {
-        "C": "Cj"
-      },
-      "resolved_parameters": {
-        "C": "(55e-15)"
-      }
-    }
-  ],
-  "wires": [
-    {
-      "source_instance_uid": "S1_TC3_L1",
-      "source_port": 2,
-      "target_instance_uid": "OT1_P2",
-      "target_port": 1,
-      "name": "",
-      "gui_wire_id": "wire_1"
-    },
-    {
-      "source_instance_uid": "IT1_P1",
-      "source_port": 1,
-      "target_instance_uid": "OT1_P2",
-      "target_port": 2,
-      "name": "",
-      "gui_wire_id": "wire_2"
-    },
-    {
-      "source_instance_uid": "IT1_L1",
-      "source_port": 2,
-      "target_instance_uid": "S1_TCM1_C1",
-      "target_port": 1,
-      "name": "",
-      "gui_wire_id": "wire_3"
-    },
-    {
-      "source_instance_uid": "OT1_P2",
-      "source_port": 1,
-      "target_instance_uid": "OT1_C1",
-      "target_port": 1,
-      "name": "",
-      "gui_wire_id": "wire_1"
-    },
-    {
-      "source_instance_uid": "OT1_C1",
-      "source_port": 1,
-      "target_instance_uid": "OT1_R1",
-      "target_port": 1,
-      "name": "",
-      "gui_wire_id": "wire_2"
-    },
-    {
-      "source_instance_uid": "OT1_P2",
-      "source_port": 2,
-      "target_instance_uid": "OT1_C1",
-      "target_port": 2,
-      "name": "",
-      "gui_wire_id": "wire_3"
-    },
-    {
-      "source_instance_uid": "OT1_C1",
-      "source_port": 2,
-      "target_instance_uid": "OT1_R1",
-      "target_port": 2,
-      "name": "",
-      "gui_wire_id": "wire_4"
-    },
-    {
-      "source_instance_uid": "S1_TCM1_L1",
-      "source_port": 2,
-      "target_instance_uid": "S1_TC1_C1",
-      "target_port": 1,
-      "name": "",
-      "gui_wire_id": "wire_1"
-    },
-    {
-      "source_instance_uid": "S1_TCM1_C1",
-      "source_port": 2,
-      "target_instance_uid": "S1_TC1_C1",
-      "target_port": 2,
-      "name": "",
-      "gui_wire_id": "wire_2"
-    },
-    {
-      "source_instance_uid": "S1_TC1_C1",
-      "source_port": 2,
-      "target_instance_uid": "S1_TC2_C1",
-      "target_port": 2,
-      "name": "",
-      "gui_wire_id": "wire_4"
-    },
-    {
-      "source_instance_uid": "S1_TC2_C1",
-      "source_port": 2,
-      "target_instance_uid": "S1_TC3_C1",
-      "target_port": 2,
-      "name": "",
-      "gui_wire_id": "wire_6"
-    },
-    {
-      "source_instance_uid": "S1_TC1_L1",
-      "source_port": 2,
-      "target_instance_uid": "S1_TC2_C1",
-      "target_port": 1,
-      "name": "",
-      "gui_wire_id": "wire_3"
-    },
-    {
-      "source_instance_uid": "S1_TC2_L1",
-      "source_port": 2,
-      "target_instance_uid": "S1_TC3_C1",
-      "target_port": 1,
-      "name": "",
-      "gui_wire_id": "wire_5"
-    },
-    {
-      "source_instance_uid": "S1_TCM1_C3",
-      "source_port": 1,
-      "target_instance_uid": "S1_TCM1_L1",
-      "target_port": 1,
-      "name": "",
-      "gui_wire_id": "wire_1"
-    },
-    {
-      "source_instance_uid": "S1_TCM1_C2",
-      "source_port": 1,
-      "target_instance_uid": "S1_TCM1_C1",
-      "target_port": 1,
-      "name": "",
-      "gui_wire_id": "wire_5"
-    },
-    {
-      "source_instance_uid": "S1_TCM1_L1",
-      "source_port": 1,
-      "target_instance_uid": "S1_TCM1_C1",
-      "target_port": 1,
-      "name": "",
-      "gui_wire_id": "wire_8"
-    },
-    {
-      "source_instance_uid": "S1_TCM1_L1",
-      "source_port": 2,
-      "target_instance_uid": "S1_TCM1_C3",
-      "target_port": 2,
-      "name": "",
-      "gui_wire_id": "wire_2"
-    },
-    {
-      "source_instance_uid": "S1_TCM1_C2",
-      "source_port": 2,
-      "target_instance_uid": "S1_TCM1_C4",
-      "target_port": 1,
-      "name": "",
-      "gui_wire_id": "wire_3"
-    },
-    {
-      "source_instance_uid": "S1_TCM1_C4",
-      "source_port": 1,
-      "target_instance_uid": "S1_TCM1_L2",
-      "target_port": 1,
-      "name": "",
-      "gui_wire_id": "wire_4"
-    },
-    {
-      "source_instance_uid": "S1_TCM1_C4",
-      "source_port": 2,
-      "target_instance_uid": "S1_TCM1_C1",
-      "target_port": 2,
-      "name": "",
-      "gui_wire_id": "wire_6"
-    },
-    {
-      "source_instance_uid": "S1_TCM1_L2",
-      "source_port": 2,
-      "target_instance_uid": "S1_TCM1_C1",
-      "target_port": 2,
-      "name": "",
-      "gui_wire_id": "wire_7"
-    },
-    {
-      "source_instance_uid": "S1_TC1_C1",
-      "source_port": 1,
-      "target_instance_uid": "S1_TC1_L1",
-      "target_port": 1,
-      "name": "",
-      "gui_wire_id": "wire_1"
-    },
-    {
-      "source_instance_uid": "S1_TC1_L1",
-      "source_port": 1,
-      "target_instance_uid": "S1_TC1_C2",
-      "target_port": 1,
-      "name": "",
-      "gui_wire_id": "wire_2"
-    },
-    {
-      "source_instance_uid": "S1_TC1_L1",
-      "source_port": 2,
-      "target_instance_uid": "S1_TC1_C2",
-      "target_port": 2,
-      "name": "",
-      "gui_wire_id": "wire_3"
-    },
-    {
-      "source_instance_uid": "S1_TC2_C1",
-      "source_port": 1,
-      "target_instance_uid": "S1_TC2_L1",
-      "target_port": 1,
-      "name": "",
-      "gui_wire_id": "wire_1"
-    },
-    {
-      "source_instance_uid": "S1_TC2_L1",
-      "source_port": 1,
-      "target_instance_uid": "S1_TC2_C2",
-      "target_port": 1,
-      "name": "",
-      "gui_wire_id": "wire_2"
-    },
-    {
-      "source_instance_uid": "S1_TC2_L1",
-      "source_port": 2,
-      "target_instance_uid": "S1_TC2_C2",
-      "target_port": 2,
-      "name": "",
-      "gui_wire_id": "wire_3"
-    },
-    {
-      "source_instance_uid": "S1_TC3_C1",
-      "source_port": 1,
-      "target_instance_uid": "S1_TC3_L1",
-      "target_port": 1,
-      "name": "",
-      "gui_wire_id": "wire_1"
-    },
-    {
-      "source_instance_uid": "S1_TC3_L1",
-      "source_port": 1,
-      "target_instance_uid": "S1_TC3_C2",
-      "target_port": 1,
-      "name": "",
-      "gui_wire_id": "wire_2"
-    },
-    {
-      "source_instance_uid": "S1_TC3_L1",
-      "source_port": 2,
-      "target_instance_uid": "S1_TC3_C2",
-      "target_port": 2,
-      "name": "",
-      "gui_wire_id": "wire_3"
-    },
-    {
-      "source_instance_uid": "IT1_P1",
-      "source_port": 1,
-      "target_instance_uid": "IT1_R1",
-      "target_port": 1,
-      "name": "",
-      "gui_wire_id": "wire_1"
-    },
-    {
-      "source_instance_uid": "IT1_C1",
-      "source_port": 1,
-      "target_instance_uid": "IT1_R1",
-      "target_port": 1,
-      "name": "",
-      "gui_wire_id": "wire_3"
-    },
-    {
-      "source_instance_uid": "IT1_P1",
-      "source_port": 2,
-      "target_instance_uid": "IT1_R1",
-      "target_port": 2,
-      "name": "",
-      "gui_wire_id": "wire_2"
-    },
-    {
-      "source_instance_uid": "IT1_C1",
-      "source_port": 2,
-      "target_instance_uid": "IT1_R1",
-      "target_port": 2,
-      "name": "",
-      "gui_wire_id": "wire_4"
-    },
-    {
-      "source_instance_uid": "IT1_C1",
-      "source_port": 2,
-      "target_instance_uid": "IT1_C2",
-      "target_port": 1,
-      "name": "",
-      "gui_wire_id": "wire_5"
-    },
-    {
-      "source_instance_uid": "IT1_P1",
-      "source_port": 2,
-      "target_instance_uid": "IT1_L1",
-      "target_port": 1,
-      "name": "",
-      "gui_wire_id": "wire_6"
-    },
-    {
-      "source_instance_uid": "IT1_L1",
-      "source_port": 2,
-      "target_instance_uid": "IT1_C2",
-      "target_port": 2,
-      "name": "",
-      "gui_wire_id": "wire_7"
-    }
-  ],
-  "pins": [
-    {
-      "name": "P_out",
-      "instance_uid": "OT1_P2",
-      "port": 1
-    },
-    {
-      "name": "P_in",
-      "instance_uid": "IT1_P1",
-      "port": 2
-    }
-  ],
-  "labels": [
-    {
-      "name": "OT1_P_N",
-      "instance_uid": "OT1_P2",
-      "port": 1
-    },
-    {
-      "name": "0",
-      "instance_uid": "OT1_P2",
-      "port": 2
-    },
-    {
-      "name": "S1_P_j",
-      "instance_uid": "S1_TCM1_C1",
-      "port": 1
-    },
-    {
-      "name": "S1_P_j+5",
-      "instance_uid": "S1_TC3_L1",
-      "port": 2
-    },
-    {
-      "name": "S1_TCM1_P_j",
-      "instance_uid": "S1_TCM1_C1",
-      "port": 1
-    },
-    {
-      "name": "0",
-      "instance_uid": "S1_TCM1_C1",
-      "port": 2
-    },
-    {
-      "name": "S1_TCM1_P_j+2",
-      "instance_uid": "S1_TCM1_L1",
-      "port": 2
-    },
-    {
-      "name": "0",
-      "instance_uid": "S1_TC1_C1",
-      "port": 2
-    },
-    {
-      "name": "S1_TC1_P_j",
-      "instance_uid": "S1_TC1_C1",
-      "port": 1
-    },
-    {
-      "name": "S1_TC1_P_j+1",
-      "instance_uid": "S1_TC1_L1",
-      "port": 2
-    },
-    {
-      "name": "0",
-      "instance_uid": "S1_TC2_C1",
-      "port": 2
-    },
-    {
-      "name": "S1_TC2_P_j",
-      "instance_uid": "S1_TC2_C1",
-      "port": 1
-    },
-    {
-      "name": "S1_TC2_P_j+1",
-      "instance_uid": "S1_TC2_L1",
-      "port": 2
-    },
-    {
-      "name": "0",
-      "instance_uid": "S1_TC3_C1",
-      "port": 2
-    },
-    {
-      "name": "S1_TC3_P_j",
-      "instance_uid": "S1_TC3_C1",
-      "port": 1
-    },
-    {
-      "name": "S1_TC3_P_j+1",
-      "instance_uid": "S1_TC3_L1",
-      "port": 2
-    },
-    {
-      "name": "0",
-      "instance_uid": "IT1_P1",
-      "port": 1
-    },
-    {
-      "name": "IT1_P_2",
-      "instance_uid": "IT1_L1",
-      "port": 2
-    },
-    {
-      "name": "IT1_P_pin",
-      "instance_uid": "IT1_P1",
-      "port": 2
-    },
-    {
-      "name": "0",
-      "instance_uid": "IT1_P1",
-      "port": 1
-    }
-  ],
-  "variables": [
-    {
-      "name": "z0",
-      "default": "50.0",
-      "resolved": "50.0"
-    }
-  ],
-  "z0": 50.0,
-  "simulation_input_ports": [
-    "P_in"
-  ],
-  "simulation_output_ports": [
-    "P_out"
-  ],
-  "simulation_freq_start": 1.0,
-  "simulation_freq_stop": 14.0,
-  "simulation_freq_points": 200,
-  "simulation_sweep_type": "linear",
-  "simulation_figure_title": "twpa",
-  "hb_top_block": "true",
-  "hb_pump_ports": [
-    1
-  ],
-  "hb_pump_frequencies": [
-    7.12
-  ],
-  "hb_pump_currents": [
-    1.85e-06
-  ],
-  "hb_dc_ports": [],
-  "hb_dc_currents": [],
-  "hb_modulation_harmonics": [
-    10
-  ],
-  "hb_pump_harmonics": [
-    20
-  ],
-  "hb_threewave_mixing": true,
-  "hb_fourwave_mixing": true,
-  "gui": {
-    "version": 1,
-    "viewport": {
-      "zoom": 1,
-      "pan": [
-        0,
-        0
-      ]
-    },
-    "wire_routes": [
-      {
-        "net_id": "net_1",
-        "wire_id": "wire_1",
-        "source": {
-          "instance_uid": "S1",
-          "port": "P_j+5"
-        },
-        "target": {
-          "instance_uid": "OT1",
-          "port": "P_N"
-        },
-        "points": [
-          [
-            -80.0,
-            -260.0
-          ],
-          [
-            -34.0,
-            -260.0
-          ],
-          [
-            16.0,
-            -260.0
-          ],
-          [
-            40.0,
-            -260.0
-          ],
-          [
-            80.0,
-            -260.0
-          ],
-          [
-            200.0,
-            -260.0
-          ],
-          [
-            247.0,
-            -260.0
-          ],
-          [
-            265.0,
-            -260.0
-          ],
-          [
-            276.0,
-            -260.0
-          ],
-          [
-            276.0,
-            -262.0
-          ],
-          [
-            276.0,
-            -270.0
-          ],
-          [
-            276.0,
-            -278.0
-          ],
-          [
-            276.0,
-            -280.0
-          ],
-          [
-            276.0,
-            -298.0
-          ],
-          [
-            276.0,
-            -335.0
-          ],
-          [
-            276.0,
-            -340.0
-          ],
-          [
-            340.0,
-            -340.0
-          ]
-        ],
-        "auto": true
-      },
-      {
-        "net_id": "net_2",
-        "wire_id": "wire_2",
-        "source": {
-          "instance_uid": "IT1",
-          "port": "P_0"
-        },
-        "target": {
-          "instance_uid": "OT1",
-          "port": "P_0"
-        },
-        "points": [
-          [
-            -640.0,
-            -245.0
-          ],
-          [
-            -640.0,
-            -199.0
-          ],
-          [
-            265.0,
-            -199.0
-          ],
-          [
-            265.0,
-            -252.0
-          ],
-          [
-            305.0,
-            -252.0
-          ],
-          [
-            305.0,
-            -280.0
-          ]
-        ],
-        "auto": true
-      },
-      {
-        "net_id": "net_2",
-        "wire_id": "wire_4",
-        "source": {
-          "instance_uid": "G1",
-          "port": "p1"
-        },
-        "target": {
-          "instance_uid": "IT1",
-          "port": "P_0"
-        },
-        "points": [
-          [
-            80.0,
-            0.0
-          ],
-          [
-            16.0,
-            0.0
-          ],
-          [
-            -34.0,
-            0.0
-          ],
-          [
-            -40.0,
-            0.0
-          ],
-          [
-            -80.0,
-            0.0
-          ],
-          [
-            -200.0,
-            0.0
-          ],
-          [
-            -240.0,
-            0.0
-          ],
-          [
-            -246.0,
-            0.0
-          ],
-          [
-            -264.0,
-            0.0
-          ],
-          [
-            -269.0,
-            0.0
-          ],
-          [
-            -282.0,
-            0.0
-          ],
-          [
-            -534.0,
-            0.0
-          ],
-          [
-            -540.0,
-            0.0
-          ],
-          [
-            -580.0,
-            0.0
-          ],
-          [
-            -622.0,
-            0.0
-          ],
-          [
-            -622.0,
-            -65.0
-          ],
-          [
-            -622.0,
-            -181.0
-          ],
-          [
-            -622.0,
-            -185.0
-          ],
-          [
-            -622.0,
-            -199.0
-          ],
-          [
-            -622.0,
-            -205.0
-          ],
-          [
-            -622.0,
-            -217.0
-          ],
-          [
-            -640.0,
-            -217.0
-          ],
-          [
-            -640.0,
-            -245.0
-          ]
-        ],
-        "auto": true
-      },
-      {
-        "net_id": "net_3",
-        "wire_id": "wire_3",
-        "source": {
-          "instance_uid": "IT1",
-          "port": "P_2"
-        },
-        "target": {
-          "instance_uid": "S1",
-          "port": "P_j"
-        },
-        "points": [
-          [
-            -580.0,
-            -280.0
-          ],
-          [
-            -534.0,
-            -280.0
-          ],
-          [
-            -282.0,
-            -280.0
-          ],
-          [
-            -269.0,
-            -280.0
-          ],
-          [
-            -264.0,
-            -280.0
-          ],
-          [
-            -264.0,
-            -278.0
-          ],
-          [
-            -264.0,
-            -260.0
-          ],
-          [
-            -200.0,
-            -260.0
-          ]
-        ],
-        "auto": true
-      }
     ],
-    "last_selected": []
-  },
-  "multimode": true,
-  "multimode_symplectic_tolerance": 1e-06,
-  "reference": true
+    "wires": [
+        {
+            "source_instance_uid": "S1_TC3_L1",
+            "source_port": 2,
+            "target_instance_uid": "OT1_P2",
+            "target_port": 1,
+            "name": "",
+            "gui_wire_id": "wire_1"
+        },
+        {
+            "source_instance_uid": "IT1_P1",
+            "source_port": 1,
+            "target_instance_uid": "OT1_P2",
+            "target_port": 2,
+            "name": "",
+            "gui_wire_id": "wire_2"
+        },
+        {
+            "source_instance_uid": "IT1_L1",
+            "source_port": 2,
+            "target_instance_uid": "S1_TCM1_C1",
+            "target_port": 1,
+            "name": "",
+            "gui_wire_id": "wire_3"
+        },
+        {
+            "source_instance_uid": "OT1_P2",
+            "source_port": 1,
+            "target_instance_uid": "OT1_C1",
+            "target_port": 1,
+            "name": "",
+            "gui_wire_id": "wire_1"
+        },
+        {
+            "source_instance_uid": "OT1_C1",
+            "source_port": 1,
+            "target_instance_uid": "OT1_R1",
+            "target_port": 1,
+            "name": "",
+            "gui_wire_id": "wire_2"
+        },
+        {
+            "source_instance_uid": "OT1_P2",
+            "source_port": 2,
+            "target_instance_uid": "OT1_C1",
+            "target_port": 2,
+            "name": "",
+            "gui_wire_id": "wire_3"
+        },
+        {
+            "source_instance_uid": "OT1_C1",
+            "source_port": 2,
+            "target_instance_uid": "OT1_R1",
+            "target_port": 2,
+            "name": "",
+            "gui_wire_id": "wire_4"
+        },
+        {
+            "source_instance_uid": "S1_TCM1_L1",
+            "source_port": 2,
+            "target_instance_uid": "S1_TC1_C1",
+            "target_port": 1,
+            "name": "",
+            "gui_wire_id": "wire_1"
+        },
+        {
+            "source_instance_uid": "S1_TCM1_C1",
+            "source_port": 2,
+            "target_instance_uid": "S1_TC1_C1",
+            "target_port": 2,
+            "name": "",
+            "gui_wire_id": "wire_2"
+        },
+        {
+            "source_instance_uid": "S1_TC1_C1",
+            "source_port": 2,
+            "target_instance_uid": "S1_TC2_C1",
+            "target_port": 2,
+            "name": "",
+            "gui_wire_id": "wire_4"
+        },
+        {
+            "source_instance_uid": "S1_TC2_C1",
+            "source_port": 2,
+            "target_instance_uid": "S1_TC3_C1",
+            "target_port": 2,
+            "name": "",
+            "gui_wire_id": "wire_6"
+        },
+        {
+            "source_instance_uid": "S1_TC1_L1",
+            "source_port": 2,
+            "target_instance_uid": "S1_TC2_C1",
+            "target_port": 1,
+            "name": "",
+            "gui_wire_id": "wire_3"
+        },
+        {
+            "source_instance_uid": "S1_TC2_L1",
+            "source_port": 2,
+            "target_instance_uid": "S1_TC3_C1",
+            "target_port": 1,
+            "name": "",
+            "gui_wire_id": "wire_5"
+        },
+        {
+            "source_instance_uid": "S1_TCM1_C3",
+            "source_port": 1,
+            "target_instance_uid": "S1_TCM1_L1",
+            "target_port": 1,
+            "name": "",
+            "gui_wire_id": "wire_1"
+        },
+        {
+            "source_instance_uid": "S1_TCM1_C2",
+            "source_port": 1,
+            "target_instance_uid": "S1_TCM1_C1",
+            "target_port": 1,
+            "name": "",
+            "gui_wire_id": "wire_5"
+        },
+        {
+            "source_instance_uid": "S1_TCM1_L1",
+            "source_port": 1,
+            "target_instance_uid": "S1_TCM1_C1",
+            "target_port": 1,
+            "name": "",
+            "gui_wire_id": "wire_8"
+        },
+        {
+            "source_instance_uid": "S1_TCM1_L1",
+            "source_port": 2,
+            "target_instance_uid": "S1_TCM1_C3",
+            "target_port": 2,
+            "name": "",
+            "gui_wire_id": "wire_2"
+        },
+        {
+            "source_instance_uid": "S1_TCM1_C2",
+            "source_port": 2,
+            "target_instance_uid": "S1_TCM1_C4",
+            "target_port": 1,
+            "name": "",
+            "gui_wire_id": "wire_3"
+        },
+        {
+            "source_instance_uid": "S1_TCM1_C4",
+            "source_port": 1,
+            "target_instance_uid": "S1_TCM1_L2",
+            "target_port": 1,
+            "name": "",
+            "gui_wire_id": "wire_4"
+        },
+        {
+            "source_instance_uid": "S1_TCM1_C4",
+            "source_port": 2,
+            "target_instance_uid": "S1_TCM1_C1",
+            "target_port": 2,
+            "name": "",
+            "gui_wire_id": "wire_6"
+        },
+        {
+            "source_instance_uid": "S1_TCM1_L2",
+            "source_port": 2,
+            "target_instance_uid": "S1_TCM1_C1",
+            "target_port": 2,
+            "name": "",
+            "gui_wire_id": "wire_7"
+        },
+        {
+            "source_instance_uid": "S1_TC1_C1",
+            "source_port": 1,
+            "target_instance_uid": "S1_TC1_L1",
+            "target_port": 1,
+            "name": "",
+            "gui_wire_id": "wire_1"
+        },
+        {
+            "source_instance_uid": "S1_TC1_L1",
+            "source_port": 1,
+            "target_instance_uid": "S1_TC1_C2",
+            "target_port": 1,
+            "name": "",
+            "gui_wire_id": "wire_2"
+        },
+        {
+            "source_instance_uid": "S1_TC1_L1",
+            "source_port": 2,
+            "target_instance_uid": "S1_TC1_C2",
+            "target_port": 2,
+            "name": "",
+            "gui_wire_id": "wire_3"
+        },
+        {
+            "source_instance_uid": "S1_TC2_C1",
+            "source_port": 1,
+            "target_instance_uid": "S1_TC2_L1",
+            "target_port": 1,
+            "name": "",
+            "gui_wire_id": "wire_1"
+        },
+        {
+            "source_instance_uid": "S1_TC2_L1",
+            "source_port": 1,
+            "target_instance_uid": "S1_TC2_C2",
+            "target_port": 1,
+            "name": "",
+            "gui_wire_id": "wire_2"
+        },
+        {
+            "source_instance_uid": "S1_TC2_L1",
+            "source_port": 2,
+            "target_instance_uid": "S1_TC2_C2",
+            "target_port": 2,
+            "name": "",
+            "gui_wire_id": "wire_3"
+        },
+        {
+            "source_instance_uid": "S1_TC3_C1",
+            "source_port": 1,
+            "target_instance_uid": "S1_TC3_L1",
+            "target_port": 1,
+            "name": "",
+            "gui_wire_id": "wire_1"
+        },
+        {
+            "source_instance_uid": "S1_TC3_L1",
+            "source_port": 1,
+            "target_instance_uid": "S1_TC3_C2",
+            "target_port": 1,
+            "name": "",
+            "gui_wire_id": "wire_2"
+        },
+        {
+            "source_instance_uid": "S1_TC3_L1",
+            "source_port": 2,
+            "target_instance_uid": "S1_TC3_C2",
+            "target_port": 2,
+            "name": "",
+            "gui_wire_id": "wire_3"
+        },
+        {
+            "source_instance_uid": "IT1_P1",
+            "source_port": 1,
+            "target_instance_uid": "IT1_R1",
+            "target_port": 1,
+            "name": "",
+            "gui_wire_id": "wire_1"
+        },
+        {
+            "source_instance_uid": "IT1_C1",
+            "source_port": 1,
+            "target_instance_uid": "IT1_R1",
+            "target_port": 1,
+            "name": "",
+            "gui_wire_id": "wire_3"
+        },
+        {
+            "source_instance_uid": "IT1_P1",
+            "source_port": 2,
+            "target_instance_uid": "IT1_R1",
+            "target_port": 2,
+            "name": "",
+            "gui_wire_id": "wire_2"
+        },
+        {
+            "source_instance_uid": "IT1_C1",
+            "source_port": 2,
+            "target_instance_uid": "IT1_R1",
+            "target_port": 2,
+            "name": "",
+            "gui_wire_id": "wire_4"
+        },
+        {
+            "source_instance_uid": "IT1_C1",
+            "source_port": 2,
+            "target_instance_uid": "IT1_C2",
+            "target_port": 1,
+            "name": "",
+            "gui_wire_id": "wire_5"
+        },
+        {
+            "source_instance_uid": "IT1_P1",
+            "source_port": 2,
+            "target_instance_uid": "IT1_L1",
+            "target_port": 1,
+            "name": "",
+            "gui_wire_id": "wire_6"
+        },
+        {
+            "source_instance_uid": "IT1_L1",
+            "source_port": 2,
+            "target_instance_uid": "IT1_C2",
+            "target_port": 2,
+            "name": "",
+            "gui_wire_id": "wire_7"
+        }
+    ],
+    "pins": [
+        {
+            "name": "P_out",
+            "instance_uid": "OT1_P2",
+            "port": 1
+        },
+        {
+            "name": "P_in",
+            "instance_uid": "IT1_P1",
+            "port": 2
+        }
+    ],
+    "labels": [
+        {
+            "name": "OT1_P_N",
+            "instance_uid": "OT1_P2",
+            "port": 1
+        },
+        {
+            "name": "0",
+            "instance_uid": "OT1_P2",
+            "port": 2
+        },
+        {
+            "name": "S1_P_j",
+            "instance_uid": "S1_TCM1_C1",
+            "port": 1
+        },
+        {
+            "name": "S1_P_j+5",
+            "instance_uid": "S1_TC3_L1",
+            "port": 2
+        },
+        {
+            "name": "S1_TCM1_P_j",
+            "instance_uid": "S1_TCM1_C1",
+            "port": 1
+        },
+        {
+            "name": "0",
+            "instance_uid": "S1_TCM1_C1",
+            "port": 2
+        },
+        {
+            "name": "S1_TCM1_P_j+2",
+            "instance_uid": "S1_TCM1_L1",
+            "port": 2
+        },
+        {
+            "name": "0",
+            "instance_uid": "S1_TC1_C1",
+            "port": 2
+        },
+        {
+            "name": "S1_TC1_P_j",
+            "instance_uid": "S1_TC1_C1",
+            "port": 1
+        },
+        {
+            "name": "S1_TC1_P_j+1",
+            "instance_uid": "S1_TC1_L1",
+            "port": 2
+        },
+        {
+            "name": "0",
+            "instance_uid": "S1_TC2_C1",
+            "port": 2
+        },
+        {
+            "name": "S1_TC2_P_j",
+            "instance_uid": "S1_TC2_C1",
+            "port": 1
+        },
+        {
+            "name": "S1_TC2_P_j+1",
+            "instance_uid": "S1_TC2_L1",
+            "port": 2
+        },
+        {
+            "name": "0",
+            "instance_uid": "S1_TC3_C1",
+            "port": 2
+        },
+        {
+            "name": "S1_TC3_P_j",
+            "instance_uid": "S1_TC3_C1",
+            "port": 1
+        },
+        {
+            "name": "S1_TC3_P_j+1",
+            "instance_uid": "S1_TC3_L1",
+            "port": 2
+        },
+        {
+            "name": "0",
+            "instance_uid": "IT1_P1",
+            "port": 1
+        },
+        {
+            "name": "IT1_P_2",
+            "instance_uid": "IT1_L1",
+            "port": 2
+        },
+        {
+            "name": "IT1_P_pin",
+            "instance_uid": "IT1_P1",
+            "port": 2
+        },
+        {
+            "name": "0",
+            "instance_uid": "IT1_P1",
+            "port": 1
+        }
+    ],
+    "variables": [
+        {
+            "name": "z0",
+            "default": "50.0",
+            "resolved": "50.0"
+        }
+    ],
+    "z0": 50.0,
+    "simulation_input_ports": [
+        "P_in"
+    ],
+    "simulation_output_ports": [
+        "P_out"
+    ],
+    "simulation_freq_start": 1.0,
+    "simulation_freq_stop": 14.0,
+    "simulation_freq_points": 200,
+    "simulation_sweep_type": "linear",
+    "simulation_figure_title": "twpa",
+    "gui": {
+        "version": 1,
+        "viewport": {
+            "zoom": 1,
+            "pan": [
+                0,
+                0
+            ]
+        },
+        "wire_routes": [
+            {
+                "net_id": "net_1",
+                "wire_id": "wire_1",
+                "source": {
+                    "instance_uid": "S1",
+                    "port": "P_j+5"
+                },
+                "target": {
+                    "instance_uid": "OT1",
+                    "port": "P_N"
+                },
+                "points": [
+                    [
+                        -80.0,
+                        -260.0
+                    ],
+                    [
+                        -34.0,
+                        -260.0
+                    ],
+                    [
+                        16.0,
+                        -260.0
+                    ],
+                    [
+                        40.0,
+                        -260.0
+                    ],
+                    [
+                        80.0,
+                        -260.0
+                    ],
+                    [
+                        200.0,
+                        -260.0
+                    ],
+                    [
+                        247.0,
+                        -260.0
+                    ],
+                    [
+                        265.0,
+                        -260.0
+                    ],
+                    [
+                        276.0,
+                        -260.0
+                    ],
+                    [
+                        276.0,
+                        -262.0
+                    ],
+                    [
+                        276.0,
+                        -270.0
+                    ],
+                    [
+                        276.0,
+                        -278.0
+                    ],
+                    [
+                        276.0,
+                        -280.0
+                    ],
+                    [
+                        276.0,
+                        -298.0
+                    ],
+                    [
+                        276.0,
+                        -335.0
+                    ],
+                    [
+                        276.0,
+                        -340.0
+                    ],
+                    [
+                        340.0,
+                        -340.0
+                    ]
+                ],
+                "auto": true
+            },
+            {
+                "net_id": "net_2",
+                "wire_id": "wire_2",
+                "source": {
+                    "instance_uid": "IT1",
+                    "port": "P_0"
+                },
+                "target": {
+                    "instance_uid": "OT1",
+                    "port": "P_0"
+                },
+                "points": [
+                    [
+                        -640.0,
+                        -245.0
+                    ],
+                    [
+                        -640.0,
+                        -199.0
+                    ],
+                    [
+                        265.0,
+                        -199.0
+                    ],
+                    [
+                        265.0,
+                        -252.0
+                    ],
+                    [
+                        305.0,
+                        -252.0
+                    ],
+                    [
+                        305.0,
+                        -280.0
+                    ]
+                ],
+                "auto": true
+            },
+            {
+                "net_id": "net_2",
+                "wire_id": "wire_4",
+                "source": {
+                    "instance_uid": "G1",
+                    "port": "p1"
+                },
+                "target": {
+                    "instance_uid": "IT1",
+                    "port": "P_0"
+                },
+                "points": [
+                    [
+                        80.0,
+                        0.0
+                    ],
+                    [
+                        16.0,
+                        0.0
+                    ],
+                    [
+                        -34.0,
+                        0.0
+                    ],
+                    [
+                        -40.0,
+                        0.0
+                    ],
+                    [
+                        -80.0,
+                        0.0
+                    ],
+                    [
+                        -200.0,
+                        0.0
+                    ],
+                    [
+                        -240.0,
+                        0.0
+                    ],
+                    [
+                        -246.0,
+                        0.0
+                    ],
+                    [
+                        -264.0,
+                        0.0
+                    ],
+                    [
+                        -269.0,
+                        0.0
+                    ],
+                    [
+                        -282.0,
+                        0.0
+                    ],
+                    [
+                        -534.0,
+                        0.0
+                    ],
+                    [
+                        -540.0,
+                        0.0
+                    ],
+                    [
+                        -580.0,
+                        0.0
+                    ],
+                    [
+                        -622.0,
+                        0.0
+                    ],
+                    [
+                        -622.0,
+                        -65.0
+                    ],
+                    [
+                        -622.0,
+                        -181.0
+                    ],
+                    [
+                        -622.0,
+                        -185.0
+                    ],
+                    [
+                        -622.0,
+                        -199.0
+                    ],
+                    [
+                        -622.0,
+                        -205.0
+                    ],
+                    [
+                        -622.0,
+                        -217.0
+                    ],
+                    [
+                        -640.0,
+                        -217.0
+                    ],
+                    [
+                        -640.0,
+                        -245.0
+                    ]
+                ],
+                "auto": true
+            },
+            {
+                "net_id": "net_3",
+                "wire_id": "wire_3",
+                "source": {
+                    "instance_uid": "IT1",
+                    "port": "P_2"
+                },
+                "target": {
+                    "instance_uid": "S1",
+                    "port": "P_j"
+                },
+                "points": [
+                    [
+                        -580.0,
+                        -280.0
+                    ],
+                    [
+                        -534.0,
+                        -280.0
+                    ],
+                    [
+                        -282.0,
+                        -280.0
+                    ],
+                    [
+                        -269.0,
+                        -280.0
+                    ],
+                    [
+                        -264.0,
+                        -280.0
+                    ],
+                    [
+                        -264.0,
+                        -278.0
+                    ],
+                    [
+                        -264.0,
+                        -260.0
+                    ],
+                    [
+                        -200.0,
+                        -260.0
+                    ]
+                ],
+                "auto": true
+            }
+        ],
+        "last_selected": []
+    },
+    "multimode": true,
+    "multimode_symplectic_tolerance": 1e-06,
+    "reference": true,
+    "simulation": {
+        "hb": {
+            "top_block": "true",
+            "pump_ports": [
+                1
+            ],
+            "pump_frequencies": [
+                7.12
+            ],
+            "pump_currents": [
+                1.85e-06
+            ],
+            "dc_ports": [],
+            "dc_currents": [],
+            "modulation_harmonics": [
+                10
+            ],
+            "pump_harmonics": [
+                20
+            ],
+            "threewave_mixing": true,
+            "fourwave_mixing": true
+        }
+    }
 }

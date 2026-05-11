@@ -1,31 +1,35 @@
 {
-  "name": "C",
-  "type": "built-in",
-  "subtype": "hbsolve",
-  "hb_top_block": false,
-  "variables": [
-    {
-      "name": "C",
-      "default": "1e-12"
+    "name": "C",
+    "type": "built-in",
+    "subtype": "hbsolve",
+    "variables": [
+        {
+            "name": "C",
+            "default": "1e-12"
+        }
+    ],
+    "port_count": 2,
+    "port_names": [
+        "p1",
+        "p2"
+    ],
+    "about": "HB capacitor element.",
+    "sketch": "p1 o---[ C ]---o p2",
+    "library_group": "HB Primitive Blocks",
+    "symbol_port_layout": [
+        {
+            "side": "left",
+            "port": "p1"
+        },
+        {
+            "side": "right",
+            "port": "p2"
+        }
+    ],
+    "julia_string": "(\"C\", string(n1), string(n2), C)",
+    "simulation": {
+        "hb": {
+            "top_block": false
+        }
     }
-  ],
-  "port_count": 2,
-  "port_names": [
-    "p1",
-    "p2"
-  ],
-  "about": "HB capacitor element.",
-  "sketch": "p1 o---[ C ]---o p2",
-  "library_group": "HB Primitive Blocks",
-  "symbol_port_layout": [
-    {
-      "side": "left",
-      "port": "p1"
-    },
-    {
-      "side": "right",
-      "port": "p2"
-    }
-  ],
-  "julia_string": "(\"C\", string(n1), string(n2), C)"
 }

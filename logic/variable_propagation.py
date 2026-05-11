@@ -410,6 +410,10 @@ def inject_z0_aliases(env, z0_value):
 
 
 def extract_top_z0(data):
+    sim = data.get("simulation") or {}
+    if sim.get("z0") not in ["", None]:
+        return str(sim["z0"])
+    # Backward-compat: fall back to legacy top-level z0
     if "z0" in data and data["z0"] not in ["", None]:
         return str(data["z0"])
     return None
@@ -441,7 +445,11 @@ def extract_simulation_grid(data):
 
 
 def overwrite_hb_grid_from_parent(data, parent_grid):
-    if not parent_grid or not truthy(data.get("hb_top_block", False)):
+    _is_hb_top = (
+        truthy((data.get("simulation") or {}).get("hb", {}).get("top_block"))
+        or truthy(data.get("hb_top_block", False))
+    )
+    if not parent_grid or not _is_hb_top:
         return data
     for key in SIMULATION_GRID_KEYS:
         data[key] = parent_grid[key]
@@ -613,7 +621,11 @@ def patch_z0_variables_in_data(data, env):
                 var["default"] = z0_value
                 var["resolved"] = z0_value
 
-    if "z0" in data:
+    sim = data.get("simulation")
+    if sim is not None and "z0" in sim:
+        sim["z0"] = float(z0_value) if _looks_numeric(z0_value) else z0_value
+    elif "z0" in data:
+        # Backward-compat: update legacy top-level z0
         data["z0"] = float(z0_value) if _looks_numeric(z0_value) else z0_value
 
     return data

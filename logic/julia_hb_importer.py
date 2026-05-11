@@ -38,18 +38,6 @@ JULIA_ARRAY_INIT_FNS = frozenset({
     "Array", "Matrix", "Vector", "repeat", "reshape",
 })
 
-HB_INSTANCE_KEYS = [
-    "hb_top_block",
-    "hb_pump_ports",
-    "hb_pump_frequencies",
-    "hb_pump_currents",
-    "hb_dc_ports",
-    "hb_dc_currents",
-    "hb_modulation_harmonics",
-    "hb_pump_harmonics",
-    "hb_threewave_mixing",
-    "hb_fourwave_mixing",
-]
 
 BUILTIN_S_SOLVE_PORTS = {
     "ABCD_attenuator_Pi_matched": ["p1", "p2"],
@@ -831,7 +819,7 @@ def build_direct_s_cell(
         "matrix_definitions": definitions,
         "matrix_values": f"{clean}([w]{call_suffix})[:, :, 1]",
         "variables": variables,
-        "z0": 50.0,
+        "simulation": {"z0": 50.0},
         "symbol": generated_symbol(port_names),
         "symbol_port_layout": generated_symbol(port_names)["port_layout"],
         "generated_from": "julia_direct_s",
@@ -1242,8 +1230,22 @@ def build_reverse_solve_cell(
         "wires": wires,
         "pins": pins,
         "labels": labels,
-        "variables": variables,
-        "z0": 50.0,
+        "simulation_variables": variables,
+        "simulation": {
+            "z0": 50.0,
+            "hb": {
+                "top_block": mode == "hbsolve",
+                "pump_ports": [],
+                "pump_frequencies": hb_settings.get("hb_pump_frequencies", []),
+                "pump_currents": [],
+                "dc_ports": [],
+                "dc_currents": [],
+                "modulation_harmonics": hb_settings.get("hb_modulation_harmonics", [10]),
+                "pump_harmonics": hb_settings.get("hb_pump_harmonics", [20]),
+                "threewave_mixing": hb_settings.get("hb_threewave_mixing", True),
+                "fourwave_mixing": hb_settings.get("hb_fourwave_mixing", True),
+            },
+        },
         "simulation_mode": mode,
         "simulation_input_ports": [pins[0]["name"]] if pins else [],
         "simulation_output_ports": [pins[-1]["name"]] if pins else [],
@@ -1252,16 +1254,6 @@ def build_reverse_solve_cell(
         "simulation_freq_points": sim_settings.get("simulation_freq_points", 200),
         "simulation_sweep_type": "linear",
         "simulation_figure_title": clean,
-        "hb_top_block": mode == "hbsolve",
-        "hb_pump_ports": [],
-        "hb_pump_frequencies": hb_settings.get("hb_pump_frequencies", []),
-        "hb_pump_currents": [],
-        "hb_dc_ports": [],
-        "hb_dc_currents": [],
-        "hb_modulation_harmonics": hb_settings.get("hb_modulation_harmonics", [10]),
-        "hb_pump_harmonics": hb_settings.get("hb_pump_harmonics", [20]),
-        "hb_threewave_mixing": hb_settings.get("hb_threewave_mixing", True),
-        "hb_fourwave_mixing": hb_settings.get("hb_fourwave_mixing", True),
         "generated_from": "julia_reverse_import",
         "generated_source": extract_circuit_source(source),
     }
@@ -1309,8 +1301,8 @@ def build_wrapper_cell(
         "wires": [],
         "pins": pins,
         "labels": [],
-        "variables": variables,
-        "z0": 50.0,
+        "simulation_variables": variables,
+        "simulation": {"z0": 50.0, "hb": {"top_block": False}},
         "simulation_mode": "solveS",
         "simulation_input_ports": [pins[0]["name"]] if pins else [],
         "simulation_output_ports": [pins[-1]["name"]] if pins else [],
@@ -1319,7 +1311,6 @@ def build_wrapper_cell(
         "simulation_freq_points": sim_settings.get("simulation_freq_points", 200),
         "simulation_sweep_type": "linear",
         "simulation_figure_title": clean,
-        "hb_top_block": False,
         "generated_from": "julia_reverse_import",
         "generated_source": _extract_wrapper_source(source, callees),
     }
@@ -1356,7 +1347,7 @@ def copy_hb_top_settings_to_child_instances(cells: list[dict[str, Any]]) -> None
     hb_cells = {
         clean_name(str(cell.get("name", ""))): cell
         for cell in cells
-        if cell.get("hb_top_block")
+        if (cell.get("simulation") or {}).get("hb", {}).get("top_block") or cell.get("hb_top_block")
     }
     if not hb_cells:
         return
@@ -1365,9 +1356,7 @@ def copy_hb_top_settings_to_child_instances(cells: list[dict[str, Any]]) -> None
             ref = hb_cells.get(clean_name(str(inst.get("type_name", ""))))
             if not ref:
                 continue
-            for key in HB_INSTANCE_KEYS:
-                if key in ref:
-                    inst[key] = json.loads(json.dumps(ref.get(key)))
+            inst["hb"] = json.loads(json.dumps((ref.get("simulation") or {}).get("hb") or {}))
 
 
 def imported_cell_port_names(cell: dict[str, Any]) -> list[str]:
@@ -1610,7 +1599,7 @@ def import_julia_simulation_hierarchy(source: str, *, name_hint: str = "imported
         gf = c.get("generated_from", "")
         if gf == "julia_direct_s":
             return f"direct S-matrix ({len(c.get('pins', []))} ports)"
-        if c.get("hb_top_block"):
+        if (c.get("simulation") or {}).get("hb", {}).get("top_block") or c.get("hb_top_block"):
             return "hbsolve"
         insts = c.get("instances", [])
         wires = c.get("wires", [])
@@ -1628,7 +1617,7 @@ def import_julia_simulation_hierarchy(source: str, *, name_hint: str = "imported
             "cell_names": [cell.get("name", "") for cell in cells],
             "cell_kinds": {cell.get("name", ""): _cell_kind(cell) for cell in cells},
             "solve_count": sum(1 for c in cells if c.get("simulation_mode") == "solveS"),
-            "hbsolve_count": sum(1 for c in cells if c.get("simulation_mode") == "hbsolve" or c.get("hb_top_block")),
+            "hbsolve_count": sum(1 for c in cells if c.get("simulation_mode") == "hbsolve" or (c.get("simulation") or {}).get("hb", {}).get("top_block") or c.get("hb_top_block")),
         },
     }
 
@@ -1728,18 +1717,7 @@ def build_generated_cell(name: str, source: str, probe: dict[str, Any] | None = 
         "generated_source": source,
         "generated_summary": summary_from_probe(probe),
         "generated_display_components": display_comps,
-        "z0": 50.0,
         "simulation": sim_defaults,
-        "hb_top_block": True,
-        "hb_pump_ports": hb.get("pump_ports", []),
-        "hb_pump_frequencies": hb.get("pump_frequencies", []),
-        "hb_pump_currents": hb.get("pump_currents", []),
-        "hb_dc_ports": hb.get("dc_ports", []),
-        "hb_dc_currents": hb.get("dc_currents", []),
-        "hb_modulation_harmonics": hb.get("modulation_harmonics", [10]),
-        "hb_pump_harmonics": hb.get("pump_harmonics", [20]),
-        "hb_threewave_mixing": hb.get("threewave_mixing", True),
-        "hb_fourwave_mixing": hb.get("fourwave_mixing", True),
         "symbol": generated_symbol(port_names),
         "symbol_port_layout": generated_symbol(port_names)["port_layout"],
         "gui": {"version": 1, "viewport": {"zoom": 1, "pan": [0, 0]}, "wire_routes": [], "last_selected": []},
@@ -1830,7 +1808,6 @@ def build_generated_s_cell(name: str, source: str) -> dict[str, Any]:
         "generated_language": "julia",
         "generator_kind": "josephsoncircuits_solveS",
         "generated_source": source,
-        "z0": 50.0,
         "simulation": sim,
         "symbol": generated_symbol(port_names),
         "symbol_port_layout": generated_symbol(port_names)["port_layout"],
@@ -1964,6 +1941,7 @@ def port_names_from_probe(probe: dict[str, Any]) -> list[str]:
 def default_simulation(name: str) -> dict[str, Any]:
     return {
         "mode": "s",
+        "z0": 50.0,
         "input_ports": [],
         "output_ports": [],
         "freq_start": 2.0,
@@ -2249,13 +2227,6 @@ def materialize_probe_to_pipeline_cell(cell: dict[str, Any], probe: dict[str, An
 
     sim = cell.get("simulation", {}) or {}
     hb = sim.get("hb", {}) or {}
-    pump_ports = cell.get("hb_pump_ports", hb.get("pump_ports", []))
-    pump_freqs = cell.get("hb_pump_frequencies", hb.get("pump_frequencies", []))
-    pump_currents = cell.get("hb_pump_currents", hb.get("pump_currents", []))
-    dc_ports = cell.get("hb_dc_ports", hb.get("dc_ports", []))
-    dc_currents = cell.get("hb_dc_currents", hb.get("dc_currents", []))
-    mod_harmonics = cell.get("hb_modulation_harmonics", hb.get("modulation_harmonics", [10]))
-    pump_harmonics = cell.get("hb_pump_harmonics", hb.get("pump_harmonics", [20]))
     out = {
         "name": cell.get("name", "generated_hb"),
         "type": "schematic",
@@ -2263,8 +2234,22 @@ def materialize_probe_to_pipeline_cell(cell: dict[str, Any], probe: dict[str, An
         "wires": wires,
         "pins": pins,
         "labels": labels,
-        "variables": variables,
-        "z0": float(cell.get("z0", 50) or 50),
+        "simulation_variables": variables,
+        "simulation": {
+            "z0": float(sim.get("z0") or cell.get("z0", 50) or 50),
+            "hb": {
+                "top_block": str(hb.get("top_block", cell.get("hb_top_block", True))).lower() in ("true", "1", "yes"),
+                "pump_ports": hb.get("pump_ports", cell.get("hb_pump_ports", [])),
+                "pump_frequencies": hb.get("pump_frequencies", cell.get("hb_pump_frequencies", [])),
+                "pump_currents": hb.get("pump_currents", cell.get("hb_pump_currents", [])),
+                "dc_ports": hb.get("dc_ports", cell.get("hb_dc_ports", [])),
+                "dc_currents": hb.get("dc_currents", cell.get("hb_dc_currents", [])),
+                "modulation_harmonics": hb.get("modulation_harmonics", cell.get("hb_modulation_harmonics", [10])),
+                "pump_harmonics": hb.get("pump_harmonics", cell.get("hb_pump_harmonics", [20])),
+                "threewave_mixing": hb.get("threewave_mixing", cell.get("hb_threewave_mixing", True)),
+                "fourwave_mixing": hb.get("fourwave_mixing", cell.get("hb_fourwave_mixing", True)),
+            },
+        },
         "simulation_input_ports": sim.get("input_ports", []),
         "simulation_output_ports": sim.get("output_ports", []),
         "simulation_freq_start": float(sim.get("freq_start", 2.0)),
@@ -2272,16 +2257,6 @@ def materialize_probe_to_pipeline_cell(cell: dict[str, Any], probe: dict[str, An
         "simulation_freq_points": int(sim.get("freq_points", 200)),
         "simulation_sweep_type": sim.get("sweep_type", "linear"),
         "simulation_figure_title": sim.get("figure_title") or cell.get("name"),
-        "hb_top_block": bool(cell.get("hb_top_block", True)),
-        "hb_pump_ports": pump_ports,
-        "hb_pump_frequencies": pump_freqs,
-        "hb_pump_currents": pump_currents,
-        "hb_dc_ports": dc_ports,
-        "hb_dc_currents": dc_currents,
-        "hb_modulation_harmonics": mod_harmonics,
-        "hb_pump_harmonics": pump_harmonics,
-        "hb_threewave_mixing": cell.get("hb_threewave_mixing", hb.get("threewave_mixing", True)),
-        "hb_fourwave_mixing": cell.get("hb_fourwave_mixing", hb.get("fourwave_mixing", True)),
         "generated_from": "trusted_julia",
         "generated_source": extract_circuit_source(str(cell.get("generated_source", ""))),
     }

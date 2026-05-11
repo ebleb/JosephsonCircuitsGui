@@ -240,9 +240,8 @@ def classify_cell(file_path, builtin_dir, script_dir, memo=None):
             # Exception: if the parent has skip_hb_top_block_check=True, all nested
             # hb_top_block sub-blocks are treated as part of the parent's HB simulation
             # (the parent itself is an hb_top_block container).
-            with open(inst_file, "r") as _f:
-                _inst_data = json.load(_f)
-            child_is_hb_top = str(_inst_data.get("hb_top_block", "")).lower() == "true"
+            _top_val = inst.get("hb", {}).get("top_block", False)
+            child_is_hb_top = str(_top_val).lower() in ("true", "1", "yes")
             if child_is_hb_top and not skip_hb_top_block_check:
                 has_sp_component = True
                 sp_reasons.add(f"{type_name} (HB top block, treated as sparam)")

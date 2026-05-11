@@ -87,20 +87,22 @@
         "RM1.lcoupler": "3698.0e-6",
         "RM1.tl_length": "1849.0e-6"
       },
-      "hb_top_block": false,
-      "hb_pump_ports": [],
-      "hb_pump_frequencies": [],
-      "hb_pump_currents": [],
-      "hb_dc_ports": [],
-      "hb_dc_currents": [],
-      "hb_modulation_harmonics": [
-        10
-      ],
-      "hb_pump_harmonics": [
-        20
-      ],
-      "hb_threewave_mixing": true,
-      "hb_fourwave_mixing": true
+      "hb": {
+        "top_block": false,
+        "pump_ports": [],
+        "pump_frequencies": [],
+        "pump_currents": [],
+        "dc_ports": [],
+        "dc_currents": [],
+        "modulation_harmonics": [
+          10
+        ],
+        "pump_harmonics": [
+          20
+        ],
+        "threewave_mixing": true,
+        "fourwave_mixing": true
+      }
     },
     {
       "type_name": "example_add_drop/add_drop",
@@ -187,20 +189,22 @@
         "RM1.lcoupler": "4279.7e-6",
         "RM1.tl_length": "2139.9e-6"
       },
-      "hb_top_block": false,
-      "hb_pump_ports": [],
-      "hb_pump_frequencies": [],
-      "hb_pump_currents": [],
-      "hb_dc_ports": [],
-      "hb_dc_currents": [],
-      "hb_modulation_harmonics": [
-        10
-      ],
-      "hb_pump_harmonics": [
-        20
-      ],
-      "hb_threewave_mixing": true,
-      "hb_fourwave_mixing": true
+      "hb": {
+        "top_block": false,
+        "pump_ports": [],
+        "pump_frequencies": [],
+        "pump_currents": [],
+        "dc_ports": [],
+        "dc_currents": [],
+        "modulation_harmonics": [
+          10
+        ],
+        "pump_harmonics": [
+          20
+        ],
+        "threewave_mixing": true,
+        "fourwave_mixing": true
+      }
     },
     {
       "type_name": "example_twpa/twpa",
@@ -254,26 +258,28 @@
           }
         ]
       },
-      "hb_top_block": true,
-      "hb_pump_ports": [
-        1
-      ],
-      "hb_pump_frequencies": [
-        7.12
-      ],
-      "hb_pump_currents": [
-        1.85e-06
-      ],
-      "hb_dc_ports": [],
-      "hb_dc_currents": [],
-      "hb_modulation_harmonics": [
-        10
-      ],
-      "hb_pump_harmonics": [
-        20
-      ],
-      "hb_threewave_mixing": true,
-      "hb_fourwave_mixing": true
+      "hb": {
+        "top_block": true,
+        "pump_ports": [
+          1
+        ],
+        "pump_frequencies": [
+          7.12
+        ],
+        "pump_currents": [
+          1.85e-06
+        ],
+        "dc_ports": [],
+        "dc_currents": [],
+        "modulation_harmonics": [
+          10
+        ],
+        "pump_harmonics": [
+          20
+        ],
+        "threewave_mixing": true,
+        "fourwave_mixing": true
+      }
     },
     {
       "type_name": "example_add_drop/add_drop",
@@ -360,20 +366,22 @@
         "RM1.lcoupler": "5078.6e-6",
         "RM1.tl_length": "2539.3e-6"
       },
-      "hb_top_block": false,
-      "hb_pump_ports": [],
-      "hb_pump_frequencies": [],
-      "hb_pump_currents": [],
-      "hb_dc_ports": [],
-      "hb_dc_currents": [],
-      "hb_modulation_harmonics": [
-        10
-      ],
-      "hb_pump_harmonics": [
-        20
-      ],
-      "hb_threewave_mixing": true,
-      "hb_fourwave_mixing": true
+      "hb": {
+        "top_block": false,
+        "pump_ports": [],
+        "pump_frequencies": [],
+        "pump_currents": [],
+        "dc_ports": [],
+        "dc_currents": [],
+        "modulation_harmonics": [
+          10
+        ],
+        "pump_harmonics": [
+          20
+        ],
+        "threewave_mixing": true,
+        "fourwave_mixing": true
+      }
     },
     {
       "type_name": "S_termination",
@@ -691,7 +699,26 @@
   ],
   "labels": [],
   "variables": [],
-  "z0": 50.0,
+  "simulation": {
+    "z0": 50.0,
+    "hb": {
+      "top_block": false,
+      "disable_child_top_block": false,
+      "pump_ports": [],
+      "pump_frequencies": [],
+      "pump_currents": [],
+      "dc_ports": [],
+      "dc_currents": [],
+      "modulation_harmonics": [
+        10
+      ],
+      "pump_harmonics": [
+        20
+      ],
+      "threewave_mixing": true,
+      "fourwave_mixing": true
+    }
+  },
   "simulation_input_ports": [
     "P_in"
   ],
@@ -703,20 +730,6 @@
   "simulation_freq_points": 200,
   "simulation_sweep_type": "linear",
   "simulation_figure_title": "second_half",
-  "hb_top_block": false,
-  "hb_pump_ports": [],
-  "hb_pump_frequencies": [],
-  "hb_pump_currents": [],
-  "hb_dc_ports": [],
-  "hb_dc_currents": [],
-  "hb_modulation_harmonics": [
-    10
-  ],
-  "hb_pump_harmonics": [
-    20
-  ],
-  "hb_threewave_mixing": true,
-  "hb_fourwave_mixing": true,
   "gui": {
     "version": 1,
     "viewport": {
@@ -767,7 +780,7 @@
         "auto": true
       },
       {
-        "net_id": "net_8",
+        "net_id": "net_2",
         "wire_id": "wire_cf2bd31a",
         "source": {
           "instance_uid": "ST5",
@@ -802,7 +815,7 @@
         "auto": true
       },
       {
-        "net_id": "net_50b9cc3b",
+        "net_id": "net_3",
         "wire_id": "wire_4928685d",
         "source": {
           "instance_uid": "AD1",
@@ -833,7 +846,7 @@
         "auto": true
       },
       {
-        "net_id": "net_5eb0317a",
+        "net_id": "net_4",
         "wire_id": "wire_5f6d42a2",
         "source": {
           "instance_uid": "ST1",
@@ -868,7 +881,7 @@
         "auto": true
       },
       {
-        "net_id": "net_f7b4c8e8",
+        "net_id": "net_5",
         "wire_id": "wire_a3ed636c",
         "source": {
           "instance_uid": "AD2",
@@ -915,7 +928,7 @@
         "auto": true
       },
       {
-        "net_id": "net_7522ab33",
+        "net_id": "net_6",
         "wire_id": "wire_acf901e7",
         "source": {
           "instance_uid": "AD2",
@@ -954,7 +967,7 @@
         "auto": true
       },
       {
-        "net_id": "net_6b62883d",
+        "net_id": "net_7",
         "wire_id": "wire_f6c66730",
         "source": {
           "instance_uid": "TW1",
@@ -1001,7 +1014,7 @@
         "auto": true
       },
       {
-        "net_id": "net_8a4a6413",
+        "net_id": "net_8",
         "wire_id": "wire_559c78b5",
         "source": {
           "instance_uid": "AD3",

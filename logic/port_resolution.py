@@ -11,7 +11,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import re
 import shutil
 import sys
 from pathlib import Path
@@ -119,27 +118,6 @@ def primitive_port_map(inst: Dict[str, Any], child_data: Dict[str, Any], context
     return {name: index for index, name in enumerate(port_names, start=1)}
 
 
-def exported_pin_external_port(name: str, external_port: int) -> int:
-    match = re.fullmatch(r"P([1-9][0-9]*)", str(name))
-    if match:
-        return int(match.group(1))
-    return external_port
-
-
-def exported_pin_numbering_uses_p_names(pins: list[Dict[str, Any]]) -> bool:
-    numbers = []
-    for pin in pins:
-        name = pin.get("name")
-        if not isinstance(name, str):
-            return False
-        match = re.fullmatch(r"P([1-9][0-9]*)", name)
-        if not match:
-            return False
-        numbers.append(int(match.group(1)))
-
-    return bool(numbers) and len(numbers) == len(set(numbers))
-
-
 def schematic_pin_port_map(inst: Dict[str, Any], child_data: Dict[str, Any], context: str) -> Dict[str, int]:
     child_type = str(child_data.get("type", "")).lower()
     if child_type == "built-in":
@@ -160,18 +138,13 @@ def schematic_pin_port_map(inst: Dict[str, Any], child_data: Dict[str, Any], con
         )
 
     mapping: Dict[str, int] = {}
-    use_p_name_numbers = exported_pin_numbering_uses_p_names(pins)
     for external_port, pin in enumerate(pins, start=1):
         name = pin.get("name")
         if not isinstance(name, str) or not name:
             raise ValueError(f"{context}: child exported pin has invalid name: {pin}")
         if name in mapping:
             raise ValueError(f"{context}: duplicate exported pin name {name!r}")
-        mapping[name] = (
-            exported_pin_external_port(name, external_port)
-            if use_p_name_numbers
-            else external_port
-        )
+        mapping[name] = external_port
     return mapping
 
 
@@ -338,7 +311,7 @@ def run_port_resolution(target_files: list[str]) -> None:
         project_dir = script_dir / "outputs" / project_name
         merge_dir = project_dir / "merged"
         resolved_ports_dir = project_dir / "resolved_ports"
-        resolved_variables_dir = project_dir / "resolved_variables"
+        source_data_dir = script_dir.parent / "data"
 
         print(f"Resolving topology ports for {target}")
         copy_merged_to_resolved(merge_dir, resolved_ports_dir)
@@ -355,7 +328,7 @@ def run_port_resolution(target_files: list[str]) -> None:
                 builtin_dir,
                 script_dir,
                 stage_dir=resolved_ports_dir,
-                resolved_dir=resolved_variables_dir,
+                resolved_dir=source_data_dir,
                 context_name=path.name,
             )
             save_json(path, resolved)

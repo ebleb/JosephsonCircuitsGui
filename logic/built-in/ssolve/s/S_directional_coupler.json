@@ -1,36 +1,40 @@
 {
-  "name": "S_directional_coupler",
-  "type": "built-in",
-  "subtype": "sSolve",
-  "hb_top_block": false,
-  "variables": [
-    {
-      "name": "\u03b1",
-      "default": "sqrt(1-10^(-20/10))"
-    },
-    {
-      "name": "\u03b2",
-      "default": "10^(-20/20)"
-    },
-    {
-      "name": "\u03b8",
-      "default": "pi/2"
-    },
-    {
-      "name": "\u03d5",
-      "default": "pi/2"
+    "name": "S_directional_coupler",
+    "type": "built-in",
+    "subtype": "sSolve",
+    "variables": [
+        {
+            "name": "\u03b1",
+            "default": "sqrt(1-10^(-20/10))"
+        },
+        {
+            "name": "\u03b2",
+            "default": "10^(-20/20)"
+        },
+        {
+            "name": "\u03b8",
+            "default": "pi/2"
+        },
+        {
+            "name": "\u03d5",
+            "default": "pi/2"
+        }
+    ],
+    "port_count": 4,
+    "port_names": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+    ],
+    "about": "Ideal directional coupler with explicit coupling amplitudes and phases.",
+    "sketch": "port 1 --> through port 2\nport 3 coupled\nport 4 isolated",
+    "matrix_type": "S",
+    "matrix_is_code": true,
+    "matrix_code": "JosephsonCircuits.S_directional_coupler(\u03b1, \u03b2, \u03b8, \u03d5)",
+    "simulation": {
+        "hb": {
+            "top_block": false
+        }
     }
-  ],
-  "port_count": 4,
-  "port_names": [
-    "p1",
-    "p2",
-    "p3",
-    "p4"
-  ],
-  "about": "Ideal directional coupler with explicit coupling amplitudes and phases.",
-  "sketch": "port 1 --> through port 2\nport 3 coupled\nport 4 isolated",
-  "matrix_type": "S",
-  "matrix_is_code": true,
-  "matrix_code": "JosephsonCircuits.S_directional_coupler(\u03b1, \u03b2, \u03b8, \u03d5)"
 }

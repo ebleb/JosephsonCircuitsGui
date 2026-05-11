@@ -1,313 +1,319 @@
 {
-  "name": "full_setup",
-  "type": "schematic",
-  "instances": [
-    {
-      "type_name": "first_half",
-      "uid": "FI1",
-      "parameters": {},
-      "parameter_order": [],
-      "parameter_kinds": {},
-      "position": [
-        -460.0,
-        -100.0
-      ],
-      "port_count": 3,
-      "port_names": [
-        "pump_in",
-        "signal_in",
-        "out"
-      ],
-      "rotation_degrees": 0,
-      "repeat_count": 1,
-      "repeat_connections": [],
-      "symbol_port_layout": [
+    "name": "full_setup",
+    "type": "schematic",
+    "instances": [
         {
-          "port": "pump_in",
-          "side": "top",
-          "position": 0.5
+            "type_name": "first_half",
+            "uid": "FI1",
+            "parameters": {},
+            "parameter_order": [],
+            "parameter_kinds": {},
+            "position": [
+                -460.0,
+                -100.0
+            ],
+            "port_count": 3,
+            "port_names": [
+                "pump_in",
+                "signal_in",
+                "out"
+            ],
+            "rotation_degrees": 0,
+            "repeat_count": 1,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "pump_in",
+                    "side": "top",
+                    "position": 0.5
+                },
+                {
+                    "port": "signal_in",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "out",
+                    "side": "right",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120.0,
+                "height": 70.0,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "pump_in",
+                        "side": "top",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "signal_in",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "out",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            },
+            "raw_parameters": {},
+            "resolved_parameters": {},
+            "hb": {
+                "top_block": false,
+                "pump_ports": [],
+                "pump_frequencies": [],
+                "pump_currents": [],
+                "dc_ports": [],
+                "dc_currents": [],
+                "modulation_harmonics": [
+                    10
+                ],
+                "pump_harmonics": [
+                    20
+                ],
+                "threewave_mixing": true,
+                "fourwave_mixing": true
+            }
         },
         {
-          "port": "signal_in",
-          "side": "left",
-          "position": 0.5
-        },
-        {
-          "port": "out",
-          "side": "right",
-          "position": 0.5
+            "type_name": "second_half",
+            "uid": "SE1",
+            "parameters": {},
+            "parameter_order": [],
+            "parameter_kinds": {},
+            "position": [
+                -260.0,
+                -100.0
+            ],
+            "port_count": 3,
+            "port_names": [
+                "pump_in",
+                "P_out",
+                "P_in"
+            ],
+            "rotation_degrees": 0,
+            "repeat_count": 1,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "pump_in",
+                    "side": "top",
+                    "position": 0.5
+                },
+                {
+                    "port": "P_out",
+                    "side": "right",
+                    "position": 0.5
+                },
+                {
+                    "port": "P_in",
+                    "side": "left",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120.0,
+                "height": 70.0,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "pump_in",
+                        "side": "top",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "P_out",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "P_in",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            },
+            "raw_parameters": {},
+            "resolved_parameters": {}
         }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120.0,
-        "height": 70.0,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "pump_in",
-            "side": "top",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "signal_in",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "out",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      },
-      "hb_top_block": false,
-      "hb_pump_ports": [],
-      "hb_pump_frequencies": [],
-      "hb_pump_currents": [],
-      "hb_dc_ports": [],
-      "hb_dc_currents": [],
-      "hb_modulation_harmonics": [
-        10
-      ],
-      "hb_pump_harmonics": [
-        20
-      ],
-      "hb_threewave_mixing": true,
-      "hb_fourwave_mixing": true,
-      "raw_parameters": {},
-      "resolved_parameters": {}
-    },
-    {
-      "type_name": "second_half",
-      "uid": "SE1",
-      "parameters": {},
-      "parameter_order": [],
-      "parameter_kinds": {},
-      "position": [
-        -260.0,
-        -100.0
-      ],
-      "port_count": 3,
-      "port_names": [
-        "pump_in",
-        "P_out",
-        "P_in"
-      ],
-      "rotation_degrees": 0,
-      "repeat_count": 1,
-      "repeat_connections": [],
-      "symbol_port_layout": [
-        {
-          "port": "pump_in",
-          "side": "top",
-          "position": 0.5
-        },
-        {
-          "port": "P_out",
-          "side": "right",
-          "position": 0.5
-        },
-        {
-          "port": "P_in",
-          "side": "left",
-          "position": 0.5
-        }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120.0,
-        "height": 70.0,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "pump_in",
-            "side": "top",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "P_out",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "P_in",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      },
-      "raw_parameters": {},
-      "resolved_parameters": {}
-    }
-  ],
-  "wires": [
-    {
-      "source_instance_uid": "FI1",
-      "source_port": "out",
-      "target_instance_uid": "SE1",
-      "target_port": "P_in",
-      "name": "",
-      "gui_wire_id": "wire_110ab32b"
-    },
-    {
-      "source_instance_uid": "FI1",
-      "source_port": "pump_in",
-      "target_instance_uid": "SE1",
-      "target_port": "pump_in",
-      "name": "",
-      "gui_wire_id": "wire_62cdac3c"
-    }
-  ],
-  "pins": [
-    {
-      "name": "P_in",
-      "instance_uid": "FI1",
-      "port": "signal_in"
-    },
-    {
-      "name": "P_out",
-      "instance_uid": "SE1",
-      "port": "P_out"
-    },
-    {
-      "name": "pump_in",
-      "instance_uid": "FI1",
-      "port": "pump_in"
-    }
-  ],
-  "labels": [],
-  "variables": [],
-  "z0": 50.0,
-  "simulation_input_ports": [
-    "P_in"
-  ],
-  "simulation_output_ports": [
-    "P_out"
-  ],
-  "simulation_freq_start": 1.0,
-  "simulation_freq_stop": 20.0,
-  "simulation_freq_points": 500,
-  "simulation_sweep_type": "linear",
-  "simulation_figure_title": "full_setup",
-  "hb_top_block": false,
-  "hb_pump_ports": [],
-  "hb_pump_frequencies": [],
-  "hb_pump_currents": [],
-  "hb_dc_ports": [],
-  "hb_dc_currents": [],
-  "hb_modulation_harmonics": [
-    10
-  ],
-  "hb_pump_harmonics": [
-    20
-  ],
-  "hb_threewave_mixing": true,
-  "hb_fourwave_mixing": true,
-  "gui": {
-    "version": 1,
-    "viewport": {
-      "zoom": 1,
-      "pan": [
-        0,
-        0
-      ]
-    },
-    "wire_routes": [
-      {
-        "net_id": "net_1",
-        "wire_id": "wire_110ab32b",
-        "source": {
-          "instance_uid": "FI1",
-          "port": "out"
-        },
-        "target": {
-          "instance_uid": "SE1",
-          "port": "P_in"
-        },
-        "points": [
-          [
-            -400.0,
-            -100.0
-          ],
-          [
-            -372.0,
-            -100.0
-          ],
-          [
-            -366.0,
-            -100.0
-          ],
-          [
-            -320.0,
-            -100.0
-          ]
-        ],
-        "auto": true
-      },
-      {
-        "net_id": "net_2",
-        "wire_id": "wire_62cdac3c",
-        "source": {
-          "instance_uid": "FI1",
-          "port": "pump_in"
-        },
-        "target": {
-          "instance_uid": "SE1",
-          "port": "pump_in"
-        },
-        "points": [
-          [
-            -460.0,
-            -135.0
-          ],
-          [
-            -460.0,
-            -163.0
-          ],
-          [
-            -400.0,
-            -163.0
-          ],
-          [
-            -372.0,
-            -163.0
-          ],
-          [
-            -366.0,
-            -163.0
-          ],
-          [
-            -360.0,
-            -163.0
-          ],
-          [
-            -320.0,
-            -163.0
-          ],
-          [
-            -260.0,
-            -163.0
-          ],
-          [
-            -260.0,
-            -135.0
-          ]
-        ],
-        "auto": true
-      }
     ],
-    "last_selected": []
-  },
-  "reference": false
+    "wires": [
+        {
+            "source_instance_uid": "FI1",
+            "source_port": "out",
+            "target_instance_uid": "SE1",
+            "target_port": "P_in",
+            "name": "",
+            "gui_wire_id": "wire_110ab32b"
+        },
+        {
+            "source_instance_uid": "FI1",
+            "source_port": "pump_in",
+            "target_instance_uid": "SE1",
+            "target_port": "pump_in",
+            "name": "",
+            "gui_wire_id": "wire_62cdac3c"
+        }
+    ],
+    "pins": [
+        {
+            "name": "P_in",
+            "instance_uid": "FI1",
+            "port": "signal_in"
+        },
+        {
+            "name": "P_out",
+            "instance_uid": "SE1",
+            "port": "P_out"
+        },
+        {
+            "name": "pump_in",
+            "instance_uid": "FI1",
+            "port": "pump_in"
+        }
+    ],
+    "labels": [],
+    "variables": [],
+    "z0": 50.0,
+    "simulation_input_ports": [
+        "P_in"
+    ],
+    "simulation_output_ports": [
+        "P_out"
+    ],
+    "simulation_freq_start": 1.0,
+    "simulation_freq_stop": 20.0,
+    "simulation_freq_points": 500,
+    "simulation_sweep_type": "linear",
+    "simulation_figure_title": "full_setup",
+    "gui": {
+        "version": 1,
+        "viewport": {
+            "zoom": 1,
+            "pan": [
+                0,
+                0
+            ]
+        },
+        "wire_routes": [
+            {
+                "net_id": "net_1",
+                "wire_id": "wire_110ab32b",
+                "source": {
+                    "instance_uid": "FI1",
+                    "port": "out"
+                },
+                "target": {
+                    "instance_uid": "SE1",
+                    "port": "P_in"
+                },
+                "points": [
+                    [
+                        -400.0,
+                        -100.0
+                    ],
+                    [
+                        -372.0,
+                        -100.0
+                    ],
+                    [
+                        -366.0,
+                        -100.0
+                    ],
+                    [
+                        -320.0,
+                        -100.0
+                    ]
+                ],
+                "auto": true
+            },
+            {
+                "net_id": "net_2",
+                "wire_id": "wire_62cdac3c",
+                "source": {
+                    "instance_uid": "FI1",
+                    "port": "pump_in"
+                },
+                "target": {
+                    "instance_uid": "SE1",
+                    "port": "pump_in"
+                },
+                "points": [
+                    [
+                        -460.0,
+                        -135.0
+                    ],
+                    [
+                        -460.0,
+                        -163.0
+                    ],
+                    [
+                        -400.0,
+                        -163.0
+                    ],
+                    [
+                        -372.0,
+                        -163.0
+                    ],
+                    [
+                        -366.0,
+                        -163.0
+                    ],
+                    [
+                        -360.0,
+                        -163.0
+                    ],
+                    [
+                        -320.0,
+                        -163.0
+                    ],
+                    [
+                        -260.0,
+                        -163.0
+                    ],
+                    [
+                        -260.0,
+                        -135.0
+                    ]
+                ],
+                "auto": true
+            }
+        ],
+        "last_selected": []
+    },
+    "reference": false,
+    "simulation": {
+        "hb": {
+            "top_block": false,
+            "pump_ports": [],
+            "pump_frequencies": [],
+            "pump_currents": [],
+            "dc_ports": [],
+            "dc_currents": [],
+            "modulation_harmonics": [
+                10
+            ],
+            "pump_harmonics": [
+                20
+            ],
+            "threewave_mixing": true,
+            "fourwave_mixing": true
+        }
+    }
 }

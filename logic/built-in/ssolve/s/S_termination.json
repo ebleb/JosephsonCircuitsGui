@@ -1,21 +1,25 @@
 {
-  "name": "S_termination",
-  "type": "built-in",
-  "subtype": "sSolve",
-  "hb_top_block": false,
-  "variables": [
-    {
-      "name": "R_shunt",
-      "default": "50.0"
+    "name": "S_termination",
+    "type": "built-in",
+    "subtype": "sSolve",
+    "variables": [
+        {
+            "name": "R_shunt",
+            "default": "50.0"
+        }
+    ],
+    "port_count": 1,
+    "port_names": [
+        "p1"
+    ],
+    "about": "One-port load termination defined by its shunt resistance and the cell reference impedance.",
+    "sketch": "o---R_shunt---\u2534",
+    "matrix_type": "S",
+    "matrix_is_code": true,
+    "matrix_code": "reshape(ComplexF64[ComplexF64((R_shunt - Z0) / (R_shunt + Z0))], 1, 1)",
+    "simulation": {
+        "hb": {
+            "top_block": false
+        }
     }
-  ],
-  "port_count": 1,
-  "port_names": [
-    "p1"
-  ],
-  "about": "One-port load termination defined by its shunt resistance and the cell reference impedance.",
-  "sketch": "o---R_shunt---\u2534",
-  "matrix_type": "S",
-  "matrix_is_code": true,
-  "matrix_code": "reshape(ComplexF64[ComplexF64((R_shunt - Z0) / (R_shunt + Z0))], 1, 1)"
 }

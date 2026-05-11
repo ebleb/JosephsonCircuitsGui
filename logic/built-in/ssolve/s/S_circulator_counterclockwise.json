@@ -1,18 +1,22 @@
 {
-  "name": "S_circulator_counterclockwise",
-  "type": "built-in",
-  "subtype": "sSolve",
-  "hb_top_block": false,
-  "variables": [],
-  "port_count": 3,
-  "port_names": [
-    "p1",
-    "p2",
-    "p3"
-  ],
-  "about": "Ideal counterclockwise circulator.",
-  "sketch": "1 -> 3 -> 2 -> 1",
-  "matrix_type": "S",
-  "matrix_is_code": true,
-  "matrix_code": "JosephsonCircuits.S_circulator_counterclockwise()"
+    "name": "S_circulator_counterclockwise",
+    "type": "built-in",
+    "subtype": "sSolve",
+    "variables": [],
+    "port_count": 3,
+    "port_names": [
+        "p1",
+        "p2",
+        "p3"
+    ],
+    "about": "Ideal counterclockwise circulator.",
+    "sketch": "1 -> 3 -> 2 -> 1",
+    "matrix_type": "S",
+    "matrix_is_code": true,
+    "matrix_code": "JosephsonCircuits.S_circulator_counterclockwise()",
+    "simulation": {
+        "hb": {
+            "top_block": false
+        }
+    }
 }

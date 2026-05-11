@@ -1,63 +1,67 @@
 {
-  "name": "ABCD_seriesZ__p_39ba025f57",
-  "type": "built-in",
-  "subtype": "sSolve",
-  "hb_top_block": false,
-  "variables": [
-    {
-      "name": "Z1",
-      "default": "50.0",
-      "resolved": "im*w/1000000000000"
-    }
-  ],
-  "port_count": 2,
-  "port_names": [
-    "p1",
-    "p2"
-  ],
-  "about": "ABCD matrix for a series impedance.",
-  "sketch": "o---Z1---o\n\n\no--------o",
-  "matrix_type": "ABCD",
-  "matrix_is_code": true,
-  "matrix_code": "JosephsonCircuits.ABCD_seriesZ(Z1)",
-  "x-equivalent-circuit": {
-    "kind": "lumped_passive_network",
-    "branches": [
-      {
-        "name": "Z1",
-        "between": [
-          "p1",
-          "p2"
+    "name": "ABCD_seriesZ__p_39ba025f57",
+    "type": "built-in",
+    "subtype": "sSolve",
+    "variables": [
+        {
+            "name": "Z1",
+            "default": "50.0",
+            "resolved": "im*w/1000000000000"
+        }
+    ],
+    "port_count": 2,
+    "port_names": [
+        "p1",
+        "p2"
+    ],
+    "about": "ABCD matrix for a series impedance.",
+    "sketch": "o---Z1---o\n\n\no--------o",
+    "matrix_type": "ABCD",
+    "matrix_is_code": true,
+    "matrix_code": "JosephsonCircuits.ABCD_seriesZ(Z1)",
+    "x-equivalent-circuit": {
+        "kind": "lumped_passive_network",
+        "branches": [
+            {
+                "name": "Z1",
+                "between": [
+                    "p1",
+                    "p2"
+                ],
+                "impedance": "Z1"
+            }
         ],
-        "impedance": "Z1"
-      }
+        "pins": [
+            {
+                "name": "p1",
+                "node": "p1"
+            },
+            {
+                "name": "p2",
+                "node": "p2"
+            }
+        ],
+        "ground": "0"
+    },
+    "z0": 50.0,
+    "simulation_input_ports": [
+        "P1"
     ],
-    "pins": [
-      {
-        "name": "p1",
-        "node": "p1"
-      },
-      {
-        "name": "p2",
-        "node": "p2"
-      }
+    "simulation_output_ports": [
+        "P1"
     ],
-    "ground": "0"
-  },
-  "z0": 50.0,
-  "simulation_input_ports": [
-    "P1"
-  ],
-  "simulation_output_ports": [
-    "P1"
-  ],
-  "simulation_freq_start": 1.0,
-  "simulation_freq_stop": 20.0,
-  "simulation_freq_points": 200,
-  "simulation_sweep_type": "linear",
-  "simulation_figure_title": "subplot: ABCD_seriesZ",
-  "specialized_from": "ABCD_seriesZ",
-  "specialized_parameters": {
-    "Z1": "im*w/1000000000000"
-  }
+    "simulation_freq_start": 1.0,
+    "simulation_freq_stop": 20.0,
+    "simulation_freq_points": 200,
+    "simulation_sweep_type": "linear",
+    "simulation_figure_title": "subplot: ABCD_seriesZ",
+    "specialized_from": "ABCD_seriesZ",
+    "specialized_parameters": {
+        "Z1": "im*w/1000000000000"
+    },
+    "simulation": {
+        "hb": {
+            "top_block": false
+        }
+    }
 }

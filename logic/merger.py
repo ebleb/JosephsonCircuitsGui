@@ -894,7 +894,11 @@ def flatten_circuit_data(
     flat_labels = []
     aliases = {}
 
-    is_top_level = str(data.get("hb_top_block", "")).lower() == "true"
+    _hb_top_val = (data.get("simulation") or {}).get("hb", {}).get("top_block")
+    is_top_level = (
+        str(_hb_top_val).lower() in ("true", "1", "yes")
+        or str(data.get("hb_top_block", "")).lower() == "true"
+    )
 
     validate_repeat_usage(
         data,
@@ -1091,15 +1095,24 @@ def collapse_and_save_hbsolve(
     with open(file_path, "r") as f:
         data = json.load(f)
 
-    if str(data.get("hb_top_block", "")).lower() != "true":
+    _hb_top_val2 = (data.get("simulation") or {}).get("hb", {}).get("top_block")
+    _data_is_hb_top = (
+        str(_hb_top_val2).lower() in ("true", "1", "yes")
+        or str(data.get("hb_top_block", "")).lower() == "true"
+    )
+    if not _data_is_hb_top:
         raise ValueError(
             f"Cannot collapse {file_path.name}: expected this top HB block "
-            f'to have "hb_top_block": "true".'
+            f'to have simulation.hb.top_block = true.'
         )
 
     print(f"    [Action] MERGE: Collapsing '{file_path.name}' into a flattened logical circuit...")
 
     hb_settings = {key: data[key] for key in HB_SETTING_KEYS if key in data}
+    if "z0" not in hb_settings:
+        sim_z0 = (data.get("simulation") or {}).get("z0")
+        if sim_z0 is not None:
+            hb_settings["z0"] = sim_z0
 
     flat_insts, flat_wires, flat_pins, flat_labels, _ = flatten_circuit_data(
         data,
@@ -1254,6 +1267,10 @@ def execute_merge(
         )
 
         local_settings = extract_settings(data, SPARAM_SETTING_KEYS)
+        if "z0" not in local_settings:
+            sim_z0 = (data.get("simulation") or {}).get("z0")
+            if sim_z0 is not None:
+                local_settings["z0"] = sim_z0
 
         if inherited_sparam_settings is None:
             inherited_sparam_settings = local_settings

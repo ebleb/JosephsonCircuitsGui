@@ -316,7 +316,10 @@ def walk_cells(file_path, builtin_dir, script_dir, memo, resolved_dir=None, seen
 
 
 def has_hb_top_block_marker(data):
-    return truthy(data.get("hb_top_block", False))
+    return (
+        truthy((data.get("simulation") or {}).get("hb", {}).get("top_block", False))
+        or truthy(data.get("hb_top_block", False))
+    )
 
 
 def nested_hb_top_block_occurrences(occurrences):

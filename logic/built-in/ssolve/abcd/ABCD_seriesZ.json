@@ -1,43 +1,50 @@
 {
-  "name": "ABCD_seriesZ",
-  "type": "built-in",
-  "subtype": "sSolve",
-  "hb_top_block": false,
-  "variables": [
-    {
-      "name": "Z1",
-      "default": "50.0"
+    "name": "ABCD_seriesZ",
+    "type": "built-in",
+    "subtype": "sSolve",
+    "variables": [
+        {
+            "name": "Z1",
+            "default": "50.0"
+        }
+    ],
+    "port_count": 2,
+    "port_names": [
+        "p1",
+        "p2"
+    ],
+    "about": "ABCD matrix for a series impedance.",
+    "sketch": "o---Z1---o\n\n\no--------o",
+    "matrix_type": "ABCD",
+    "matrix_is_code": true,
+    "matrix_code": "JosephsonCircuits.ABCD_seriesZ(Z1)",
+    "x-equivalent-circuit": {
+        "kind": "lumped_passive_network",
+        "branches": [
+            {
+                "name": "Z1",
+                "between": [
+                    "p1",
+                    "p2"
+                ],
+                "impedance": "Z1"
+            }
+        ],
+        "pins": [
+            {
+                "name": "p1",
+                "node": "p1"
+            },
+            {
+                "name": "p2",
+                "node": "p2"
+            }
+        ],
+        "ground": "0"
+    },
+    "simulation": {
+        "hb": {
+            "top_block": false
+        }
     }
-  ],
-  "port_count": 2,
-  "port_names": [
-    "p1",
-    "p2"
-  ],
-  "about": "ABCD matrix for a series impedance.",
-  "sketch": "o---Z1---o\n\n\no--------o",
-  "matrix_type": "ABCD",
-  "matrix_is_code": true,
-  "matrix_code": "JosephsonCircuits.ABCD_seriesZ(Z1)",
-  "x-equivalent-circuit": {
-    "kind": "lumped_passive_network",
-    "branches": [
-      {
-        "name": "Z1",
-        "between": ["p1", "p2"],
-        "impedance": "Z1"
-      }
-    ],
-    "pins": [
-      {
-        "name": "p1",
-        "node": "p1"
-      },
-      {
-        "name": "p2",
-        "node": "p2"
-      }
-    ],
-    "ground": "0"
-  }
 }

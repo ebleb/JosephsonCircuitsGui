@@ -117,18 +117,6 @@ from julia_hb_importer import (
     probe_julia_source,
 )
 
-HB_INSTANCE_KEYS = [
-    "hb_top_block",
-    "hb_pump_ports",
-    "hb_pump_frequencies",
-    "hb_pump_currents",
-    "hb_dc_ports",
-    "hb_dc_currents",
-    "hb_modulation_harmonics",
-    "hb_pump_harmonics",
-    "hb_threewave_mixing",
-    "hb_fourwave_mixing",
-]
 
 VARIABLE_GLOBAL_NAMES = RESERVED_VARIABLE_NAMES | {
     "im", "pi", "exp", "sqrt", "sin", "cos", "tan", "log", "log10", "abs", "real", "imag",
@@ -2310,7 +2298,6 @@ class MainWindow(QMainWindow):
             "path": str(self.project_dir),
             "version": 1,
             "default_cell": self.project.get("default_cell", ""),
-            "default_z0": self.project.get("default_z0", 50.0),
             "recent_cells": self.project.get("recent_cells", []),
             "imports": self.project.get("imports", []),
             "gui": {
@@ -2884,7 +2871,7 @@ Original code:
             return
         cell = blank_cell(name, cell_type)
         cell["description"] = desc.toPlainText()
-        cell["z0"] = z0.value()
+        cell.setdefault("simulation", {})["z0"] = z0.value()
         if cell_type == "matrix":
             ports = [clean_name(x) for x in port_names.text().split(",") if clean_name(x)]
             cell["matrix"] = {
@@ -3003,7 +2990,7 @@ Original code:
                 "port_names": self.cell_port_names(c),
                 "variables": self.public_variable_items(c),
                 "symbol": c.get("symbol") or default_symbol(self.cell_port_names(c)),
-                **{key: json.loads(json.dumps(c.get(key))) for key in HB_INSTANCE_KEYS if key in c},
+                "hb": json.loads(json.dumps(c.get("simulation", {}).get("hb") or {})),
             }
             for c in self.project.get("cells", {}).values()
             if c.get("id") != self.active_cell_id and not c.get("readOnly")
@@ -3021,7 +3008,7 @@ Original code:
                         "port_names": ports,
                         "variables": self.public_variable_items(cell),
                         "symbol": cell.get("symbol") or default_symbol(ports),
-                        **{key: json.loads(json.dumps(cell.get(key))) for key in HB_INSTANCE_KEYS if key in cell},
+                        "hb": json.loads(json.dumps(cell.get("simulation", {}).get("hb") or {})),
                     }
                 )
         return self.builtins + local + imported
@@ -3048,17 +3035,13 @@ Original code:
         return None
 
     def copy_hb_settings_to_instance(self, inst: dict[str, Any], ref: dict[str, Any]) -> None:
-        for key in HB_INSTANCE_KEYS:
-            if key in ref:
-                inst[key] = json.loads(json.dumps(ref.get(key)))
-            else:
-                inst.pop(key, None)
+        inst["hb"] = json.loads(json.dumps(ref.get("hb") or {}))
 
-    def instance_hb_settings_summary(self, inst: dict[str, Any]) -> str:
-        pump_ports = ", ".join(str(x) for x in inst.get("hb_pump_ports", []) or []) or "none"
-        pump_freqs = ", ".join(str(x) for x in inst.get("hb_pump_frequencies", []) or []) or "none"
-        mod = ", ".join(str(x) for x in inst.get("hb_modulation_harmonics", []) or []) or "default"
-        pump_harm = ", ".join(str(x) for x in inst.get("hb_pump_harmonics", []) or []) or "default"
+    def instance_hb_settings_summary(self, hb: dict[str, Any]) -> str:
+        pump_ports = ", ".join(str(x) for x in hb.get("pump_ports", []) or []) or "none"
+        pump_freqs = ", ".join(str(x) for x in hb.get("pump_frequencies", []) or []) or "none"
+        mod = ", ".join(str(x) for x in hb.get("modulation_harmonics", []) or []) or "default"
+        pump_harm = ", ".join(str(x) for x in hb.get("pump_harmonics", []) or []) or "default"
         return f"Pump ports: {pump_ports}   Pump freqs: {pump_freqs} GHz   Mod harmonics: {mod}   Pump harmonics: {pump_harm}"
 
     def unique_uid(self, prefix: str) -> str:
@@ -4143,14 +4126,14 @@ Original code:
         name = QLineEdit(cell.get("name", ""))
         desc = QPlainTextEdit(cell.get("description", ""))
         desc.setMaximumHeight(80)
-        z0 = QLineEdit(str(cell.get("z0", 50)))
+        z0 = QLineEdit(str(cell.get("simulation", {}).get("z0", 50)))
         form.addRow("Name", name)
         form.addRow("Description", desc)
         form.addRow("z0", z0)
         self.inspector_layout.addLayout(form)
         name.editingFinished.connect(lambda: self.set_cell_prop(cell, "name", clean_name(name.text())))
         desc.textChanged.connect(lambda: self.set_cell_prop(cell, "description", desc.toPlainText()))
-        z0.editingFinished.connect(lambda: self.set_cell_prop(cell, "z0", self.float_or(z0.text(), 50.0)))
+        z0.editingFinished.connect(lambda: (cell.setdefault("simulation", {}).__setitem__("z0", self.float_or(z0.text(), 50.0)), self.mark_dirty(cell), self.refresh_tabs()))
         self.inspector_layout.addWidget(QLabel("Ports"))
         ports = QTableWidget(len(cell.get("pins", [])), 3)
         ports.setHorizontalHeaderLabels(["#", "Name", "Net"])
@@ -4168,19 +4151,20 @@ Original code:
         sim_button = QPushButton("Simulation Setup")
         sim_button.clicked.connect(self.edit_simulation_setup)
         self.inspector_layout.addWidget(sim_button)
+        _cell_hb = cell.setdefault("simulation", {}).setdefault("hb", {})
         hb_top_cb = QCheckBox("HB top block")
-        hb_top_cb.setChecked(bool(cell.get("hb_top_block", False)))
+        hb_top_cb.setChecked(bool(_cell_hb.get("top_block", False)))
         self.inspector_layout.addWidget(hb_top_cb)
         hb_disable_cb = QCheckBox("Skip nested HB block check")
         hb_disable_cb.setChecked(bool(cell.get("skip_hb_top_block_check", False)))
         hb_disable_cb.setVisible(cell.get("type") == "schematic")
         self.inspector_layout.addWidget(hb_disable_cb)
         hb_settings_btn = QPushButton("HB Simulation Settings")
-        hb_settings_btn.setVisible(bool(cell.get("hb_top_block", False)))
+        hb_settings_btn.setVisible(bool(_cell_hb.get("top_block", False)))
         self.inspector_layout.addWidget(hb_settings_btn)
 
         def _on_hb_top_toggled(checked: bool) -> None:
-            cell["hb_top_block"] = checked
+            cell.setdefault("simulation", {}).setdefault("hb", {})["top_block"] = checked
             hb_settings_btn.setVisible(checked)
             self.mark_dirty(cell)
 
@@ -4189,7 +4173,7 @@ Original code:
             cell.update({"skip_hb_top_block_check": checked}),  # type: ignore[func-returns-value]
             self.mark_dirty(cell),
         ))
-        hb_settings_btn.clicked.connect(lambda _checked=False, c=cell: self.edit_hb_settings_cell(c))
+        hb_settings_btn.clicked.connect(lambda _checked=False, c=cell: self.edit_hb_settings(c.setdefault("simulation", {}).setdefault("hb", {}), c))
         port_order = QPushButton("Edit Port Order")
         port_order.clicked.connect(self.edit_port_order)
         self.inspector_layout.addWidget(port_order)
@@ -4565,17 +4549,18 @@ Original code:
         cell_def = self.cell_definition_for_instance(inst)
         if type_name and self.project:
             # Show indicator and editable settings when the referenced block is an HB simulation root.
-            if (cell_def and cell_def.get("hb_top_block")) or inst.get("hb_top_block"):
+            _def_hb = (cell_def or {}).get("simulation", {}).get("hb", {})
+            if _def_hb.get("top_block") or inst.get("hb", {}).get("top_block"):
                 hb_info = QLabel("⚠️ Cell definition is marked as HB top block")
                 hb_info.setStyleSheet("color: #8e4b32; font-weight: bold;")
                 self.inspector_layout.addWidget(hb_info)
-                if cell_def and "hb_top_block" not in inst:
+                if cell_def and not inst.get("hb"):
                     self.copy_hb_settings_to_instance(inst, cell_def)
-                hb_summary = QLabel(self.instance_hb_settings_summary(inst))
+                hb_summary = QLabel(self.instance_hb_settings_summary(inst.get("hb") or {}))
                 hb_summary.setWordWrap(True)
                 self.inspector_layout.addWidget(hb_summary)
                 hb_settings_btn = QPushButton("HB Instance Simulation Settings")
-                hb_settings_btn.clicked.connect(lambda _checked=False, i=inst, owner=cell: self.edit_hb_settings_cell(i, owner))
+                hb_settings_btn.clicked.connect(lambda _checked=False, i=inst, owner=cell: self.edit_hb_settings(i.setdefault("hb", {}), owner))
                 self.inspector_layout.addWidget(hb_settings_btn)
         params = inst.setdefault("parameters", {})
         has_frequency_dependency = bool(inst.get("has_frequency_dependency")) or "w" in params
@@ -4880,60 +4865,6 @@ Original code:
         inst.setdefault("simulation", {})[key] = checked
         self.mark_dirty()
 
-    def edit_hb_settings_cell(self, cell: dict[str, Any], owner_cell: dict[str, Any] | None = None) -> None:
-        dialog = QDialog(self)
-        dialog.setWindowTitle("HB Simulation Settings")
-        layout = QFormLayout(dialog)
-
-        def list_to_str(lst: list) -> str:
-            return ", ".join(str(x) for x in lst) if lst else ""
-
-        pump_ports = QLineEdit(list_to_str(cell.get("hb_pump_ports", [])))
-        pump_freqs = QLineEdit(list_to_str(cell.get("hb_pump_frequencies", [])))
-        pump_currents = QLineEdit(list_to_str(cell.get("hb_pump_currents", [])))
-        dc_ports = QLineEdit(list_to_str(cell.get("hb_dc_ports", [])))
-        dc_currents = QLineEdit(list_to_str(cell.get("hb_dc_currents", [])))
-        mod_harm = QLineEdit(list_to_str(cell.get("hb_modulation_harmonics", [10]) or [10]))
-        pump_harm = QLineEdit(list_to_str(cell.get("hb_pump_harmonics", [20]) or [20]))
-        threewave = QCheckBox()
-        threewave.setChecked(bool(cell.get("hb_threewave_mixing", True)))
-        fourwave = QCheckBox()
-        fourwave.setChecked(bool(cell.get("hb_fourwave_mixing", True)))
-
-        layout.addRow("Pump ports (comma-separated)", pump_ports)
-        layout.addRow("Pump frequencies GHz (comma-separated)", pump_freqs)
-        layout.addRow("Pump currents (comma-separated)", pump_currents)
-        layout.addRow("DC ports (comma-separated)", dc_ports)
-        layout.addRow("DC currents (comma-separated)", dc_currents)
-        layout.addRow("Modulation harmonics (comma-separated, one per pump)", mod_harm)
-        layout.addRow("Pump harmonics (comma-separated, one per pump)", pump_harm)
-        layout.addRow("Three-wave mixing", threewave)
-        layout.addRow("Four-wave mixing", fourwave)
-
-        buttons = QDialogButtonBox(QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel)
-        layout.addRow(buttons)
-        buttons.accepted.connect(dialog.accept)
-        buttons.rejected.connect(dialog.reject)
-
-        if dialog.exec() != QDialog.DialogCode.Accepted:
-            return
-
-        def parse_list(text: str) -> list[str]:
-            return [x.strip() for x in text.split(",") if x.strip()]
-
-        self.record_undo()
-        cell["hb_pump_ports"] = parse_list(pump_ports.text())
-        cell["hb_pump_frequencies"] = [float(x) for x in parse_list(pump_freqs.text()) if x]
-        cell["hb_pump_currents"] = parse_list(pump_currents.text())
-        cell["hb_dc_ports"] = parse_list(dc_ports.text())
-        cell["hb_dc_currents"] = parse_list(dc_currents.text())
-        cell["hb_modulation_harmonics"] = [int(x) for x in parse_list(mod_harm.text()) if x]
-        cell["hb_pump_harmonics"] = [int(x) for x in parse_list(pump_harm.text()) if x]
-        cell["hb_threewave_mixing"] = threewave.isChecked()
-        cell["hb_fourwave_mixing"] = fourwave.isChecked()
-        self.mark_dirty(owner_cell or cell)
-        self.refresh_inspector()
-
     def edit_hb_settings(self, hb: dict[str, Any], owner: dict[str, Any]) -> None:
         dialog = QDialog(self)
         dialog.setWindowTitle("HB Simulation Settings")
@@ -4988,6 +4919,7 @@ Original code:
         hb["threewave_mixing"] = threewave.isChecked()
         hb["fourwave_mixing"] = fourwave.isChecked()
         self.mark_dirty()
+        self.refresh_inspector()
 
     def edit_repeat_settings(self) -> None:
         inst = self.find_instance(self.selected.id if self.selected else None)
@@ -5156,7 +5088,7 @@ Original code:
         z0 = QDoubleSpinBox()
         z0.setRange(0.000001, 1e12)
         z0.setDecimals(6)
-        z0.setValue(float(cell.get("z0", 50.0)))
+        z0.setValue(float(cell.get("simulation", {}).get("z0", 50.0)))
         x = cell["simulation"].setdefault("x", {})
         x_input = port_combo(str(x.get("input_port", "")))
         x_output = port_combo(str(x.get("output_port", "")))
@@ -5195,16 +5127,17 @@ Original code:
         s_form.addRow("Output port", output_port)
         hb_group = QGroupBox("HB top-block settings")
         hb_layout = QVBoxLayout(hb_group)
-        if cell.get("hb_top_block"):
-            hb_layout.addWidget(QLabel(self.instance_hb_settings_summary(cell)))
+        _sim_hb = cell.get("simulation", {}).get("hb", {})
+        if _sim_hb.get("top_block"):
+            hb_layout.addWidget(QLabel(self.instance_hb_settings_summary(_sim_hb)))
             hb_settings = QPushButton("Edit HB Settings")
-            hb_settings.clicked.connect(lambda _checked=False, c=cell: self.edit_hb_settings_cell(c))
+            hb_settings.clicked.connect(lambda _checked=False, c=cell: self.edit_hb_settings(c.setdefault("simulation", {}).setdefault("hb", {}), c))
             hb_layout.addWidget(hb_settings)
         else:
             top_names = sorted(
                 str(inst.get("uid", ""))
                 for inst in cell.get("instances", [])
-                if inst.get("hb_top_block")
+                if inst.get("hb", {}).get("top_block")
             )
             msg = "HB top block: " + (", ".join(top_names) if top_names else "none marked")
             hb_layout.addWidget(QLabel(msg))
@@ -5243,7 +5176,7 @@ Original code:
             sim["freq_points"] = points.value()
             sim["sweep_type"] = sweep.currentText()
             sim["figure_title"] = title.text().strip() or cell.get("name")
-            cell["z0"] = z0.value()
+            sim["z0"] = z0.value()
             x = sim.setdefault("x", {})
             x["input_port"] = x_input.currentText()
             x["output_port"] = x_output.currentText()
@@ -5497,7 +5430,7 @@ Original code:
         value = QDoubleSpinBox()
         value.setRange(0.000001, 1e12)
         value.setDecimals(6)
-        value.setValue(float(cell.get("z0", 50)))
+        value.setValue(float(cell.get("simulation", {}).get("z0", 50)))
         current_only = QRadioButton("Current cell only")
         project_default = QRadioButton("Current project default")
         selected_cells = QRadioButton("Selected cells")
@@ -5514,18 +5447,17 @@ Original code:
             return
         self.record_undo()
         if project_default.isChecked() and self.project:
-            self.project["default_z0"] = value.value()
             for item in self.project.get("cells", {}).values():
                 if not item.get("readOnly"):
-                    item["z0"] = value.value()
+                    item.setdefault("simulation", {})["z0"] = value.value()
                     item["dirty"] = True
         elif selected_cells.isChecked() and self.project:
             for item in self.project.get("cells", {}).values():
                 if not item.get("readOnly") and item.get("id") == self.active_cell_id:
-                    item["z0"] = value.value()
+                    item.setdefault("simulation", {})["z0"] = value.value()
                     item["dirty"] = True
         else:
-            cell["z0"] = value.value()
+            cell.setdefault("simulation", {})["z0"] = value.value()
             self.mark_dirty(cell)
         self.refresh_all()
 
@@ -5858,7 +5790,7 @@ Original code:
                 out.append(("Error", "Generated HB block has no Julia source."))
             if not cell.get("pins"):
                 out.append(("Error", "Generated HB block has no exported ports."))
-            if float(cell.get("z0", 0) or 0) <= 0:
+            if float(cell.get("simulation", {}).get("z0", 0) or 0) <= 0:
                 out.append(("Error", "z0 must be positive."))
             return out
         seen: set[str] = set()
@@ -5975,7 +5907,7 @@ Original code:
             if port not in pins and port not in p_uids_with_labels:
                 out.append(("Error", f"Simulation port {port} is not an exported pin."))
         sim = cell.get("simulation", {})
-        if float(cell.get("z0", 0) or 0) <= 0:
+        if float(sim.get("z0", 0) or 0) <= 0:
             out.append(("Error", "z0 must be positive."))
         if float(sim.get("freq_start", 0) or 0) >= float(sim.get("freq_stop", 0) or 0):
             out.append(("Error", "Frequency stop must be greater than frequency start."))
@@ -6038,7 +5970,7 @@ Original code:
                 "matrix_values": matrix.get("values", ""),
                 "matrix_definitions": matrix.get("definitions", ""),
                 "variables": [{"name": v.get("name"), "default": v.get("default") or v.get("value")} for v in cell.get("variables", [])],
-                "z0": float(cell.get("z0", 50)),
+                "simulation": {"z0": float(cell.get("simulation", {}).get("z0", 50))},
                 "symbol": cell.get("symbol") or default_symbol(ports),
                 "symbol_port_layout": cell.get("symbol_port_layout") or (cell.get("symbol") or default_symbol(ports)).get("port_layout", []),
                 "gui": cell.get("gui", {}),
@@ -6104,7 +6036,10 @@ Original code:
             "pins": pins,
             "labels": labels,
             "variables": self.inferred_cell_variables(cell),
-            "z0": float(cell.get("z0", 50)),
+            "simulation": {
+                "z0": float(cell.get("simulation", {}).get("z0", 50)),
+                "hb": json.loads(json.dumps(cell.get("simulation", {}).get("hb") or {})),
+            },
             "simulation_input_ports": sim.get("input_ports", []),
             "simulation_output_ports": sim.get("output_ports", []),
             "simulation_freq_start": float(sim.get("freq_start", 2.0)),
@@ -6112,16 +6047,6 @@ Original code:
             "simulation_freq_points": int(sim.get("freq_points", 200)),
             "simulation_sweep_type": sim.get("sweep_type", "linear"),
             "simulation_figure_title": sim.get("figure_title") or cell.get("name"),
-            "hb_top_block": cell.get("hb_top_block", False),
-            "hb_pump_ports": cell.get("hb_pump_ports", []),
-            "hb_pump_frequencies": cell.get("hb_pump_frequencies", []),
-            "hb_pump_currents": cell.get("hb_pump_currents", []),
-            "hb_dc_ports": cell.get("hb_dc_ports", []),
-            "hb_dc_currents": cell.get("hb_dc_currents", []),
-            "hb_modulation_harmonics": cell.get("hb_modulation_harmonics", [10]),
-            "hb_pump_harmonics": cell.get("hb_pump_harmonics", [20]),
-            "hb_threewave_mixing": cell.get("hb_threewave_mixing", True),
-            "hb_fourwave_mixing": cell.get("hb_fourwave_mixing", True),
             "gui": gui_meta,
         }
         for inst in cell.get("instances", []):
@@ -6188,7 +6113,8 @@ Original code:
                 }
             if inst.get("internal_parameter_overrides") and not rewrote_to_override_cell:
                 inst_export["internal_parameter_overrides"] = dict(inst.get("internal_parameter_overrides", {}))
-            inst_export.update({key: inst.get(key) for key in HB_INSTANCE_KEYS if key in inst})
+            if inst.get("hb"):
+                inst_export["hb"] = json.loads(json.dumps(inst["hb"]))
             base["instances"].append(inst_export)
         if cell.get("skip_hb_top_block_check"):
             base["skip_hb_top_block_check"] = True
@@ -6280,22 +6206,11 @@ Original code:
             "labels": [],
             "instances": [],
             "nets": [],
-            "z0": float(cell.get("z0", 50) or 50),
             "generated_language": cell.get("generated_language", "julia"),
             "generator_kind": cell.get("generator_kind", "josephsoncircuits_circuit"),
             "generated_source": cell.get("generated_source", ""),
             "generated_summary": cell.get("generated_summary", {}),
             "simulation": cell.get("simulation", {}),
-            "hb_top_block": cell.get("hb_top_block", True),
-            "hb_pump_ports": cell.get("hb_pump_ports", []),
-            "hb_pump_frequencies": cell.get("hb_pump_frequencies", []),
-            "hb_pump_currents": cell.get("hb_pump_currents", []),
-            "hb_dc_ports": cell.get("hb_dc_ports", []),
-            "hb_dc_currents": cell.get("hb_dc_currents", []),
-            "hb_modulation_harmonics": cell.get("hb_modulation_harmonics", [10]),
-            "hb_pump_harmonics": cell.get("hb_pump_harmonics", [20]),
-            "hb_threewave_mixing": cell.get("hb_threewave_mixing", True),
-            "hb_fourwave_mixing": cell.get("hb_fourwave_mixing", True),
             "symbol": cell.get("symbol") or default_symbol(self.cell_port_names(cell)),
             "symbol_port_layout": cell.get("symbol_port_layout") or (cell.get("symbol") or default_symbol(self.cell_port_names(cell))).get("port_layout", []),
             "gui": cell.get("gui", {}),
@@ -6401,7 +6316,9 @@ Original code:
         raw = self.coerce_direct_s_matrix_cell(raw)
         cell = blank_cell(raw.get("name", "imported_cell"), raw.get("type", "schematic"))
         cell["dirty"] = False
-        cell["z0"] = raw.get("z0", 50)
+        # Migrate z0: prefer simulation.z0, fall back to legacy top-level z0
+        _raw_sim = raw.get("simulation") or {}
+        cell.setdefault("simulation", {})["z0"] = _raw_sim.get("z0") or raw.get("z0", 50)
         if raw.get("generated_source"):
             cell["generated_source"] = raw.get("generated_source", "")
             cell["generated_from"] = raw.get("generated_from", "julia_reverse_import")
@@ -6417,17 +6334,23 @@ Original code:
             cell["generator_kind"] = raw.get("generator_kind", "josephsoncircuits_circuit")
             cell["generated_source"] = raw.get("generated_source", "")
             cell["generated_summary"] = raw.get("generated_summary", {})
-            cell["simulation"] = raw.get("simulation", cell.get("simulation", {}))
-            cell["hb_top_block"] = truthy(raw.get("hb_top_block", True))
-            cell["hb_pump_ports"] = as_list(raw.get("hb_pump_ports", []))
-            cell["hb_pump_frequencies"] = as_list(raw.get("hb_pump_frequencies", []))
-            cell["hb_pump_currents"] = as_list(raw.get("hb_pump_currents", []))
-            cell["hb_dc_ports"] = as_list(raw.get("hb_dc_ports", []))
-            cell["hb_dc_currents"] = as_list(raw.get("hb_dc_currents", []))
-            cell["hb_modulation_harmonics"] = raw.get("hb_modulation_harmonics", [10])
-            cell["hb_pump_harmonics"] = raw.get("hb_pump_harmonics", [20])
-            cell["hb_threewave_mixing"] = truthy(raw.get("hb_threewave_mixing", True))
-            cell["hb_fourwave_mixing"] = truthy(raw.get("hb_fourwave_mixing", True))
+            _sim = dict(raw.get("simulation", cell.get("simulation", {})))
+            if "z0" not in _sim:
+                _sim["z0"] = raw.get("z0", 50)
+            _raw_hb = _sim.get("hb") or {
+                "top_block": truthy(raw.get("hb_top_block", True)),
+                "pump_ports": as_list(raw.get("hb_pump_ports", [])),
+                "pump_frequencies": as_list(raw.get("hb_pump_frequencies", [])),
+                "pump_currents": as_list(raw.get("hb_pump_currents", [])),
+                "dc_ports": as_list(raw.get("hb_dc_ports", [])),
+                "dc_currents": as_list(raw.get("hb_dc_currents", [])),
+                "modulation_harmonics": raw.get("hb_modulation_harmonics", [10]),
+                "pump_harmonics": raw.get("hb_pump_harmonics", [20]),
+                "threewave_mixing": truthy(raw.get("hb_threewave_mixing", True)),
+                "fourwave_mixing": truthy(raw.get("hb_fourwave_mixing", True)),
+            }
+            _sim["hb"] = _raw_hb
+            cell["simulation"] = _sim
             cell["symbol"] = raw.get("symbol") or default_symbol(self.cell_port_names(cell))
             cell["symbol_port_layout"] = raw.get("symbol_port_layout") or cell["symbol"].get("port_layout", [])
             cell["reference"] = bool(raw.get("reference", False))
@@ -6588,17 +6511,19 @@ Original code:
         sim["freq_points"] = raw.get("simulation_freq_points", 200)
         sim["sweep_type"] = raw.get("simulation_sweep_type", "linear")
         sim["figure_title"] = raw.get("simulation_figure_title", cell["name"])
-        cell["hb_top_block"] = truthy(raw.get("hb_top_block", False))
         cell["skip_hb_top_block_check"] = truthy(raw.get("skip_hb_top_block_check", False))
-        cell["hb_pump_ports"] = as_list(raw.get("hb_pump_ports", []))
-        cell["hb_pump_frequencies"] = as_list(raw.get("hb_pump_frequencies", []))
-        cell["hb_pump_currents"] = as_list(raw.get("hb_pump_currents", []))
-        cell["hb_dc_ports"] = as_list(raw.get("hb_dc_ports", []))
-        cell["hb_dc_currents"] = as_list(raw.get("hb_dc_currents", []))
-        cell["hb_modulation_harmonics"] = raw.get("hb_modulation_harmonics", [10])
-        cell["hb_pump_harmonics"] = raw.get("hb_pump_harmonics", [20])
-        cell["hb_threewave_mixing"] = truthy(raw.get("hb_threewave_mixing", True))
-        cell["hb_fourwave_mixing"] = truthy(raw.get("hb_fourwave_mixing", True))
+        _raw_sim_hb = (raw.get("simulation") or {}).get("hb") or {}
+        _cell_sim_hb = cell.setdefault("simulation", {}).setdefault("hb", {})
+        _cell_sim_hb["top_block"] = truthy(_raw_sim_hb.get("top_block", raw.get("hb_top_block", False)))
+        _cell_sim_hb["pump_ports"] = as_list(_raw_sim_hb.get("pump_ports", raw.get("hb_pump_ports", [])))
+        _cell_sim_hb["pump_frequencies"] = as_list(_raw_sim_hb.get("pump_frequencies", raw.get("hb_pump_frequencies", [])))
+        _cell_sim_hb["pump_currents"] = as_list(_raw_sim_hb.get("pump_currents", raw.get("hb_pump_currents", [])))
+        _cell_sim_hb["dc_ports"] = as_list(_raw_sim_hb.get("dc_ports", raw.get("hb_dc_ports", [])))
+        _cell_sim_hb["dc_currents"] = as_list(_raw_sim_hb.get("dc_currents", raw.get("hb_dc_currents", [])))
+        _cell_sim_hb["modulation_harmonics"] = _raw_sim_hb.get("modulation_harmonics", raw.get("hb_modulation_harmonics", [10]))
+        _cell_sim_hb["pump_harmonics"] = _raw_sim_hb.get("pump_harmonics", raw.get("hb_pump_harmonics", [20]))
+        _cell_sim_hb["threewave_mixing"] = truthy(_raw_sim_hb.get("threewave_mixing", raw.get("hb_threewave_mixing", True)))
+        _cell_sim_hb["fourwave_mixing"] = truthy(_raw_sim_hb.get("fourwave_mixing", raw.get("hb_fourwave_mixing", True)))
         if truthy(raw.get("x-params", raw.get("x_params", False))):
             sim["mode"] = "x"
         x = sim.setdefault("x", {})
@@ -6666,7 +6591,7 @@ Original code:
                     item = item_by_name.get(cell_name)
                     if item is None:
                         return
-                    item["hb_top_block"] = False
+                    item.setdefault("simulation", {}).setdefault("hb", {})["top_block"] = False
                     # Recursively patch all instances in this cell
                     for inst in item.get("instances", []):
                         inst_type = inst.get("type_name", "")

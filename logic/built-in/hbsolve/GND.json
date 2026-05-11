@@ -1,21 +1,25 @@
 {
-  "name": "GND",
-  "type": "built-in",
-  "subtype": "hbsolve",
-  "hb_top_block": false,
-  "variables": [],
-  "port_count": 1,
-  "port_names": [
-    "p1"
-  ],
-  "about": "HB helper block that marks a node as the global ground reference.",
-  "sketch": "o\n|\nGND",
-  "library_group": "HB Utility Blocks",
-  "symbol_port_layout": [
-    {
-      "side": "left",
-      "port": "p1"
+    "name": "GND",
+    "type": "built-in",
+    "subtype": "hbsolve",
+    "variables": [],
+    "port_count": 1,
+    "port_names": [
+        "p1"
+    ],
+    "about": "HB helper block that marks a node as the global ground reference.",
+    "sketch": "o\n|\nGND",
+    "library_group": "HB Utility Blocks",
+    "symbol_port_layout": [
+        {
+            "side": "left",
+            "port": "p1"
+        }
+    ],
+    "julia_string": "nothing",
+    "simulation": {
+        "hb": {
+            "top_block": false
+        }
     }
-  ],
-  "julia_string": "nothing"
 }

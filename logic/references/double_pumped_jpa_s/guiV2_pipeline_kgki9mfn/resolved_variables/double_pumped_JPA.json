@@ -1,145 +1,151 @@
 {
-  "name": "double_pumped_JPA",
-  "type": "schematic",
-  "instances": [
-    {
-      "type_name": "example_JPA/JPA",
-      "uid": "JP1",
-      "parameters": {},
-      "parameter_order": [],
-      "parameter_kinds": {},
-      "position": [
-        -60.0,
-        -40.0
-      ],
-      "port_count": 2,
-      "port_names": [
-        "P_in",
-        "P_out"
-      ],
-      "rotation_degrees": 0,
-      "repeat_count": 1,
-      "repeat_connections": [],
-      "symbol_port_layout": [
+    "name": "double_pumped_JPA",
+    "type": "schematic",
+    "instances": [
         {
-          "port": "P_in",
-          "side": "left",
-          "position": 0.5
+            "type_name": "example_JPA/JPA",
+            "uid": "JP1",
+            "parameters": {},
+            "parameter_order": [],
+            "parameter_kinds": {},
+            "position": [
+                -60.0,
+                -40.0
+            ],
+            "port_count": 2,
+            "port_names": [
+                "P_in",
+                "P_out"
+            ],
+            "rotation_degrees": 0,
+            "repeat_count": 1,
+            "repeat_connections": [],
+            "symbol_port_layout": [
+                {
+                    "port": "P_in",
+                    "side": "left",
+                    "position": 0.5
+                },
+                {
+                    "port": "P_out",
+                    "side": "right",
+                    "position": 0.5
+                }
+            ],
+            "symbol": {
+                "shape": "rectangle",
+                "width": 120,
+                "height": 70,
+                "label_position": "center",
+                "show_type_name": true,
+                "show_uid": true,
+                "port_layout": [
+                    {
+                        "port": "P_in",
+                        "side": "left",
+                        "position": 0.5,
+                        "label_visible": true
+                    },
+                    {
+                        "port": "P_out",
+                        "side": "right",
+                        "position": 0.5,
+                        "label_visible": true
+                    }
+                ]
+            },
+            "raw_parameters": {},
+            "resolved_parameters": {},
+            "hb": {
+                "top_block": true,
+                "pump_ports": [
+                    "1"
+                ],
+                "pump_frequencies": [
+                    4.75001
+                ],
+                "pump_currents": [
+                    "0.00565e-6"
+                ],
+                "dc_ports": [],
+                "dc_currents": [],
+                "modulation_harmonics": [
+                    10
+                ],
+                "pump_harmonics": [
+                    20
+                ],
+                "threewave_mixing": true,
+                "fourwave_mixing": true
+            }
+        }
+    ],
+    "wires": [],
+    "pins": [
+        {
+            "name": "P_in",
+            "instance_uid": "JP1",
+            "port": "P_in"
         },
         {
-          "port": "P_out",
-          "side": "right",
-          "position": 0.5
+            "name": "P_out",
+            "instance_uid": "JP1",
+            "port": "P_out"
         }
-      ],
-      "symbol": {
-        "shape": "rectangle",
-        "width": 120,
-        "height": 70,
-        "label_position": "center",
-        "show_type_name": true,
-        "show_uid": true,
-        "port_layout": [
-          {
-            "port": "P_in",
-            "side": "left",
-            "position": 0.5,
-            "label_visible": true
-          },
-          {
-            "port": "P_out",
-            "side": "right",
-            "position": 0.5,
-            "label_visible": true
-          }
-        ]
-      },
-      "hb_top_block": true,
-      "hb_pump_ports": [
-        "1"
-      ],
-      "hb_pump_frequencies": [
-        4.75001
-      ],
-      "hb_pump_currents": [
-        "0.00565e-6"
-      ],
-      "hb_dc_ports": [],
-      "hb_dc_currents": [],
-      "hb_modulation_harmonics": [
-        10
-      ],
-      "hb_pump_harmonics": [
-        20
-      ],
-      "hb_threewave_mixing": true,
-      "hb_fourwave_mixing": true,
-      "raw_parameters": {},
-      "resolved_parameters": {}
-    }
-  ],
-  "wires": [],
-  "pins": [
-    {
-      "name": "P_in",
-      "instance_uid": "JP1",
-      "port": "P_in"
+    ],
+    "labels": [],
+    "variables": [],
+    "z0": 50.0,
+    "simulation_input_ports": [
+        "P_in"
+    ],
+    "simulation_output_ports": [
+        "P_out"
+    ],
+    "simulation_freq_start": 4.5,
+    "simulation_freq_stop": 5.0,
+    "simulation_freq_points": 200,
+    "simulation_sweep_type": "linear",
+    "simulation_figure_title": "double_pumped_JPA",
+    "gui": {
+        "version": 1,
+        "viewport": {
+            "zoom": 1,
+            "pan": [
+                0,
+                0
+            ]
+        },
+        "wire_routes": [],
+        "last_selected": []
     },
-    {
-      "name": "P_out",
-      "instance_uid": "JP1",
-      "port": "P_out"
+    "skip_hb_top_block_check": true,
+    "reference": false,
+    "simulation": {
+        "hb": {
+            "top_block": true,
+            "pump_ports": [
+                "1",
+                "1"
+            ],
+            "pump_frequencies": [
+                4.65001,
+                4.85001
+            ],
+            "pump_currents": [
+                "0.00565e-6*1.7",
+                "0.00565e-6*1.7"
+            ],
+            "dc_ports": [],
+            "dc_currents": [],
+            "modulation_harmonics": [
+                8
+            ],
+            "pump_harmonics": [
+                16
+            ],
+            "threewave_mixing": true,
+            "fourwave_mixing": true
+        }
     }
-  ],
-  "labels": [],
-  "variables": [],
-  "z0": 50.0,
-  "simulation_input_ports": [
-    "P_in"
-  ],
-  "simulation_output_ports": [
-    "P_out"
-  ],
-  "simulation_freq_start": 4.5,
-  "simulation_freq_stop": 5.0,
-  "simulation_freq_points": 200,
-  "simulation_sweep_type": "linear",
-  "simulation_figure_title": "double_pumped_JPA",
-  "hb_top_block": true,
-  "hb_pump_ports": [
-    "1",
-    "1"
-  ],
-  "hb_pump_frequencies": [
-    4.65001,
-    4.85001
-  ],
-  "hb_pump_currents": [
-    "0.00565e-6*1.7",
-    "0.00565e-6*1.7"
-  ],
-  "hb_dc_ports": [],
-  "hb_dc_currents": [],
-  "hb_modulation_harmonics": [
-    8
-  ],
-  "hb_pump_harmonics": [
-    16
-  ],
-  "hb_threewave_mixing": true,
-  "hb_fourwave_mixing": true,
-  "gui": {
-    "version": 1,
-    "viewport": {
-      "zoom": 1,
-      "pan": [
-        0,
-        0
-      ]
-    },
-    "wire_routes": [],
-    "last_selected": []
-  },
-  "skip_hb_top_block_check": true,
-  "reference": false
 }

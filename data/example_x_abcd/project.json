@@ -3,7 +3,6 @@
   "path": "/home/benedikte/userdata/urop/app_v2/data/example_x_abcd",
   "version": 1,
   "default_cell": "first_half",
-  "default_z0": 50.0,
   "recent_cells": [
     "example_x_abcd"
   ],

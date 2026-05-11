@@ -347,7 +347,10 @@ def classify_json_for_simulation(json_path, memo):
         # Many primitive JSONs are just built-ins without subtype consistency.
         return get_memo_class_for_path(json_path, memo)
 
-    if data.get("hb_top_block") in [True, "true", "True"]:
+    if (
+        (data.get("simulation") or {}).get("hb", {}).get("top_block") in [True, "true", "True"]
+        or data.get("hb_top_block") in [True, "true", "True"]
+    ):
         return "hbsolve_block"
 
     if data.get("type") == "schematic":
@@ -989,8 +992,8 @@ def extract_sim_variables_julia(data):
     lines = []
     function_names = cell_function_names(data)
 
-    if "z0" in data and data["z0"] not in ["", None]:
-        z0 = data["z0"]
+    z0 = (data.get("simulation") or {}).get("z0") or data.get("z0")
+    if z0 not in ["", None]:
         lines.append(f"Z0 = {z0}")
         lines.append(f"z0 = {z0}")
         lines.append(f"z_0 = {z0}")
@@ -1080,13 +1083,13 @@ def generate_builtin_sparam_script(
     # Only emit z0 aliases globally. Do not emit variables here, because some
     # may depend on w.
     z0_lines = []
-    if "z0" in data and data["z0"] not in ["", None]:
-        z0 = data["z0"]
+    _z0 = (data.get("simulation") or {}).get("z0") or data.get("z0")
+    if _z0 not in ["", None]:
         z0_lines.extend([
-            f"Z0 = {z0}",
-            f"z0 = {z0}",
-            f"z_0 = {z0}",
-            f"Z_0 = {z0}",
+            f"Z0 = {_z0}",
+            f"z0 = {_z0}",
+            f"z_0 = {_z0}",
+            f"Z_0 = {_z0}",
         ])
     z0_str = "\n".join(z0_lines)
 
@@ -1701,11 +1704,12 @@ def generate_hbsolve_script(json_path, cache_dir, out_jl_path, out_csv_path, pro
         builtin_dir,
     )
 
-    pump_freqs = data.get("hb_pump_frequencies", [7.12]) or [7.12]
-    pump_ports = data.get("hb_pump_ports", [1]) or [1]
-    pump_currents = data.get("hb_pump_currents", [1.85e-6]) or [1.85e-6]
-    dc_ports = data.get("hb_dc_ports", []) or []
-    dc_currents = data.get("hb_dc_currents", []) or []
+    _sim_hb = (data.get("simulation") or {}).get("hb") or {}
+    pump_freqs = _sim_hb.get("pump_frequencies", data.get("hb_pump_frequencies", [7.12])) or [7.12]
+    pump_ports = _sim_hb.get("pump_ports", data.get("hb_pump_ports", [1])) or [1]
+    pump_currents = _sim_hb.get("pump_currents", data.get("hb_pump_currents", [1.85e-6])) or [1.85e-6]
+    dc_ports = _sim_hb.get("dc_ports", data.get("hb_dc_ports", [])) or []
+    dc_currents = _sim_hb.get("dc_currents", data.get("hb_dc_currents", [])) or []
 
     n_pumps = max(1, len(pump_freqs))
 
@@ -1717,8 +1721,8 @@ def generate_hbsolve_script(json_path, cache_dir, out_jl_path, out_csv_path, pro
 
     pump_ports = _pad(pump_ports, n_pumps, 1)
     pump_currents = _pad(pump_currents, n_pumps, "1.85e-6")
-    mod_harmonics = _pad(data.get("hb_modulation_harmonics", [10]) or [10], n_pumps, 10)
-    pump_harmonics_vals = _pad(data.get("hb_pump_harmonics", [20]) or [20], n_pumps, 20)
+    mod_harmonics = _pad(_sim_hb.get("modulation_harmonics", data.get("hb_modulation_harmonics", [10])) or [10], n_pumps, 10)
+    pump_harmonics_vals = _pad(_sim_hb.get("pump_harmonics", data.get("hb_pump_harmonics", [20])) or [20], n_pumps, 20)
 
     def _pump_mode(n, i):
         return "(" + ",".join("1" if j == i else "0" for j in range(n)) + ",)"
@@ -1780,8 +1784,8 @@ rpm = hbsolve(
     {npump_tuple},
     circuit,
     Dict();
-    threewavemixing={str(data.get("hb_threewave_mixing", True)).lower()},
-    fourwavemixing={str(data.get("hb_fourwave_mixing", True)).lower()},{dc_kwarg}
+    threewavemixing={str(_sim_hb.get("threewave_mixing", data.get("hb_threewave_mixing", True))).lower()},
+    fourwavemixing={str(_sim_hb.get("fourwave_mixing", data.get("hb_fourwave_mixing", True))).lower()},{dc_kwarg}
 )
 
 function save_hbsolve_result()

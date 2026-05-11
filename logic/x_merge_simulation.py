@@ -25,7 +25,6 @@ from merger import (  # type: ignore
 )
 
 X_SETTING_KEYS = [
-    "z0",
     "simulation_input_ports",
     "simulation_output_ports",
     "simulation_freq_start",
@@ -1171,7 +1170,10 @@ def collapse_and_save_x_hbsolve(
 
     validate_x_list_lengths(original_data)
     x_settings = {key: original_data[key] for key in X_SETTING_KEYS if key in original_data}
-    z0_value = numeric_float(original_data.get("z0"), "top-level z0")
+    z0_value = numeric_float(
+        (original_data.get("simulation") or {}).get("z0") or original_data.get("z0"),
+        "z0",
+    )
 
     print(f"    [Action] X-MERGE: Flattening '{file_path.name}' into one X/HB circuit...")
 

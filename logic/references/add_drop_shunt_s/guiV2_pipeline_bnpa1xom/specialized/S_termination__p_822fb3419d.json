@@ -1,38 +1,42 @@
 {
-  "name": "S_termination__p_822fb3419d",
-  "type": "built-in",
-  "subtype": "sSolve",
-  "hb_top_block": false,
-  "variables": [
-    {
-      "name": "R_shunt",
-      "default": "50.0",
-      "resolved": "50"
+    "name": "S_termination__p_822fb3419d",
+    "type": "built-in",
+    "subtype": "sSolve",
+    "variables": [
+        {
+            "name": "R_shunt",
+            "default": "50.0",
+            "resolved": "50"
+        }
+    ],
+    "port_count": 1,
+    "port_names": [
+        "p1"
+    ],
+    "about": "One-port load termination defined by its shunt resistance and the cell reference impedance.",
+    "sketch": "o---R_shunt---\u2534",
+    "matrix_type": "S",
+    "matrix_is_code": true,
+    "matrix_code": "reshape(ComplexF64[ComplexF64((R_shunt - Z0) / (R_shunt + Z0))], 1, 1)",
+    "z0": 50.0,
+    "simulation_input_ports": [
+        "P_in"
+    ],
+    "simulation_output_ports": [
+        "P_out"
+    ],
+    "simulation_freq_start": 2.0,
+    "simulation_freq_stop": 20.0,
+    "simulation_freq_points": 200,
+    "simulation_sweep_type": "linear",
+    "simulation_figure_title": "subplot: S_termination",
+    "specialized_from": "S_termination",
+    "specialized_parameters": {
+        "R_shunt": "50"
+    },
+    "simulation": {
+        "hb": {
+            "top_block": false
+        }
     }
-  ],
-  "port_count": 1,
-  "port_names": [
-    "p1"
-  ],
-  "about": "One-port load termination defined by its shunt resistance and the cell reference impedance.",
-  "sketch": "o---R_shunt---\u2534",
-  "matrix_type": "S",
-  "matrix_is_code": true,
-  "matrix_code": "reshape(ComplexF64[ComplexF64((R_shunt - Z0) / (R_shunt + Z0))], 1, 1)",
-  "z0": 50.0,
-  "simulation_input_ports": [
-    "P_in"
-  ],
-  "simulation_output_ports": [
-    "P_out"
-  ],
-  "simulation_freq_start": 2.0,
-  "simulation_freq_stop": 20.0,
-  "simulation_freq_points": 200,
-  "simulation_sweep_type": "linear",
-  "simulation_figure_title": "subplot: S_termination",
-  "specialized_from": "S_termination",
-  "specialized_parameters": {
-    "R_shunt": "50"
-  }
 }

@@ -1,36 +1,40 @@
 {
-  "name": "ABCD_shunt_signal2signal",
-  "type": "built-in",
-  "subtype": "sSolve",
-  "hb_top_block": false,
-  "variables": [
-    {
-      "name": "Y",
-      "default": "1/50"
+    "name": "ABCD_shunt_signal2signal",
+    "type": "built-in",
+    "subtype": "sSolve",
+    "variables": [
+        {
+            "name": "Y",
+            "default": "1/50"
+        }
+    ],
+    "port_count": 4,
+    "port_names": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+    ],
+    "about": "ABCD matrix for a shunt admittance coupling two signal lines.",
+    "sketch": "p1 -------- p3\n     |  Y1  |\np2 -------- p4",
+    "matrix_type": "ABCD",
+    "matrix_is_code": true,
+    "matrix_code": "ComplexF64.([[1 0; 0 1] [0 0; 0 0];[Y -Y; -Y Y]   [1 0; 0 1]])",
+    "z0": 50.0,
+    "simulation_input_ports": [
+        "P1"
+    ],
+    "simulation_output_ports": [
+        "P1"
+    ],
+    "simulation_freq_start": 1.0,
+    "simulation_freq_stop": 20.0,
+    "simulation_freq_points": 200,
+    "simulation_sweep_type": "linear",
+    "simulation_figure_title": "subplot: ABCD_shunt_signal2signal",
+    "simulation": {
+        "hb": {
+            "top_block": false
+        }
     }
-  ],
-  "port_count": 4,
-  "port_names": [
-    "p1",
-    "p2",
-    "p3",
-    "p4"
-  ],
-  "about": "ABCD matrix for a shunt admittance coupling two signal lines.",
-  "sketch": "p1 -------- p3\n     |  Y1  |\np2 -------- p4",
-  "matrix_type": "ABCD",
-  "matrix_is_code": true,
-  "matrix_code": "ComplexF64.([[1 0; 0 1] [0 0; 0 0];[Y -Y; -Y Y]   [1 0; 0 1]])",
-  "z0": 50.0,
-  "simulation_input_ports": [
-    "P1"
-  ],
-  "simulation_output_ports": [
-    "P1"
-  ],
-  "simulation_freq_start": 1.0,
-  "simulation_freq_stop": 20.0,
-  "simulation_freq_points": 200,
-  "simulation_sweep_type": "linear",
-  "simulation_figure_title": "subplot: ABCD_shunt_signal2signal"
 }

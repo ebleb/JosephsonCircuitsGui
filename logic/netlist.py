@@ -1,5 +1,4 @@
 import json
-import re
 import shutil
 from pathlib import Path
 
@@ -146,41 +145,12 @@ def validate_port_on_instance(data, uid, port_value, context):
     return port
 
 
-def exported_pin_external_port(name, external_port):
-    match = re.fullmatch(r"P([1-9][0-9]*)", str(name))
-    if match:
-        return int(match.group(1))
-    return external_port
-
-
-def exported_pin_numbering_uses_p_names(pins):
-    numbers = []
-    for pin in pins:
-        name = pin.get("name")
-        if not isinstance(name, str):
-            return False
-        match = re.fullmatch(r"P([1-9][0-9]*)", name)
-        if not match:
-            return False
-        numbers.append(int(match.group(1)))
-
-    return bool(numbers) and len(numbers) == len(set(numbers))
-
-
 def extract_julia_ports(file_path):
-    """
-    Return JSON-defined external port order.
-
-    Important:
-        Conventional schematic interfaces named P1/P2/P3/... use the numeric
-        suffix as the external port identity. Other interfaces preserve pins[]
-        order exactly.
-    """
+    """Return JSON-defined external port order as a list of (uid, internal_port) pairs."""
     data = load_json(file_path)
 
-    ports = {}
+    ports = []
     pins = data.get("pins", [])
-    use_p_name_numbers = exported_pin_numbering_uses_p_names(pins)
 
     for external_port, pin in enumerate(pins, start=1):
         pin_name = pin.get("name")
@@ -202,14 +172,9 @@ def extract_julia_ports(file_path):
             f"{file_path.name} exported pin {pin_name!r}",
         )
 
-        output_port = (
-            exported_pin_external_port(pin_name, external_port)
-            if use_p_name_numbers
-            else external_port
-        )
-        ports[output_port] = (uid, internal_port)
+        ports.append((uid, internal_port))
 
-    return [ports[index] for index in sorted(ports)]
+    return ports
 
 
 def extract_hb_input_field(file_path):
