@@ -1,0 +1,139 @@
+{
+  "name": "tpwa_core",
+  "type": "schematic",
+  "hb_top_block": "false",
+  "instances": [
+    {
+      "type_name": "C",
+      "uid": "C1",
+      "parameters": {
+        "C": "Cg"
+      },
+      "parameter_defaults": {
+        "C": "1e-12"
+      },
+      "parameter_order": [
+        "C"
+      ],
+      "parameter_kinds": {
+        "C": "keyword"
+      },
+      "position": [
+        451.74843937499963,
+        367.0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 90.0,
+      "repeat_count": 1,
+      "symbol_port_layout": []
+    },
+    {
+      "type_name": "Lj",
+      "uid": "L1",
+      "parameters": {
+        "Lj": "Lj"
+      },
+      "parameter_defaults": {
+        "Lj": "1e-12"
+      },
+      "parameter_order": [
+        "Lj"
+      ],
+      "parameter_kinds": {
+        "Lj": "keyword"
+      },
+      "position": [
+        656.7484393749996,
+        111.0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0.0,
+      "repeat_count": 1,
+      "symbol_port_layout": []
+    },
+    {
+      "type_name": "C",
+      "uid": "C2",
+      "parameters": {
+        "C": "Cj"
+      },
+      "parameter_defaults": {
+        "C": "1e-12"
+      },
+      "parameter_order": [
+        "C"
+      ],
+      "parameter_kinds": {
+        "C": "keyword"
+      },
+      "position": [
+        653.7484393749996,
+        231.0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0.0,
+      "repeat_count": 1,
+      "symbol_port_layout": []
+    }
+  ],
+  "wires": [
+    {
+      "source_instance_uid": "C1",
+      "source_port": 1,
+      "target_instance_uid": "L1",
+      "target_port": 1,
+      "name": ""
+    },
+    {
+      "source_instance_uid": "L1",
+      "source_port": 1,
+      "target_instance_uid": "C2",
+      "target_port": 1,
+      "name": ""
+    },
+    {
+      "source_instance_uid": "L1",
+      "source_port": 2,
+      "target_instance_uid": "C2",
+      "target_port": 2,
+      "name": ""
+    }
+  ],
+  "pins": [
+    {
+      "name": "P_0",
+      "instance_uid": "C1",
+      "port": 2
+    },
+    {
+      "name": "P_j",
+      "instance_uid": "C1",
+      "port": 1
+    },
+    {
+      "name": "P_j+1",
+      "instance_uid": "L1",
+      "port": 2
+    }
+  ],
+  "z0": 50.0,
+  "simulation_input_ports": [],
+  "simulation_output_ports": [],
+  "simulation_freq_start": 2.0,
+  "simulation_freq_stop": 20.0,
+  "simulation_freq_points": 200,
+  "simulation_sweep_type": "linear",
+  "simulation_figure_title": ""
+}

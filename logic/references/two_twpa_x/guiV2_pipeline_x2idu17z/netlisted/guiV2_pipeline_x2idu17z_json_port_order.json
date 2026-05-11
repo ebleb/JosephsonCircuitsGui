@@ -1,0 +1,16 @@
+{
+  "two_twpas_series": [
+    [
+      "TWPA1_IT1_P1",
+      2
+    ],
+    [
+      "TWPA2_OT1_P2",
+      1
+    ]
+  ],
+  "two_twpas_series__hb_input_field": 1,
+  "two_twpas_series__hb_input_pin_name": "P_in",
+  "two_twpas_series__hb_output_field": 2,
+  "two_twpas_series__hb_output_pin_name": "P_out"
+}

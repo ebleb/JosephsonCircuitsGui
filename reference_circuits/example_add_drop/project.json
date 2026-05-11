@@ -1,0 +1,25 @@
+{
+  "name": "example_add_drop",
+  "path": "/home/benedikte/userdata/urop/app_v2_pub/data/example_add_drop",
+  "version": 1,
+  "default_cell": "new_test_cell",
+  "default_z0": 50.0,
+  "recent_cells": [
+    "add_drop",
+    "input_module",
+    "io_coupler_module",
+    "airbridge_signal2signal_crossing",
+    "airbridge_signal2signal",
+    "output_module",
+    "ring_module",
+    "new_test_cell",
+    "top"
+  ],
+  "imports": [],
+  "gui": {
+    "last_open_tabs": [
+      "add_drop"
+    ],
+    "layout": {}
+  }
+}

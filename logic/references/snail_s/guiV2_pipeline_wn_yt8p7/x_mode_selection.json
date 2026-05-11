@@ -1,0 +1,9 @@
+{
+  "target": "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_wn_yt8p7/testbench.json",
+  "stage_input": "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_wn_yt8p7/resolved_variables/testbench.json",
+  "x_params_requested": false,
+  "mode": "regular_pipeline",
+  "next_step_code": 0,
+  "reason": "x-params is not enabled on the top-level JSON.",
+  "use_patched_hbsolve": false
+}

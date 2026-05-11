@@ -1,0 +1,11 @@
+{
+  "twpa": {
+    "cache_key": "24a344022660b866",
+    "csv": "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_tdbd2wyx/cache/twpa_24a344022660b866.csv",
+    "XFB": "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_tdbd2wyx/cache/twpa_24a344022660b866_x_XFB.csv",
+    "XS_full": "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_tdbd2wyx/cache/twpa_24a344022660b866_x_XS_full.csv",
+    "XT_full": "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_tdbd2wyx/cache/twpa_24a344022660b866_x_XT_full.csv",
+    "modes": "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_tdbd2wyx/cache/twpa_24a344022660b866_x_modes.json",
+    "nodeflux": "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_tdbd2wyx/cache/twpa_24a344022660b866_nodeflux.csv"
+  }
+}

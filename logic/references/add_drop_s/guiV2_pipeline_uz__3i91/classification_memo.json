@@ -1,0 +1,99 @@
+{
+  "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/ssolve/abcd/ABCD_tline.json": {
+    "class": "sparam_primitive",
+    "hb_elements": [],
+    "sp_elements": [
+      "ABCD_tline"
+    ]
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/ssolve/abcd/ABCD_seriesZ.json": {
+    "class": "sparam_primitive",
+    "hb_elements": [],
+    "sp_elements": [
+      "ABCD_seriesZ"
+    ]
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/ssolve/abcd/ABCD_shuntY.json": {
+    "class": "sparam_primitive",
+    "hb_elements": [],
+    "sp_elements": [
+      "ABCD_shuntY"
+    ]
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_uz__3i91/airbridge_signal2signal.json": {
+    "class": "sparam_block",
+    "hb_elements": [],
+    "sp_elements": [
+      "ABCD_seriesZ (sparam_primitive)",
+      "ABCD_shuntY (sparam_primitive)"
+    ]
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/ssolve/abcd/ABCD_coupled_tline.json": {
+    "class": "sparam_primitive",
+    "hb_elements": [],
+    "sp_elements": [
+      "ABCD_coupled_tline"
+    ]
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_uz__3i91/ring_module.json": {
+    "class": "sparam_block",
+    "hb_elements": [],
+    "sp_elements": [
+      "ABCD_coupled_tline (sparam_primitive)",
+      "ABCD_tline (sparam_primitive)",
+      "airbridge_signal2signal (sparam_block)"
+    ]
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/ssolve/abcd/ABCD_shunt_signal2signal.json": {
+    "class": "sparam_primitive",
+    "hb_elements": [],
+    "sp_elements": [
+      "ABCD_shunt_signal2signal"
+    ]
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_uz__3i91/airbridge_signal2signal_crossing.json": {
+    "class": "sparam_block",
+    "hb_elements": [],
+    "sp_elements": [
+      "ABCD_shunt_signal2signal (sparam_primitive)",
+      "airbridge_signal2signal (sparam_block)"
+    ]
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_uz__3i91/io_coupler_module.json": {
+    "class": "sparam_block",
+    "hb_elements": [],
+    "sp_elements": [
+      "ABCD_coupled_tline (sparam_primitive)",
+      "ABCD_seriesZ (sparam_primitive)",
+      "airbridge_signal2signal_crossing (sparam_block)"
+    ]
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_uz__3i91/output_module.json": {
+    "class": "sparam_block",
+    "hb_elements": [],
+    "sp_elements": [
+      "ABCD_coupled_tline (sparam_primitive)",
+      "ABCD_tline (sparam_primitive)",
+      "airbridge_signal2signal (sparam_block)",
+      "io_coupler_module (sparam_block)"
+    ]
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_uz__3i91/input_module__override_add_drop_IM1.json": {
+    "class": "sparam_block",
+    "hb_elements": [],
+    "sp_elements": [
+      "ABCD_tline (sparam_primitive)",
+      "airbridge_signal2signal (sparam_block)",
+      "io_coupler_module (sparam_block)"
+    ]
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_uz__3i91/add_drop.json": {
+    "class": "sparam_block",
+    "hb_elements": [],
+    "sp_elements": [
+      "input_module__override_add_drop_IM1 (sparam_block)",
+      "output_module (sparam_block)",
+      "ring_module (sparam_block)"
+    ]
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "target": "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_w5c514mh/double_pumped_JPA.json",
+  "stage_input": "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_w5c514mh/resolved_variables/double_pumped_JPA.json",
+  "x_params_requested": true,
+  "is_valid": true,
+  "errors": [],
+  "mode": "x_merge_simulation",
+  "next_step_code": 1,
+  "reason": "Multiple hb_top_block=true simulation roots were found. Merge the simulations before running the patched hbsolve.",
+  "use_patched_hbsolve": true,
+  "x_settings": {
+    "x-params": true,
+    "x_dc_currents": [],
+    "x_dc_ports": [],
+    "x_fourwave_mixing": true,
+    "x_modulation_harmonics": [
+      8,
+      8
+    ],
+    "x_params": true,
+    "x_pump_currents": [
+      "0.00565e-6*1.7",
+      "0.00565e-6*1.7"
+    ],
+    "x_pump_frequencies": [
+      4.65001,
+      4.85001
+    ],
+    "x_pump_harmonics": [
+      8,
+      8
+    ],
+    "x_pump_ports": [
+      "P_in"
+    ],
+    "x_threewave_mixing": true
+  },
+  "topology": {
+    "top_class": "hbsolve_block",
+    "top_is_hb_top": true,
+    "classes": {
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_w5c514mh/resolved_variables/double_pumped_JPA.json": "hbsolve_block",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_w5c514mh/resolved_variables/example_JPA/JPA.json": "hbsolve_block",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/P.json": "hbsolve_primitive",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/R.json": "hbsolve_primitive",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/C.json": "hbsolve_primitive",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/Lj.json": "hbsolve_primitive",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/GND.json": "hbsolve_primitive"
+    },
+    "hb_top_blocks": [
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_w5c514mh/resolved_variables/double_pumped_JPA.json",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_w5c514mh/resolved_variables/example_JPA/JPA.json"
+    ],
+    "hb_top_block_occurrences": [
+      {
+        "file": "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_w5c514mh/resolved_variables/double_pumped_JPA.json",
+        "instance_path": []
+      },
+      {
+        "file": "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_w5c514mh/resolved_variables/example_JPA/JPA.json",
+        "instance_path": [
+          "JP1"
+        ]
+      }
+    ],
+    "nested_hb_top_block_occurrences": [
+      {
+        "file": "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_w5c514mh/resolved_variables/example_JPA/JPA.json",
+        "instance_path": [
+          "JP1"
+        ]
+      }
+    ],
+    "hb_top_block_count": 2,
+    "hbsolve_blocks": [
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_w5c514mh/resolved_variables/double_pumped_JPA.json",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_w5c514mh/resolved_variables/example_JPA/JPA.json"
+    ],
+    "sparam_blocks": [],
+    "mixtures": [],
+    "has_hb": true,
+    "has_sparam": false
+  }
+}

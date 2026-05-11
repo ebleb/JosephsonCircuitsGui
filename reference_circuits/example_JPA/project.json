@@ -1,0 +1,17 @@
+{
+  "name": "example_JPA",
+  "path": "/home/benedikte/userdata/urop/app_v2_pub/data/example_JPA",
+  "version": 1,
+  "default_cell": "JPA",
+  "default_z0": 50.0,
+  "recent_cells": [
+    "JPA"
+  ],
+  "imports": [],
+  "gui": {
+    "last_open_tabs": [
+      "JPA"
+    ],
+    "layout": {}
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "ABCD_PiY",
+  "type": "built-in",
+  "subtype": "sSolve",
+  "hb_top_block": false,
+  "variables": [
+    {
+      "name": "Y1",
+      "default": "1.0"
+    },
+    {
+      "name": "Y2",
+      "default": "2.0"
+    },
+    {
+      "name": "Y3",
+      "default": "4.0"
+    }
+  ],
+  "port_count": 2,
+  "port_names": [
+    "p1",
+    "p2"
+  ],
+  "about": "ABCD matrix for a Pi network of admittances.",
+  "sketch": "o----Y3-----o\n   |     |\n   Y1    Y2\n   |     |\no-----------o",
+  "matrix_type": "ABCD",
+  "matrix_is_code": true,
+  "matrix_code": "JosephsonCircuits.ABCD_PiY(Y1, Y2, Y3)"
+}

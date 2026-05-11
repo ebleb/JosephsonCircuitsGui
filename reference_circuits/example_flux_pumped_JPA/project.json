@@ -1,0 +1,19 @@
+{
+  "name": "example_flux_pumped_JPA",
+  "path": "/home/benedikte/userdata/urop/app_v2_pub/data/example_flux_pumped_JPA",
+  "version": 1,
+  "default_cell": "flux_pumped_JPA",
+  "default_z0": 50.0,
+  "recent_cells": [
+    "testbench",
+    "flux_pumped_JPA"
+  ],
+  "imports": [],
+  "gui": {
+    "last_open_tabs": [
+      "testbench",
+      "flux_pumped_JPA"
+    ],
+    "layout": {}
+  }
+}

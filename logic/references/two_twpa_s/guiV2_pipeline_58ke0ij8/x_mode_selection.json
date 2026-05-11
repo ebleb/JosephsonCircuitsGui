@@ -1,0 +1,9 @@
+{
+  "target": "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_58ke0ij8/two_twpas_series.json",
+  "stage_input": "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_58ke0ij8/resolved_variables/two_twpas_series.json",
+  "x_params_requested": false,
+  "mode": "regular_pipeline",
+  "next_step_code": 0,
+  "reason": "x-params is not enabled on the top-level JSON.",
+  "use_patched_hbsolve": false
+}

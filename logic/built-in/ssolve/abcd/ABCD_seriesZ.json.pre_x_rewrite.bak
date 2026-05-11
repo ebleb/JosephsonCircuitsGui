@@ -1,0 +1,22 @@
+{
+  "name": "ABCD_seriesZ",
+  "type": "built-in",
+  "subtype": "sSolve",
+  "hb_top_block": false,
+  "variables": [
+    {
+      "name": "Z1",
+      "default": "50.0"
+    }
+  ],
+  "port_count": 2,
+  "port_names": [
+    "p1",
+    "p2"
+  ],
+  "about": "ABCD matrix for a series impedance.",
+  "sketch": "o---Z1---o\n\n\no--------o",
+  "matrix_type": "ABCD",
+  "matrix_is_code": true,
+  "matrix_code": "JosephsonCircuits.ABCD_seriesZ(Z1)"
+}

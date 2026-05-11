@@ -1,0 +1,16 @@
+{
+  "JPA": [
+    [
+      "P1",
+      2
+    ],
+    [
+      "P1",
+      1
+    ]
+  ],
+  "JPA__hb_input_field": 1,
+  "JPA__hb_input_pin_name": "P_in",
+  "JPA__hb_output_field": 1,
+  "JPA__hb_output_pin_name": "P_out"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "example_snail",
+  "path": "/home/benedikte/userdata/urop/app_v2_pub/data/example_snail",
+  "version": 1,
+  "default_cell": "snail",
+  "default_z0": 50.0,
+  "recent_cells": [
+    "testbench",
+    "snail"
+  ],
+  "imports": [],
+  "gui": {
+    "last_open_tabs": [
+      "snail",
+      "testbench"
+    ],
+    "layout": {}
+  }
+}

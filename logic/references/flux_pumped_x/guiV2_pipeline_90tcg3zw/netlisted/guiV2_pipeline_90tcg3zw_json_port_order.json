@@ -1,0 +1,16 @@
+{
+  "testbench": [
+    [
+      "FL1_P1",
+      2
+    ],
+    [
+      "FL1_P2",
+      2
+    ]
+  ],
+  "testbench__hb_input_field": 1,
+  "testbench__hb_input_pin_name": "P_in",
+  "testbench__hb_output_field": 2,
+  "testbench__hb_output_pin_name": "P_out"
+}

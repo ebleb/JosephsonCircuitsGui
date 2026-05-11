@@ -1,0 +1,21 @@
+{
+  "indexing": "port-major saved-port order",
+  "raw_index": "(port_index - 1) * Nmodes + mode_index",
+  "ports": [1, 2],
+  "matrix_ports": [1, 2],
+  "raw_ports": [1, 2],
+  "saved_signal_ports": [1, 2],
+  "signal_modes": [0, 1, 2, 3, 4, 5, 6, 7, 8, -8, -7, -6, -5, -4, -3, -2, -1],
+  "pump_modes": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+  "pump_current": "[4.4e-6]",
+  "pump_phase": "1.0",
+  "pump_port": 2,
+  "pump_ports": [2],
+  "dc_enabled": true,
+  "dc_port": 2,
+  "dc_ports": [2],
+  "dc_current": "0.000159",
+  "dc_currents": ["0.000159"],
+  "conjugate_partner": "l -> 0 - l",
+  "x_matrix_note": "XS_full and XT_full are reordered to matrix_ports, matching the saved signal-only S CSV."
+}

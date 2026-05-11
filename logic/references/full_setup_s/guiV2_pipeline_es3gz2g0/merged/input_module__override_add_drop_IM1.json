@@ -1,0 +1,1070 @@
+{
+  "name": "input_module",
+  "type": "schematic",
+  "instances": [
+    {
+      "type_name": "io_coupler_module",
+      "uid": "ICM1",
+      "parameters": {
+        "L_inductor": "1e-12",
+        "c": "2.99792458e8",
+        "lcoupler": "5078.6e-6",
+        "ne0": "2.4674194849509394",
+        "no0": "2.483285416407112",
+        "w": "(w)"
+      },
+      "parameter_order": [
+        "w",
+        "ne0",
+        "lcoupler",
+        "c",
+        "no0",
+        "L_inductor"
+      ],
+      "parameter_kinds": {
+        "w": "keyword",
+        "ne0": "positional",
+        "lcoupler": "positional",
+        "c": "positional",
+        "no0": "positional",
+        "L_inductor": "positional"
+      },
+      "position": [
+        -320.0,
+        -260.0
+      ],
+      "port_count": 4,
+      "port_names": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "rotation_degrees": 0.0,
+      "repeat_count": 1,
+      "repeat_connections": [],
+      "symbol_port_layout": [
+        {
+          "port": "P1",
+          "side": "left",
+          "position": 0.2
+        },
+        {
+          "port": "P2",
+          "side": "left",
+          "position": 0.8
+        },
+        {
+          "port": "P3",
+          "side": "right",
+          "position": 0.2
+        },
+        {
+          "port": "P4",
+          "side": "right",
+          "position": 0.8
+        }
+      ],
+      "symbol": {
+        "shape": "rectangle",
+        "width": 120.0,
+        "height": 70.0,
+        "label_position": "center",
+        "show_type_name": true,
+        "show_uid": true,
+        "port_layout": [
+          {
+            "port": "P1",
+            "side": "left",
+            "position": 0.2,
+            "label_visible": true
+          },
+          {
+            "port": "P2",
+            "side": "left",
+            "position": 0.8,
+            "label_visible": true
+          },
+          {
+            "port": "P3",
+            "side": "right",
+            "position": 0.2,
+            "label_visible": true
+          },
+          {
+            "port": "P4",
+            "side": "right",
+            "position": 0.8,
+            "label_visible": true
+          }
+        ]
+      },
+      "raw_parameters": {
+        "lcoupler": "5078.6e-6"
+      },
+      "resolved_parameters": {
+        "L_inductor": "1e-12",
+        "c": "2.99792458e8",
+        "lcoupler": "5078.6e-6",
+        "ne0": "2.4674194849509394",
+        "no0": "2.483285416407112",
+        "w": "(w)"
+      }
+    },
+    {
+      "type_name": "ABCD_tline",
+      "uid": "AT1",
+      "parameters": {
+        "Z0": "50.0",
+        "theta": "(2.4587274815602576)*(w)/(3e8)*(140e-6)"
+      },
+      "parameter_order": [
+        "Z0",
+        "theta"
+      ],
+      "parameter_kinds": {
+        "Z0": "positional",
+        "theta": "positional"
+      },
+      "position": [
+        -500.0,
+        120.0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 270.0,
+      "repeat_count": 1,
+      "repeat_connections": [],
+      "symbol_port_layout": [
+        {
+          "port": "p1",
+          "side": "left",
+          "position": 0.5
+        },
+        {
+          "port": "p2",
+          "side": "right",
+          "position": 0.5
+        }
+      ],
+      "symbol": {
+        "shape": "rectangle",
+        "width": 120,
+        "height": 70,
+        "label_position": "center",
+        "show_type_name": true,
+        "show_uid": true,
+        "port_layout": [
+          {
+            "port": "p1",
+            "side": "left",
+            "position": 0.5,
+            "label_visible": true
+          },
+          {
+            "port": "p2",
+            "side": "right",
+            "position": 0.5,
+            "label_visible": true
+          }
+        ]
+      },
+      "raw_parameters": {
+        "Z0": 50.0,
+        "theta": "n0*w/c*lconnector"
+      },
+      "resolved_parameters": {
+        "Z0": "50.0",
+        "theta": "(2.4587274815602576)*(w)/(3e8)*(140e-6)"
+      }
+    },
+    {
+      "type_name": "ABCD_tline",
+      "uid": "AT2",
+      "parameters": {
+        "Z0": "50.0",
+        "theta": "(2.4587274815602576)*(w)/(3e8)*(140e-6)"
+      },
+      "parameter_order": [
+        "Z0",
+        "theta"
+      ],
+      "parameter_kinds": {
+        "Z0": "positional",
+        "theta": "positional"
+      },
+      "position": [
+        -20.0,
+        0.0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 90.0,
+      "repeat_count": 1,
+      "repeat_connections": [],
+      "symbol_port_layout": [
+        {
+          "port": "p1",
+          "side": "left",
+          "position": 0.5
+        },
+        {
+          "port": "p2",
+          "side": "right",
+          "position": 0.5
+        }
+      ],
+      "symbol": {
+        "shape": "rectangle",
+        "width": 120,
+        "height": 70,
+        "label_position": "center",
+        "show_type_name": true,
+        "show_uid": true,
+        "port_layout": [
+          {
+            "port": "p1",
+            "side": "left",
+            "position": 0.5,
+            "label_visible": true
+          },
+          {
+            "port": "p2",
+            "side": "right",
+            "position": 0.5,
+            "label_visible": true
+          }
+        ]
+      },
+      "raw_parameters": {
+        "Z0": 50.0,
+        "theta": "n0*w/c*lconnector"
+      },
+      "resolved_parameters": {
+        "Z0": "50.0",
+        "theta": "(2.4587274815602576)*(w)/(3e8)*(140e-6)"
+      }
+    },
+    {
+      "type_name": "io_coupler_module",
+      "uid": "ICM2",
+      "parameters": {
+        "L_inductor": "1e-12",
+        "c": "2.99792458e8",
+        "lcoupler": "5078.6e-6",
+        "ne0": "2.4674194849509394",
+        "no0": "2.483285416407112",
+        "w": "(w)"
+      },
+      "parameter_order": [
+        "w",
+        "ne0",
+        "lcoupler",
+        "c",
+        "no0",
+        "L_inductor"
+      ],
+      "parameter_kinds": {
+        "w": "keyword",
+        "ne0": "positional",
+        "lcoupler": "positional",
+        "c": "positional",
+        "no0": "positional",
+        "L_inductor": "positional"
+      },
+      "position": [
+        80.0,
+        340.0
+      ],
+      "port_count": 4,
+      "port_names": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "rotation_degrees": 0.0,
+      "repeat_count": 1,
+      "repeat_connections": [],
+      "symbol_port_layout": [
+        {
+          "port": "P1",
+          "side": "left",
+          "position": 0.2
+        },
+        {
+          "port": "P2",
+          "side": "left",
+          "position": 0.8
+        },
+        {
+          "port": "P3",
+          "side": "right",
+          "position": 0.2
+        },
+        {
+          "port": "P4",
+          "side": "right",
+          "position": 0.8
+        }
+      ],
+      "symbol": {
+        "shape": "rectangle",
+        "width": 120.0,
+        "height": 70.0,
+        "label_position": "center",
+        "show_type_name": true,
+        "show_uid": true,
+        "port_layout": [
+          {
+            "port": "P1",
+            "side": "left",
+            "position": 0.2,
+            "label_visible": true
+          },
+          {
+            "port": "P2",
+            "side": "left",
+            "position": 0.8,
+            "label_visible": true
+          },
+          {
+            "port": "P3",
+            "side": "right",
+            "position": 0.2,
+            "label_visible": true
+          },
+          {
+            "port": "P4",
+            "side": "right",
+            "position": 0.8,
+            "label_visible": true
+          }
+        ]
+      },
+      "raw_parameters": {
+        "lcoupler": "5078.6e-6"
+      },
+      "resolved_parameters": {
+        "L_inductor": "1e-12",
+        "c": "2.99792458e8",
+        "lcoupler": "5078.6e-6",
+        "ne0": "2.4674194849509394",
+        "no0": "2.483285416407112",
+        "w": "(w)"
+      }
+    },
+    {
+      "type_name": "ABCD_tline",
+      "uid": "AT3",
+      "parameters": {
+        "Z0": "50.0",
+        "theta": "(2.4587274815602576)*(w)/(3e8)*(2539.3e-6)"
+      },
+      "parameter_order": [
+        "Z0",
+        "theta"
+      ],
+      "parameter_kinds": {
+        "Z0": "positional",
+        "theta": "positional"
+      },
+      "position": [
+        40.0,
+        -260.0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0.0,
+      "repeat_count": 1,
+      "repeat_connections": [],
+      "symbol_port_layout": [
+        {
+          "port": "p1",
+          "side": "left",
+          "position": 0.5
+        },
+        {
+          "port": "p2",
+          "side": "right",
+          "position": 0.5
+        }
+      ],
+      "symbol": {
+        "shape": "rectangle",
+        "width": 120,
+        "height": 70,
+        "label_position": "center",
+        "show_type_name": true,
+        "show_uid": true,
+        "port_layout": [
+          {
+            "port": "p1",
+            "side": "left",
+            "position": 0.5,
+            "label_visible": true
+          },
+          {
+            "port": "p2",
+            "side": "right",
+            "position": 0.5,
+            "label_visible": true
+          }
+        ]
+      },
+      "raw_parameters": {
+        "Z0": 50.0,
+        "theta": "n0*w/c*tl_length"
+      },
+      "resolved_parameters": {
+        "Z0": "50.0",
+        "theta": "(2.4587274815602576)*(w)/(3e8)*(2539.3e-6)"
+      }
+    },
+    {
+      "type_name": "airbridge_signal2signal",
+      "uid": "AS1",
+      "parameters": {
+        "C_gnd": "0.5e-15",
+        "L_bridge": "1e-12",
+        "w": "(w)"
+      },
+      "parameter_order": [
+        "w",
+        "L_bridge",
+        "C_gnd"
+      ],
+      "parameter_kinds": {
+        "w": "keyword",
+        "L_bridge": "keyword",
+        "C_gnd": "keyword"
+      },
+      "position": [
+        340.0,
+        -260.0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "P1",
+        "P2"
+      ],
+      "rotation_degrees": 0.0,
+      "repeat_count": 1,
+      "repeat_connections": [],
+      "symbol_port_layout": [
+        {
+          "port": "P1",
+          "side": "left",
+          "position": 0.5
+        },
+        {
+          "port": "P2",
+          "side": "right",
+          "position": 0.5
+        }
+      ],
+      "symbol": {
+        "shape": "rectangle",
+        "width": 120,
+        "height": 70,
+        "label_position": "center",
+        "show_type_name": true,
+        "show_uid": true,
+        "port_layout": [
+          {
+            "port": "P1",
+            "side": "left",
+            "position": 0.5,
+            "label_visible": true
+          },
+          {
+            "port": "P2",
+            "side": "right",
+            "position": 0.5,
+            "label_visible": true
+          }
+        ]
+      },
+      "raw_parameters": {
+        "w": "",
+        "L_bridge": "1e-12",
+        "C_gnd": "0.5e-15"
+      },
+      "resolved_parameters": {
+        "C_gnd": "0.5e-15",
+        "L_bridge": "1e-12",
+        "w": "(w)"
+      }
+    }
+  ],
+  "wires": [
+    {
+      "source_instance_uid": "ICM1",
+      "source_port": "P2",
+      "target_instance_uid": "AT1",
+      "target_port": "p2",
+      "name": "",
+      "gui_wire_id": "wire_1"
+    },
+    {
+      "source_instance_uid": "AT3",
+      "source_port": "p2",
+      "target_instance_uid": "AS1",
+      "target_port": "P1",
+      "name": "",
+      "gui_wire_id": "wire_2"
+    },
+    {
+      "source_instance_uid": "ICM2",
+      "source_port": "P3",
+      "target_instance_uid": "AT2",
+      "target_port": "p2",
+      "name": "",
+      "gui_wire_id": "wire_4"
+    },
+    {
+      "source_instance_uid": "AT2",
+      "source_port": "p1",
+      "target_instance_uid": "ICM1",
+      "target_port": "P3",
+      "name": "",
+      "gui_wire_id": "wire_5"
+    },
+    {
+      "source_instance_uid": "ICM1",
+      "source_port": "P4",
+      "target_instance_uid": "AT3",
+      "target_port": "p1",
+      "name": "",
+      "gui_wire_id": "wire_6"
+    },
+    {
+      "source_instance_uid": "AT1",
+      "source_port": "p1",
+      "target_instance_uid": "ICM2",
+      "target_port": "P2",
+      "name": "",
+      "gui_wire_id": "wire_434b9728"
+    }
+  ],
+  "pins": [
+    {
+      "name": "P1",
+      "instance_uid": "ICM1",
+      "port": "P1"
+    },
+    {
+      "name": "P3",
+      "instance_uid": "AS1",
+      "port": "P2"
+    },
+    {
+      "name": "P2",
+      "instance_uid": "ICM2",
+      "port": "P1"
+    },
+    {
+      "name": "P4",
+      "instance_uid": "ICM2",
+      "port": "P4"
+    }
+  ],
+  "labels": [],
+  "variables": [
+    {
+      "name": "c",
+      "default": "",
+      "resolved": "3e8"
+    },
+    {
+      "name": "n0",
+      "default": "",
+      "resolved": "2.4587274815602576"
+    },
+    {
+      "name": "lconnector",
+      "default": "",
+      "resolved": "140e-6"
+    },
+    {
+      "name": "tl_length",
+      "default": "",
+      "resolved": "2539.3e-6"
+    }
+  ],
+  "z0": 50.0,
+  "simulation_input_ports": [
+    "P_in"
+  ],
+  "simulation_output_ports": [
+    "P_out"
+  ],
+  "simulation_freq_start": 1.0,
+  "simulation_freq_stop": 20.0,
+  "simulation_freq_points": 500,
+  "simulation_sweep_type": "linear",
+  "simulation_figure_title": "subplot: input_module__override_add_drop_IM1",
+  "hb_top_block": false,
+  "hb_pump_ports": [],
+  "hb_pump_frequencies": [],
+  "hb_pump_currents": [],
+  "hb_dc_ports": [],
+  "hb_dc_currents": [],
+  "hb_modulation_harmonics": [
+    10
+  ],
+  "hb_pump_harmonics": [
+    20
+  ],
+  "hb_threewave_mixing": true,
+  "hb_fourwave_mixing": true,
+  "gui": {
+    "version": 1,
+    "viewport": {
+      "zoom": 1,
+      "pan": [
+        0,
+        0
+      ]
+    },
+    "wire_routes": [
+      {
+        "net_id": "net_1",
+        "wire_id": "wire_1",
+        "source": {
+          "instance_uid": "ICM1",
+          "port": "P2"
+        },
+        "target": {
+          "instance_uid": "AT1",
+          "port": "p2"
+        },
+        "points": [
+          [
+            -380.0,
+            -239.0
+          ],
+          [
+            -426.0,
+            -239.0
+          ],
+          [
+            -436.0,
+            -239.0
+          ],
+          [
+            -436.0,
+            -221.0
+          ],
+          [
+            -436.0,
+            -185.0
+          ],
+          [
+            -436.0,
+            -100.0
+          ],
+          [
+            -436.0,
+            -78.0
+          ],
+          [
+            -436.0,
+            -60.0
+          ],
+          [
+            -436.0,
+            -42.0
+          ],
+          [
+            -436.0,
+            19.999999999999993
+          ],
+          [
+            -436.0,
+            60.0
+          ],
+          [
+            -500.0,
+            60.0
+          ]
+        ],
+        "auto": true
+      },
+      {
+        "net_id": "net_2",
+        "wire_id": "wire_2",
+        "source": {
+          "instance_uid": "AT3",
+          "port": "p2"
+        },
+        "target": {
+          "instance_uid": "AS1",
+          "port": "P1"
+        },
+        "points": [
+          [
+            100.0,
+            -260.0
+          ],
+          [
+            146.0,
+            -260.0
+          ],
+          [
+            234.0,
+            -260.0
+          ],
+          [
+            280.0,
+            -260.0
+          ]
+        ],
+        "auto": true
+      },
+      {
+        "net_id": "net_3",
+        "wire_id": "wire_4",
+        "source": {
+          "instance_uid": "ICM2",
+          "port": "P3"
+        },
+        "target": {
+          "instance_uid": "AT2",
+          "port": "p2"
+        },
+        "points": [
+          [
+            140.0,
+            319.0
+          ],
+          [
+            168.0,
+            319.0
+          ],
+          [
+            168.0,
+            301.0
+          ],
+          [
+            168.0,
+            283.0
+          ],
+          [
+            55.0,
+            283.0
+          ],
+          [
+            44.0,
+            283.0
+          ],
+          [
+            44.0,
+            265.0
+          ],
+          [
+            44.0,
+            247.0
+          ],
+          [
+            44.0,
+            238.0
+          ],
+          [
+            44.0,
+            220.0
+          ],
+          [
+            44.0,
+            202.0
+          ],
+          [
+            44.0,
+            184.0
+          ],
+          [
+            44.0,
+            100.0
+          ],
+          [
+            44.0,
+            60.0
+          ],
+          [
+            -19.999999999999996,
+            60.0
+          ]
+        ],
+        "auto": true
+      },
+      {
+        "net_id": "net_4",
+        "wire_id": "wire_5",
+        "source": {
+          "instance_uid": "AT2",
+          "port": "p1"
+        },
+        "target": {
+          "instance_uid": "ICM1",
+          "port": "P3"
+        },
+        "points": [
+          [
+            -20.000000000000004,
+            -60.0
+          ],
+          [
+            -84.0,
+            -60.0
+          ],
+          [
+            -95.0,
+            -60.0
+          ],
+          [
+            -102.0,
+            -60.0
+          ],
+          [
+            -178.0,
+            -60.0
+          ],
+          [
+            -196.0,
+            -60.0
+          ],
+          [
+            -196.0,
+            -78.0
+          ],
+          [
+            -196.0,
+            -100.0
+          ],
+          [
+            -196.0,
+            -185.0
+          ],
+          [
+            -196.0,
+            -221.0
+          ],
+          [
+            -196.0,
+            -239.0
+          ],
+          [
+            -196.0,
+            -242.0
+          ],
+          [
+            -196.0,
+            -257.0
+          ],
+          [
+            -196.0,
+            -260.0
+          ],
+          [
+            -196.0,
+            -278.0
+          ],
+          [
+            -196.0,
+            -281.0
+          ],
+          [
+            -260.0,
+            -281.0
+          ]
+        ],
+        "auto": true
+      },
+      {
+        "net_id": "net_5",
+        "wire_id": "wire_6",
+        "source": {
+          "instance_uid": "ICM1",
+          "port": "P4"
+        },
+        "target": {
+          "instance_uid": "AT3",
+          "port": "p1"
+        },
+        "points": [
+          [
+            -260.0,
+            -239.0
+          ],
+          [
+            -196.0,
+            -239.0
+          ],
+          [
+            -178.0,
+            -239.0
+          ],
+          [
+            -102.0,
+            -239.0
+          ],
+          [
+            -95.0,
+            -239.0
+          ],
+          [
+            -84.0,
+            -239.0
+          ],
+          [
+            -84.0,
+            -242.0
+          ],
+          [
+            -84.0,
+            -257.0
+          ],
+          [
+            -84.0,
+            -260.0
+          ],
+          [
+            -20.0,
+            -260.0
+          ]
+        ],
+        "auto": true
+      },
+      {
+        "net_id": "net_6",
+        "wire_id": "wire_434b9728",
+        "source": {
+          "instance_uid": "AT1",
+          "port": "p1"
+        },
+        "target": {
+          "instance_uid": "ICM2",
+          "port": "P2"
+        },
+        "points": [
+          [
+            -500.0,
+            180.0
+          ],
+          [
+            -564.0,
+            180.0
+          ],
+          [
+            -564.0,
+            184.0
+          ],
+          [
+            -564.0,
+            202.0
+          ],
+          [
+            -500.0,
+            202.0
+          ],
+          [
+            -454.0,
+            202.0
+          ],
+          [
+            -436.0,
+            202.0
+          ],
+          [
+            -425.0,
+            202.0
+          ],
+          [
+            -418.0,
+            202.0
+          ],
+          [
+            -214.0,
+            202.0
+          ],
+          [
+            -196.0,
+            202.0
+          ],
+          [
+            -178.0,
+            202.0
+          ],
+          [
+            -102.0,
+            202.0
+          ],
+          [
+            -95.0,
+            202.0
+          ],
+          [
+            -84.0,
+            202.0
+          ],
+          [
+            -26.0,
+            202.0
+          ],
+          [
+            -26.0,
+            220.0
+          ],
+          [
+            -26.0,
+            238.0
+          ],
+          [
+            -26.0,
+            247.0
+          ],
+          [
+            -26.0,
+            265.0
+          ],
+          [
+            -26.0,
+            283.0
+          ],
+          [
+            -26.0,
+            301.0
+          ],
+          [
+            -26.0,
+            319.0
+          ],
+          [
+            -26.0,
+            337.0
+          ],
+          [
+            -26.0,
+            361.0
+          ],
+          [
+            20.0,
+            361.0
+          ]
+        ],
+        "auto": true
+      }
+    ],
+    "last_selected": []
+  },
+  "reference": false
+}

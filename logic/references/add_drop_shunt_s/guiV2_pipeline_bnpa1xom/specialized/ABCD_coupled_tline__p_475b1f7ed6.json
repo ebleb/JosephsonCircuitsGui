@@ -1,0 +1,59 @@
+{
+  "name": "ABCD_coupled_tline__p_475b1f7ed6",
+  "type": "built-in",
+  "subtype": "sSolve",
+  "hb_top_block": false,
+  "variables": [
+    {
+      "name": "Z0e",
+      "default": "50.0",
+      "resolved": "1995976205172263/25000000000000"
+    },
+    {
+      "name": "Z0o",
+      "default": "50.0",
+      "resolved": "31268051050244907/1000000000000000"
+    },
+    {
+      "name": "thetae",
+      "default": "pi/4",
+      "resolved": "2087637902408164877*w/50000000000000000000000000000"
+    },
+    {
+      "name": "thetao",
+      "default": "pi/4",
+      "resolved": "3941202055654490879*w/93750000000000000000000000000"
+    }
+  ],
+  "port_count": 4,
+  "port_names": [
+    "p1",
+    "p2",
+    "p3",
+    "p4"
+  ],
+  "about": "ABCD matrix for two coupled transmission lines.",
+  "sketch": "thetae, Z0e\nthetao, Z0o\n\nV1, I1 -->  ======== <-- I3, V3\nV2, I2 -->  ======== <-- I4, V4",
+  "matrix_type": "ABCD",
+  "matrix_is_code": true,
+  "matrix_code": "JosephsonCircuits.ABCD_coupled_tline(Z0e, Z0o, thetae, thetao)",
+  "z0": 50.0,
+  "simulation_input_ports": [
+    "P_in"
+  ],
+  "simulation_output_ports": [
+    "P_out"
+  ],
+  "simulation_freq_start": 2.0,
+  "simulation_freq_stop": 20.0,
+  "simulation_freq_points": 200,
+  "simulation_sweep_type": "linear",
+  "simulation_figure_title": "subplot: ABCD_coupled_tline",
+  "specialized_from": "ABCD_coupled_tline",
+  "specialized_parameters": {
+    "Z0e": "1995976205172263/25000000000000",
+    "Z0o": "31268051050244907/1000000000000000",
+    "thetae": "2087637902408164877*w/50000000000000000000000000000",
+    "thetao": "3941202055654490879*w/93750000000000000000000000000"
+  }
+}

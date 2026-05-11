@@ -1,0 +1,267 @@
+{
+  "name": "two_twpas_series",
+  "type": "schematic",
+  "instances": [
+    {
+      "type_name": "twpa",
+      "uid": "TWPA1",
+      "parameters": {},
+      "parameter_order": [],
+      "parameter_kinds": {},
+      "position": [
+        -240.0,
+        -180.0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "P_in",
+        "P_out"
+      ],
+      "rotation_degrees": 0.0,
+      "repeat_count": 1,
+      "repeat_connections": [],
+      "symbol_port_layout": [
+        {
+          "port": "P_in",
+          "side": "left",
+          "position": 0.5
+        },
+        {
+          "port": "P_out",
+          "side": "right",
+          "position": 0.5
+        }
+      ],
+      "symbol": {
+        "shape": "rectangle",
+        "width": 120,
+        "height": 70,
+        "label_position": "center",
+        "show_type_name": true,
+        "show_uid": true,
+        "port_layout": [
+          {
+            "port": "P_in",
+            "side": "left",
+            "position": 0.5,
+            "label_visible": true
+          },
+          {
+            "port": "P_out",
+            "side": "right",
+            "position": 0.5,
+            "label_visible": true
+          }
+        ]
+      },
+      "hb_top_block": true,
+      "hb_pump_ports": [
+        1
+      ],
+      "hb_pump_frequencies": [
+        7.12
+      ],
+      "hb_pump_currents": [
+        1.85e-06
+      ],
+      "hb_dc_ports": [],
+      "hb_dc_currents": [],
+      "hb_modulation_harmonics": [
+        10
+      ],
+      "hb_pump_harmonics": [
+        20
+      ],
+      "hb_threewave_mixing": true,
+      "hb_fourwave_mixing": true
+    },
+    {
+      "type_name": "twpa",
+      "uid": "TWPA2",
+      "parameters": {},
+      "parameter_order": [],
+      "parameter_kinds": {},
+      "position": [
+        240.0,
+        -180.0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "P_in",
+        "P_out"
+      ],
+      "rotation_degrees": 0.0,
+      "repeat_count": 1,
+      "repeat_connections": [],
+      "symbol_port_layout": [
+        {
+          "port": "P_in",
+          "side": "left",
+          "position": 0.5
+        },
+        {
+          "port": "P_out",
+          "side": "right",
+          "position": 0.5
+        }
+      ],
+      "symbol": {
+        "shape": "rectangle",
+        "width": 120,
+        "height": 70,
+        "label_position": "center",
+        "show_type_name": true,
+        "show_uid": true,
+        "port_layout": [
+          {
+            "port": "P_in",
+            "side": "left",
+            "position": 0.5,
+            "label_visible": true
+          },
+          {
+            "port": "P_out",
+            "side": "right",
+            "position": 0.5,
+            "label_visible": true
+          }
+        ]
+      },
+      "hb_top_block": true,
+      "hb_pump_ports": [
+        1
+      ],
+      "hb_pump_frequencies": [
+        7.12
+      ],
+      "hb_pump_currents": [
+        1.85e-06
+      ],
+      "hb_dc_ports": [],
+      "hb_dc_currents": [],
+      "hb_modulation_harmonics": [
+        10
+      ],
+      "hb_pump_harmonics": [
+        20
+      ],
+      "hb_threewave_mixing": true,
+      "hb_fourwave_mixing": true
+    }
+  ],
+  "wires": [
+    {
+      "source_instance_uid": "TWPA1",
+      "source_port": "P_out",
+      "target_instance_uid": "TWPA2",
+      "target_port": "P_in",
+      "name": "",
+      "gui_wire_id": "wire_1"
+    }
+  ],
+  "pins": [
+    {
+      "name": "P_in",
+      "instance_uid": "TWPA1",
+      "port": "P_in"
+    },
+    {
+      "name": "P_out",
+      "instance_uid": "TWPA2",
+      "port": "P_out"
+    }
+  ],
+  "labels": [],
+  "variables": [],
+  "z0": 50.0,
+  "simulation_input_ports": [
+    "P_in"
+  ],
+  "simulation_output_ports": [
+    "P_out"
+  ],
+  "simulation_freq_start": 1.0,
+  "simulation_freq_stop": 14.0,
+  "simulation_freq_points": 200,
+  "simulation_sweep_type": "linear",
+  "simulation_figure_title": "two_twpas_series",
+  "hb_pump_ports": [
+    1
+  ],
+  "hb_pump_frequencies": [
+    7.12
+  ],
+  "hb_pump_currents": [
+    1.85e-06
+  ],
+  "hb_dc_ports": [],
+  "hb_dc_currents": [],
+  "hb_modulation_harmonics": [
+    10
+  ],
+  "hb_pump_harmonics": [
+    20
+  ],
+  "hb_threewave_mixing": true,
+  "hb_fourwave_mixing": true,
+  "x-params": true,
+  "x_params": true,
+  "x_input_ports": ["P_in"],
+  "x_output_ports": ["P_out"],
+  "x_pump_ports": ["P_in"],
+  "x_pump_frequencies": [7.12],
+  "x_pump_currents": ["1.85e-6"],
+  "x_dc_ports": [],
+  "x_dc_currents": [],
+  "x_modulation_harmonics": [10],
+  "x_pump_harmonics": [20],
+  "x_threewave_mixing": true,
+  "x_fourwave_mixing": true,
+  "gui": {
+    "version": 1,
+    "viewport": {
+      "zoom": 1,
+      "pan": [
+        0,
+        0
+      ]
+    },
+    "wire_routes": [
+      {
+        "net_id": "net_1",
+        "wire_id": "wire_1",
+        "source": {
+          "instance_uid": "TWPA1",
+          "port": "P_out"
+        },
+        "target": {
+          "instance_uid": "TWPA2",
+          "port": "P_in"
+        },
+        "points": [
+          [
+            -180.0,
+            -180.0
+          ],
+          [
+            -134.0,
+            -180.0
+          ],
+          [
+            134.0,
+            -180.0
+          ],
+          [
+            180.0,
+            -180.0
+          ]
+        ],
+        "auto": true
+      }
+    ],
+    "last_selected": []
+  },
+  "multimode": true,
+  "multimode_symplectic_tolerance": 1e-06,
+  "reference": true
+}

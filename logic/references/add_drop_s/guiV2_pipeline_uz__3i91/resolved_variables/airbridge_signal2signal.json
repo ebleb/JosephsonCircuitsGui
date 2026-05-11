@@ -1,0 +1,238 @@
+{
+  "name": "airbridge_signal2signal",
+  "type": "schematic",
+  "instances": [
+    {
+      "type_name": "ABCD_seriesZ",
+      "uid": "AS1",
+      "parameters": {
+        "Z1": "im*((w))*(1e-12)"
+      },
+      "parameter_order": [
+        "Z1"
+      ],
+      "parameter_kinds": {
+        "Z1": "positional"
+      },
+      "position": [
+        -440.0,
+        -160.0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0.0,
+      "repeat_count": 1,
+      "repeat_connections": [],
+      "symbol_port_layout": [
+        {
+          "port": "p1",
+          "side": "left",
+          "position": 0.5
+        },
+        {
+          "port": "p2",
+          "side": "right",
+          "position": 0.5
+        }
+      ],
+      "symbol": {
+        "shape": "rectangle",
+        "width": 120,
+        "height": 70,
+        "label_position": "center",
+        "show_type_name": true,
+        "show_uid": true,
+        "port_layout": [
+          {
+            "port": "p1",
+            "side": "left",
+            "position": 0.5,
+            "label_visible": true
+          },
+          {
+            "port": "p2",
+            "side": "right",
+            "position": 0.5,
+            "label_visible": true
+          }
+        ]
+      },
+      "raw_parameters": {
+        "Z1": "im*w*L_bridge"
+      },
+      "resolved_parameters": {
+        "Z1": "im*((w))*(1e-12)"
+      }
+    },
+    {
+      "type_name": "ABCD_shuntY",
+      "uid": "AS2",
+      "parameters": {
+        "Y1": "im*((w))*(0.5e-15)"
+      },
+      "parameter_order": [
+        "Y1"
+      ],
+      "parameter_kinds": {
+        "Y1": "positional"
+      },
+      "position": [
+        -180.0,
+        -160.0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0.0,
+      "repeat_count": 1,
+      "repeat_connections": [],
+      "symbol_port_layout": [
+        {
+          "port": "p1",
+          "side": "left",
+          "position": 0.5
+        },
+        {
+          "port": "p2",
+          "side": "right",
+          "position": 0.5
+        }
+      ],
+      "symbol": {
+        "shape": "rectangle",
+        "width": 120,
+        "height": 70,
+        "label_position": "center",
+        "show_type_name": true,
+        "show_uid": true,
+        "port_layout": [
+          {
+            "port": "p1",
+            "side": "left",
+            "position": 0.5,
+            "label_visible": true
+          },
+          {
+            "port": "p2",
+            "side": "right",
+            "position": 0.5,
+            "label_visible": true
+          }
+        ]
+      },
+      "raw_parameters": {
+        "Y1": "im*w*C_gnd"
+      },
+      "resolved_parameters": {
+        "Y1": "im*((w))*(0.5e-15)"
+      }
+    }
+  ],
+  "wires": [
+    {
+      "source_instance_uid": "AS1",
+      "source_port": "p2",
+      "target_instance_uid": "AS2",
+      "target_port": "p1",
+      "name": "",
+      "gui_wire_id": "wire_1"
+    }
+  ],
+  "pins": [
+    {
+      "name": "P1",
+      "instance_uid": "AS1",
+      "port": "p1"
+    },
+    {
+      "name": "P2",
+      "instance_uid": "AS2",
+      "port": "p2"
+    }
+  ],
+  "labels": [],
+  "variables": [
+    {
+      "name": "L_bridge",
+      "default": "",
+      "resolved": "1e-12"
+    },
+    {
+      "name": "C_gnd",
+      "default": "",
+      "resolved": "0.5e-15"
+    }
+  ],
+  "z0": 50.0,
+  "simulation_input_ports": [],
+  "simulation_output_ports": [],
+  "simulation_freq_start": 2.0,
+  "simulation_freq_stop": 20.0,
+  "simulation_freq_points": 200,
+  "simulation_sweep_type": "linear",
+  "simulation_figure_title": "airbridge_signal2signal",
+  "hb_top_block": false,
+  "hb_pump_ports": [],
+  "hb_pump_frequencies": [],
+  "hb_pump_currents": [],
+  "hb_dc_ports": [],
+  "hb_dc_currents": [],
+  "hb_modulation_harmonics": [
+    10
+  ],
+  "hb_pump_harmonics": [
+    20
+  ],
+  "hb_threewave_mixing": true,
+  "hb_fourwave_mixing": true,
+  "gui": {
+    "version": 1,
+    "viewport": {
+      "zoom": 1,
+      "pan": [
+        0,
+        0
+      ]
+    },
+    "wire_routes": [
+      {
+        "net_id": "net_1",
+        "wire_id": "wire_1",
+        "source": {
+          "instance_uid": "AS1",
+          "port": "p2"
+        },
+        "target": {
+          "instance_uid": "AS2",
+          "port": "p1"
+        },
+        "points": [
+          [
+            -380.0,
+            -160.0
+          ],
+          [
+            -334.0,
+            -160.0
+          ],
+          [
+            -286.0,
+            -160.0
+          ],
+          [
+            -240.0,
+            -160.0
+          ]
+        ],
+        "auto": true
+      }
+    ],
+    "last_selected": []
+  },
+  "reference": false
+}

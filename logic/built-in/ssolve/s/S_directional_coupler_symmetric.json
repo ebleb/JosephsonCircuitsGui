@@ -1,0 +1,24 @@
+{
+  "name": "S_directional_coupler_symmetric",
+  "type": "built-in",
+  "subtype": "sSolve",
+  "hb_top_block": false,
+  "variables": [
+    {
+      "name": "couplingdB",
+      "default": "20.0"
+    }
+  ],
+  "port_count": 4,
+  "port_names": [
+    "p1",
+    "p2",
+    "p3",
+    "p4"
+  ],
+  "about": "Ideal symmetric directional coupler.",
+  "sketch": "port 1 --> through port 2\nport 3 coupled\nport 4 isolated",
+  "matrix_type": "S",
+  "matrix_is_code": true,
+  "matrix_code": "JosephsonCircuits.S_directional_coupler_symmetric(couplingdB)"
+}

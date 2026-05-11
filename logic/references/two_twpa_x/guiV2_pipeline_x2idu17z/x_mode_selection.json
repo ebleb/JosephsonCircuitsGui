@@ -1,0 +1,85 @@
+{
+  "target": "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_x2idu17z/two_twpas_series.json",
+  "stage_input": "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_x2idu17z/resolved_variables/two_twpas_series.json",
+  "x_params_requested": true,
+  "is_valid": true,
+  "errors": [],
+  "mode": "x_merge_simulation",
+  "next_step_code": 1,
+  "reason": "Multiple hb_top_block=true simulation roots were found. Merge the simulations before running the patched hbsolve.",
+  "use_patched_hbsolve": true,
+  "x_settings": {
+    "x-params": true,
+    "x_dc_currents": [],
+    "x_dc_ports": [],
+    "x_fourwave_mixing": true,
+    "x_modulation_harmonics": [
+      10
+    ],
+    "x_params": true,
+    "x_pump_currents": [
+      "1.85e-6"
+    ],
+    "x_pump_frequencies": [
+      7.12
+    ],
+    "x_pump_harmonics": [
+      20
+    ],
+    "x_pump_ports": [
+      "P_in"
+    ],
+    "x_threewave_mixing": true
+  },
+  "topology": {
+    "top_class": "hbsolve_block",
+    "top_is_hb_top": false,
+    "classes": {
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_x2idu17z/resolved_variables/two_twpas_series.json": "hbsolve_block",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_x2idu17z/resolved_variables/twpa.json": "hbsolve_block",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_x2idu17z/resolved_variables/output_twpa.json": "hbsolve_block",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/C.json": "hbsolve_primitive",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/R.json": "hbsolve_primitive",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/P.json": "hbsolve_primitive",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_x2idu17z/resolved_variables/subcell.json": "hbsolve_block",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_x2idu17z/resolved_variables/twpa_core_mod.json": "hbsolve_block",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/Lj.json": "hbsolve_primitive",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/L.json": "hbsolve_primitive",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_x2idu17z/resolved_variables/tpwa_core.json": "hbsolve_block",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_x2idu17z/resolved_variables/input_twpa.json": "hbsolve_block",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/GND.json": "hbsolve_primitive"
+    },
+    "hb_top_blocks": [
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_x2idu17z/resolved_variables/twpa.json"
+    ],
+    "hb_top_block_occurrences": [
+      {
+        "file": "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_x2idu17z/resolved_variables/twpa.json",
+        "instance_path": [
+          "TWPA1"
+        ]
+      },
+      {
+        "file": "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_x2idu17z/resolved_variables/twpa.json",
+        "instance_path": [
+          "TWPA2"
+        ]
+      }
+    ],
+    "nested_hb_top_block_occurrences": [],
+    "hb_top_block_count": 2,
+    "hbsolve_blocks": [
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_x2idu17z/resolved_variables/input_twpa.json",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_x2idu17z/resolved_variables/output_twpa.json",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_x2idu17z/resolved_variables/subcell.json",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_x2idu17z/resolved_variables/tpwa_core.json",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_x2idu17z/resolved_variables/two_twpas_series.json",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_x2idu17z/resolved_variables/twpa.json",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_x2idu17z/resolved_variables/twpa_core_mod.json"
+    ],
+    "sparam_blocks": [],
+    "mixtures": [],
+    "has_hb": true,
+    "has_sparam": false
+  }
+}

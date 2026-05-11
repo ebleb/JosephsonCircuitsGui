@@ -1,0 +1,114 @@
+{
+  "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/ssolve/abcd/ABCD_tline.json": {
+    "class": "sparam_primitive",
+    "hb_elements": [],
+    "sp_elements": [
+      "ABCD_tline"
+    ]
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/ssolve/abcd/ABCD_seriesZ.json": {
+    "class": "sparam_primitive",
+    "hb_elements": [],
+    "sp_elements": [
+      "ABCD_seriesZ"
+    ]
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/ssolve/abcd/ABCD_shuntY.json": {
+    "class": "sparam_primitive",
+    "hb_elements": [],
+    "sp_elements": [
+      "ABCD_shuntY"
+    ]
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_bnpa1xom/example_add_drop/airbridge_signal2signal.json": {
+    "class": "sparam_block",
+    "hb_elements": [],
+    "sp_elements": [
+      "ABCD_seriesZ (sparam_primitive)",
+      "ABCD_shuntY (sparam_primitive)"
+    ]
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/ssolve/abcd/ABCD_coupled_tline.json": {
+    "class": "sparam_primitive",
+    "hb_elements": [],
+    "sp_elements": [
+      "ABCD_coupled_tline"
+    ]
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_bnpa1xom/example_add_drop/ring_module.json": {
+    "class": "sparam_block",
+    "hb_elements": [],
+    "sp_elements": [
+      "ABCD_coupled_tline (sparam_primitive)",
+      "ABCD_tline (sparam_primitive)",
+      "airbridge_signal2signal (sparam_block)"
+    ]
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/ssolve/abcd/ABCD_shunt_signal2signal.json": {
+    "class": "sparam_primitive",
+    "hb_elements": [],
+    "sp_elements": [
+      "ABCD_shunt_signal2signal"
+    ]
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_bnpa1xom/example_add_drop/airbridge_signal2signal_crossing.json": {
+    "class": "sparam_block",
+    "hb_elements": [],
+    "sp_elements": [
+      "ABCD_shunt_signal2signal (sparam_primitive)",
+      "airbridge_signal2signal (sparam_block)"
+    ]
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_bnpa1xom/example_add_drop/io_coupler_module.json": {
+    "class": "sparam_block",
+    "hb_elements": [],
+    "sp_elements": [
+      "ABCD_coupled_tline (sparam_primitive)",
+      "ABCD_seriesZ (sparam_primitive)",
+      "airbridge_signal2signal_crossing (sparam_block)"
+    ]
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_bnpa1xom/example_add_drop/output_module.json": {
+    "class": "sparam_block",
+    "hb_elements": [],
+    "sp_elements": [
+      "ABCD_coupled_tline (sparam_primitive)",
+      "ABCD_tline (sparam_primitive)",
+      "airbridge_signal2signal (sparam_block)",
+      "io_coupler_module (sparam_block)"
+    ]
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_bnpa1xom/example_add_drop/input_module__override_add_drop_IM1.json": {
+    "class": "sparam_block",
+    "hb_elements": [],
+    "sp_elements": [
+      "ABCD_tline (sparam_primitive)",
+      "airbridge_signal2signal (sparam_block)",
+      "io_coupler_module (sparam_block)"
+    ]
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_bnpa1xom/example_add_drop/add_drop.json": {
+    "class": "sparam_block",
+    "hb_elements": [],
+    "sp_elements": [
+      "input_module__override_add_drop_IM1 (sparam_block)",
+      "output_module (sparam_block)",
+      "ring_module (sparam_block)"
+    ]
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/ssolve/s/S_termination.json": {
+    "class": "sparam_primitive",
+    "hb_elements": [],
+    "sp_elements": [
+      "S_termination"
+    ]
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_bnpa1xom/add_drop_shunt.json": {
+    "class": "sparam_block",
+    "hb_elements": [],
+    "sp_elements": [
+      "S_termination (sparam_primitive)",
+      "example_add_drop/add_drop (sparam_block)"
+    ]
+  }
+}

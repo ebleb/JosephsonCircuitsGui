@@ -1,0 +1,159 @@
+{
+  "name": "testbench",
+  "type": "schematic",
+  "instances": [
+    {
+      "type_name": "snail",
+      "uid": "SN1",
+      "parameters": {
+        "Lj": "60e-12",
+        "Cj": "10.0e-15",
+        "Lr": "0.4264e-9*1.25",
+        "Cr": "0.4e-12*1.25",
+        "Lg": "100.0e-9",
+        "Cc": "0.048e-12",
+        "R": "50.0",
+        "Ll": "34e-12",
+        "Ldc": " 0.74e-12",
+        "alpha": " 0.29",
+        "K": "0.999"
+      },
+      "parameter_order": [
+        "Cc",
+        "Cj",
+        "Cr",
+        "K",
+        "Ldc",
+        "Lg",
+        "Lj",
+        "Ll",
+        "Lr",
+        "R",
+        "alpha"
+      ],
+      "parameter_kinds": {
+        "Cc": "positional",
+        "Cj": "positional",
+        "Cr": "positional",
+        "K": "positional",
+        "Ldc": "positional",
+        "Lg": "positional",
+        "Lj": "positional",
+        "Ll": "positional",
+        "Lr": "positional",
+        "R": "positional",
+        "alpha": "positional"
+      },
+      "position": [
+        -600.0,
+        -120.0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "P_in",
+        "P_out"
+      ],
+      "rotation_degrees": 0,
+      "repeat_count": 1,
+      "repeat_connections": [],
+      "symbol_port_layout": [
+        {
+          "port": "P_in",
+          "side": "left",
+          "position": 0.5
+        },
+        {
+          "port": "P_out",
+          "side": "right",
+          "position": 0.5
+        }
+      ],
+      "symbol": {
+        "shape": "rectangle",
+        "width": 120,
+        "height": 70,
+        "label_position": "center",
+        "show_type_name": true,
+        "show_uid": true,
+        "port_layout": [
+          {
+            "port": "P_in",
+            "side": "left",
+            "position": 0.5,
+            "label_visible": true
+          },
+          {
+            "port": "P_out",
+            "side": "right",
+            "position": 0.5,
+            "label_visible": true
+          }
+        ]
+      }
+    }
+  ],
+  "wires": [],
+  "pins": [
+    {
+      "name": "P_in",
+      "instance_uid": "SN1",
+      "port": "P_in"
+    },
+    {
+      "name": "P_out",
+      "instance_uid": "SN1",
+      "port": "P_out"
+    }
+  ],
+  "labels": [],
+  "variables": [],
+  "z0": 50.0,
+  "simulation_input_ports": [
+    "P_in"
+  ],
+  "simulation_output_ports": [
+    "P_out"
+  ],
+  "simulation_freq_start": 7.8,
+  "simulation_freq_stop": 8.2,
+  "simulation_freq_points": 200,
+  "simulation_sweep_type": "linear",
+  "simulation_figure_title": "testbench",
+  "hb_top_block": true,
+  "hb_pump_ports": [
+    "2"
+  ],
+  "hb_pump_frequencies": [
+    16.0
+  ],
+  "hb_pump_currents": [
+    "4.4e-6"
+  ],
+  "hb_dc_ports": [
+    "2"
+  ],
+  "hb_dc_currents": [
+    "0.000159"
+  ],
+  "hb_modulation_harmonics": [
+    8
+  ],
+  "hb_pump_harmonics": [
+    16
+  ],
+  "hb_threewave_mixing": true,
+  "hb_fourwave_mixing": true,
+  "gui": {
+    "version": 1,
+    "viewport": {
+      "zoom": 1,
+      "pan": [
+        0,
+        0
+      ]
+    },
+    "wire_routes": [],
+    "last_selected": []
+  },
+  "reference": false
+}

@@ -1,0 +1,258 @@
+{
+  "name": "twpa_core_mod",
+  "type": "schematic",
+  "hb_top_block": "false",
+  "instances": [
+    {
+      "type_name": "C",
+      "uid": "C1",
+      "parameters": {
+        "C": "Cg - Cc"
+      },
+      "parameter_defaults": {
+        "C": "1e-12"
+      },
+      "parameter_order": [
+        "C"
+      ],
+      "parameter_kinds": {
+        "C": "keyword"
+      },
+      "position": [
+        -645.9999999999997,
+        -172.20000000000005
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 90.0,
+      "repeat_count": 1,
+      "symbol_port_layout": []
+    },
+    {
+      "type_name": "C",
+      "uid": "C2",
+      "parameters": {
+        "C": "Cc"
+      },
+      "parameter_defaults": {
+        "C": "1e-12"
+      },
+      "parameter_order": [
+        "C"
+      ],
+      "parameter_kinds": {
+        "C": "keyword"
+      },
+      "position": [
+        -419.64999999999986,
+        -215.85000000000008
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0.0,
+      "repeat_count": 1,
+      "symbol_port_layout": []
+    },
+    {
+      "type_name": "Lj",
+      "uid": "L1",
+      "parameters": {
+        "Lj": "Lj"
+      },
+      "parameter_defaults": {
+        "Lj": "1e-12"
+      },
+      "parameter_order": [
+        "Lj"
+      ],
+      "parameter_kinds": {
+        "Lj": "keyword"
+      },
+      "position": [
+        122.70000000000002,
+        -287.95000000000005
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0.0,
+      "repeat_count": 1,
+      "symbol_port_layout": []
+    },
+    {
+      "type_name": "C",
+      "uid": "C3",
+      "parameters": {
+        "C": "Cj"
+      },
+      "parameter_defaults": {
+        "C": "1e-12"
+      },
+      "parameter_order": [
+        "C"
+      ],
+      "parameter_kinds": {
+        "C": "keyword"
+      },
+      "position": [
+        122.9,
+        -160.89999999999998
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0.0,
+      "repeat_count": 1,
+      "symbol_port_layout": []
+    },
+    {
+      "type_name": "C",
+      "uid": "C4",
+      "parameters": {
+        "C": "Cr"
+      },
+      "parameter_defaults": {
+        "C": "1e-12"
+      },
+      "parameter_order": [
+        "C"
+      ],
+      "parameter_kinds": {
+        "C": "keyword"
+      },
+      "position": [
+        -119.34999999999994,
+        -99.15000000000002
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 90.0,
+      "repeat_count": 1,
+      "symbol_port_layout": []
+    },
+    {
+      "type_name": "L",
+      "uid": "L2",
+      "parameters": {
+        "L": "Lr"
+      },
+      "parameter_defaults": {
+        "L": "1e-12"
+      },
+      "parameter_order": [
+        "L"
+      ],
+      "parameter_kinds": {
+        "L": "keyword"
+      },
+      "position": [
+        -239.19999999999982,
+        -127.64999999999998
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 90.0,
+      "repeat_count": 1,
+      "symbol_port_layout": []
+    }
+  ],
+  "wires": [
+    {
+      "source_instance_uid": "C3",
+      "source_port": "p1",
+      "target_instance_uid": "L1",
+      "target_port": "p1",
+      "name": ""
+    },
+    {
+      "source_instance_uid": "L1",
+      "source_port": "p2",
+      "target_instance_uid": "C3",
+      "target_port": "p2",
+      "name": ""
+    },
+    {
+      "source_instance_uid": "C2",
+      "source_port": "p2",
+      "target_instance_uid": "C4",
+      "target_port": "p1",
+      "name": ""
+    },
+    {
+      "source_instance_uid": "C4",
+      "source_port": "p1",
+      "target_instance_uid": "L2",
+      "target_port": "p1",
+      "name": ""
+    },
+    {
+      "source_instance_uid": "C2",
+      "source_port": "p1",
+      "target_instance_uid": "C1",
+      "target_port": "p1",
+      "name": ""
+    },
+    {
+      "source_instance_uid": "C4",
+      "source_port": "p2",
+      "target_instance_uid": "C1",
+      "target_port": "p2",
+      "name": ""
+    },
+    {
+      "source_instance_uid": "L2",
+      "source_port": "p2",
+      "target_instance_uid": "C1",
+      "target_port": "p2",
+      "name": ""
+    },
+    {
+      "source_instance_uid": "L1",
+      "source_port": "p1",
+      "target_instance_uid": "C1",
+      "target_port": "p1",
+      "name": ""
+    }
+  ],
+  "pins": [
+    {
+      "name": "P_j",
+      "instance_uid": "C1",
+      "port": "p1"
+    },
+    {
+      "name": "P_0",
+      "instance_uid": "C1",
+      "port": "p2"
+    },
+    {
+      "name": "P_j+2",
+      "instance_uid": "L1",
+      "port": "p2"
+    }
+  ],
+  "z0": 50.0,
+  "simulation_input_ports": [],
+  "simulation_output_ports": [],
+  "simulation_freq_start": 2.0,
+  "simulation_freq_stop": 20.0,
+  "simulation_freq_points": 200,
+  "simulation_sweep_type": "linear",
+  "simulation_figure_title": ""
+}

@@ -1,0 +1,161 @@
+using DelimitedFiles
+using LinearAlgebra
+using JosephsonCircuits
+
+Z0 = 50.0
+z0 = 50.0
+z_0 = 50.0
+Z_0 = 50.0
+c = 299792458
+lcoupler = 1849/500000
+ne0 = 12337097424754697/5000000000000000
+no0 = 310410677050889/125000000000000
+L_inductor = 1/1000000000000
+
+ws = 2 * pi * range(1.0, 20.0, length=500) * 1e9
+
+function load_s_matrix(filepath)
+    in_data = readdlm(filepath, ',', Float64)
+    num_freqs = size(in_data, 1)
+    num_ports = Int(sqrt((size(in_data, 2) - 1) / 2))
+
+    S = zeros(ComplexF64, num_ports, num_ports, num_freqs)
+
+    col = 2
+    for out_p in 1:num_ports
+        for in_p in 1:num_ports
+            S[out_p, in_p, :] = in_data[:, col] .+ im .* in_data[:, col + 1]
+            col += 2
+        end
+    end
+
+    return S
+end
+
+function load_s_matrix_at(filepath, k)
+    S = load_s_matrix(filepath)
+    return ComplexF64.(S[:, :, k])
+end
+
+function save_s_matrix(filepath, ws, S)
+    num_freqs = length(ws)
+    num_ports = size(S, 1)
+
+    out_data = zeros(Float64, num_freqs, 1 + 2 * (num_ports^2))
+    out_data[:, 1] = ws ./ (2*pi*1e9)
+
+    col = 2
+    for out_p in 1:num_ports
+        for in_p in 1:num_ports
+            out_data[:, col] = real.(S[out_p, in_p, :])
+            out_data[:, col + 1] = imag.(S[out_p, in_p, :])
+            col += 2
+        end
+    end
+
+    writedlm(filepath, out_data, ',')
+end
+
+function extract_s_matrix(sol)
+    if hasproperty(sol, :S)
+        return sol.S
+    elseif sol isa AbstractArray
+        return sol
+    else
+        error("Cannot extract S-matrix from solveS result. Expected sol.S or array.")
+    end
+end
+
+function solve_networks(networks, connections)
+    if isempty(connections) && length(networks) == 1
+        name, S = networks[1]
+        ports = [(name, p) for p in 1:size(S, 1)]
+        return reshape(S, size(S, 1), size(S, 2), 1), ports
+    end
+
+    sol = solveS(networks, connections)
+    return extract_s_matrix(sol), sol.ports
+end
+
+function apply_port_order(S_k, sol_ports)
+    expected_ports = [("ACT1", 1), ("AS1", 2), ("ASC1", 3), ("ASC1", 4)]
+
+    if expected_ports === nothing
+        return S_k
+    end
+
+    perm = Int[]
+    missing = Tuple{String, Int}[]
+
+    for ep in expected_ports
+        idx = findfirst(p -> p == ep, sol_ports)
+        if idx === nothing
+            push!(missing, ep)
+            continue
+        end
+        push!(perm, idx)
+    end
+
+    if !isempty(missing)
+        println("[WARN] JSON exported port(s) not present as external solveS ports: ", missing)
+        println("       solveS external ports: ", sol_ports)
+    end
+
+    if isempty(perm)
+        error("None of the JSON expected ports were found in solveS output ports $(sol_ports)")
+    end
+
+    return S_k[perm, perm, :]
+end
+
+function build_networks(w, k)
+    networks = Tuple{String, Matrix{ComplexF64}}[]
+
+    push!(networks, ("ASC1", load_s_matrix_at("/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_es3gz2g0/cache/airbridge_signal2signal_crossing__p_2a0171e07a_4c4c18a397136daf.csv", k)))
+    push!(networks, ("ACT1", let
+        Z0e = 1995976205172263/25000000000000
+        Z0o = 31268051050244907/1000000000000000
+        thetae = 3258756162624490679*w/107068735000000000000000000000
+        thetao = 573949341867093761*w/18737028625000000000000000000
+        ComplexF64.(JosephsonCircuits.AtoS(ComplexF64.(JosephsonCircuits.ABCD_coupled_tline(Z0e, Z0o, thetae, thetao))))
+    end))
+    push!(networks, ("AS1", let
+        Z1 = im*w/1000000000000
+        ComplexF64.(JosephsonCircuits.AtoS(ComplexF64.(JosephsonCircuits.ABCD_seriesZ(Z1))))
+    end))
+
+    return networks
+end
+
+function build_connections()
+    connections = Vector{Vector{Tuple{String, Int}}}()
+
+    push!(connections, [("ACT1", 3), ("ASC1", 1)])
+    push!(connections, [("ACT1", 4), ("ASC1", 2)])
+    push!(connections, [("ACT1", 2), ("AS1", 1)])
+
+    return connections
+end
+
+connections = build_connections()
+
+println("Running solveS on io_coupler_module__p_d5840a5c8e.json...")
+
+S_first = nothing
+
+for k in eachindex(ws)
+    w = ws[k]
+    networks = build_networks(w, k)
+    S_k, sol_ports = solve_networks(networks, connections)
+    S_k = apply_port_order(S_k, sol_ports)
+    S_k = ComplexF64.(S_k)
+
+    if S_first === nothing
+        global S_first = zeros(ComplexF64, size(S_k, 1), size(S_k, 2), length(ws))
+    end
+
+    S_first[:, :, k] .= S_k[:, :, 1]
+end
+
+save_s_matrix("/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_es3gz2g0/cache/io_coupler_module__p_d5840a5c8e_871ff25d0adb24ae.csv", ws, S_first)
+println("Saved solveS cache to io_coupler_module__p_d5840a5c8e_871ff25d0adb24ae.csv")

@@ -1,0 +1,361 @@
+{
+  "name": "add_drop_shunt",
+  "type": "schematic",
+  "instances": [
+    {
+      "type_name": "example_add_drop/add_drop",
+      "uid": "AD1",
+      "parameters": {},
+      "parameter_order": [],
+      "parameter_kinds": {},
+      "position": [
+        -360.0,
+        -260.0
+      ],
+      "port_count": 4,
+      "port_names": [
+        "P3",
+        "P1",
+        "P2",
+        "P4"
+      ],
+      "rotation_degrees": 0.0,
+      "repeat_count": 1,
+      "repeat_connections": [],
+      "symbol_port_layout": [
+        {
+          "port": "P3",
+          "side": "right",
+          "position": 0.2
+        },
+        {
+          "port": "P1",
+          "side": "left",
+          "position": 0.2
+        },
+        {
+          "port": "P2",
+          "side": "left",
+          "position": 0.8
+        },
+        {
+          "port": "P4",
+          "side": "right",
+          "position": 0.8
+        }
+      ],
+      "symbol": {
+        "shape": "rectangle",
+        "width": 120.0,
+        "height": 70.0,
+        "label_position": "center",
+        "show_type_name": true,
+        "show_uid": true,
+        "port_layout": [
+          {
+            "port": "P3",
+            "side": "right",
+            "position": 0.2,
+            "label_visible": true
+          },
+          {
+            "port": "P1",
+            "side": "left",
+            "position": 0.2,
+            "label_visible": true
+          },
+          {
+            "port": "P2",
+            "side": "left",
+            "position": 0.8,
+            "label_visible": true
+          },
+          {
+            "port": "P4",
+            "side": "right",
+            "position": 0.8,
+            "label_visible": true
+          }
+        ]
+      },
+      "hb_top_block": false,
+      "hb_pump_ports": [],
+      "hb_pump_frequencies": [],
+      "hb_pump_currents": [],
+      "hb_dc_ports": [],
+      "hb_dc_currents": [],
+      "hb_modulation_harmonics": [
+        10
+      ],
+      "hb_pump_harmonics": [
+        20
+      ],
+      "hb_threewave_mixing": true,
+      "hb_fourwave_mixing": true,
+      "raw_parameters": {},
+      "resolved_parameters": {}
+    },
+    {
+      "type_name": "S_termination",
+      "uid": "ST1",
+      "parameters": {
+        "R_shunt": "50.0"
+      },
+      "parameter_order": [
+        "R_shunt"
+      ],
+      "parameter_kinds": {
+        "R_shunt": "positional"
+      },
+      "position": [
+        -60.0,
+        -360.0
+      ],
+      "port_count": 1,
+      "port_names": [
+        "p1"
+      ],
+      "rotation_degrees": 90.0,
+      "repeat_count": 1,
+      "repeat_connections": [],
+      "symbol_port_layout": [
+        {
+          "port": "p1",
+          "side": "bottom",
+          "position": 0.5
+        }
+      ],
+      "symbol": {
+        "shape": "rectangle",
+        "width": 80,
+        "height": 50,
+        "port_layout": [
+          {
+            "port": "p1",
+            "side": "bottom",
+            "position": 0.5,
+            "label_visible": true
+          }
+        ],
+        "show_type_name": true,
+        "show_uid": true
+      },
+      "raw_parameters": {
+        "R_shunt": "50.0"
+      },
+      "resolved_parameters": {
+        "R_shunt": "50.0"
+      }
+    },
+    {
+      "type_name": "S_termination",
+      "uid": "ST2",
+      "parameters": {
+        "R_shunt": "50.0"
+      },
+      "parameter_order": [
+        "R_shunt"
+      ],
+      "parameter_kinds": {
+        "R_shunt": "positional"
+      },
+      "position": [
+        -560.0,
+        -280.0
+      ],
+      "port_count": 1,
+      "port_names": [
+        "p1"
+      ],
+      "rotation_degrees": 270.0,
+      "repeat_count": 1,
+      "repeat_connections": [],
+      "symbol_port_layout": [
+        {
+          "port": "p1",
+          "side": "bottom",
+          "position": 0.5
+        }
+      ],
+      "symbol": {
+        "shape": "rectangle",
+        "width": 80,
+        "height": 50,
+        "port_layout": [
+          {
+            "port": "p1",
+            "side": "bottom",
+            "position": 0.5,
+            "label_visible": true
+          }
+        ],
+        "show_type_name": true,
+        "show_uid": true
+      },
+      "raw_parameters": {
+        "R_shunt": "50.0"
+      },
+      "resolved_parameters": {
+        "R_shunt": "50.0"
+      }
+    }
+  ],
+  "wires": [
+    {
+      "source_instance_uid": "AD1",
+      "source_port": "P2",
+      "target_instance_uid": "ST2",
+      "target_port": "p1",
+      "name": "",
+      "gui_wire_id": "wire_52355c5c"
+    },
+    {
+      "source_instance_uid": "ST1",
+      "source_port": "p1",
+      "target_instance_uid": "AD1",
+      "target_port": "P4",
+      "name": "",
+      "gui_wire_id": "wire_18b6883d"
+    }
+  ],
+  "pins": [
+    {
+      "name": "P_in",
+      "instance_uid": "AD1",
+      "port": "P1"
+    },
+    {
+      "name": "P_out",
+      "instance_uid": "AD1",
+      "port": "P3"
+    }
+  ],
+  "labels": [],
+  "variables": [],
+  "z0": 50.0,
+  "simulation_input_ports": [
+    "P_in"
+  ],
+  "simulation_output_ports": [
+    "P_out"
+  ],
+  "simulation_freq_start": 2.0,
+  "simulation_freq_stop": 20.0,
+  "simulation_freq_points": 200,
+  "simulation_sweep_type": "linear",
+  "simulation_figure_title": "add_drop_shunt",
+  "hb_top_block": false,
+  "hb_pump_ports": [],
+  "hb_pump_frequencies": [],
+  "hb_pump_currents": [],
+  "hb_dc_ports": [],
+  "hb_dc_currents": [],
+  "hb_modulation_harmonics": [
+    10
+  ],
+  "hb_pump_harmonics": [
+    20
+  ],
+  "hb_threewave_mixing": true,
+  "hb_fourwave_mixing": true,
+  "gui": {
+    "version": 1,
+    "viewport": {
+      "zoom": 1,
+      "pan": [
+        0,
+        0
+      ]
+    },
+    "wire_routes": [
+      {
+        "net_id": "net_1",
+        "wire_id": "wire_52355c5c",
+        "source": {
+          "instance_uid": "AD1",
+          "port": "P2"
+        },
+        "target": {
+          "instance_uid": "ST2",
+          "port": "p1"
+        },
+        "points": [
+          [
+            -420.0,
+            -239.0
+          ],
+          [
+            -466.0,
+            -239.0
+          ],
+          [
+            -495.0,
+            -239.0
+          ],
+          [
+            -495.0,
+            -216.0
+          ],
+          [
+            -535.0,
+            -216.0
+          ],
+          [
+            -535.0,
+            -280.0
+          ]
+        ],
+        "auto": true
+      },
+      {
+        "net_id": "net_2",
+        "wire_id": "wire_18b6883d",
+        "source": {
+          "instance_uid": "ST1",
+          "port": "p1"
+        },
+        "target": {
+          "instance_uid": "AD1",
+          "port": "P4"
+        },
+        "points": [
+          [
+            -85.0,
+            -360.0
+          ],
+          [
+            -85.0,
+            -296.0
+          ],
+          [
+            -125.0,
+            -296.0
+          ],
+          [
+            -254.0,
+            -296.0
+          ],
+          [
+            -254.0,
+            -280.0
+          ],
+          [
+            -254.0,
+            -257.0
+          ],
+          [
+            -254.0,
+            -239.0
+          ],
+          [
+            -300.0,
+            -239.0
+          ]
+        ],
+        "auto": true
+      }
+    ],
+    "last_selected": []
+  },
+  "reference": false
+}

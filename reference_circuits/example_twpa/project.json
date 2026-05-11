@@ -1,0 +1,27 @@
+{
+  "name": "example_twpa",
+  "path": "/home/benedikte/userdata/urop/app_v2_pub/data/example_twpa",
+  "version": 1,
+  "default_cell": "",
+  "default_z0": 50.0,
+  "recent_cells": [
+    "twpa",
+    "twpa_core_mod",
+    "tpwa_core",
+    "subcell",
+    "output_twpa",
+    "input_twpa"
+  ],
+  "imports": [],
+  "gui": {
+    "last_open_tabs": [
+      "input_twpa",
+      "twpa",
+      "subcell",
+      "output_twpa",
+      "tpwa_core",
+      "twpa_core_mod"
+    ],
+    "layout": {}
+  }
+}

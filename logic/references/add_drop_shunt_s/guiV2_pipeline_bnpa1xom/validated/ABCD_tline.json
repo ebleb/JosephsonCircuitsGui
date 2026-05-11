@@ -1,0 +1,38 @@
+{
+  "name": "ABCD_tline",
+  "type": "built-in",
+  "subtype": "sSolve",
+  "hb_top_block": false,
+  "variables": [
+    {
+      "name": "Z0",
+      "default": "50.0"
+    },
+    {
+      "name": "theta",
+      "default": "pi/4"
+    }
+  ],
+  "port_count": 2,
+  "port_names": [
+    "p1",
+    "p2"
+  ],
+  "about": "ABCD matrix for a transmission line.",
+  "sketch": "   theta, Z0\no--========--o\n\n\no------------o",
+  "matrix_type": "ABCD",
+  "matrix_is_code": true,
+  "matrix_code": "JosephsonCircuits.ABCD_tline(Z0, theta)",
+  "z0": 50.0,
+  "simulation_input_ports": [
+    "P_in"
+  ],
+  "simulation_output_ports": [
+    "P_out"
+  ],
+  "simulation_freq_start": 2.0,
+  "simulation_freq_stop": 20.0,
+  "simulation_freq_points": 200,
+  "simulation_sweep_type": "linear",
+  "simulation_figure_title": "subplot: ABCD_tline"
+}

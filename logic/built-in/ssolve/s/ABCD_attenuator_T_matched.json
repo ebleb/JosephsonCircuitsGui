@@ -1,0 +1,26 @@
+{
+  "name": "ABCD_attenuator_T_matched",
+  "type": "built-in",
+  "subtype": "sSolve",
+  "hb_top_block": false,
+  "variables": [
+    {
+      "name": "Z0",
+      "default": "50.0"
+    },
+    {
+      "name": "attenuationdB",
+      "default": "10.0"
+    }
+  ],
+  "port_count": 2,
+  "port_names": [
+    "p1",
+    "p2"
+  ],
+  "about": "Matched T attenuator block.",
+  "sketch": "o--Ra-----Rb--o\n       |\n       Rc\n       |\no-------------o",
+  "matrix_type": "S",
+  "matrix_is_code": true,
+  "matrix_code": "JosephsonCircuits.ABCD_attenuator_T(Z0, attenuationdB)"
+}

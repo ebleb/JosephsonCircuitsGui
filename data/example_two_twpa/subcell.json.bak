@@ -1,0 +1,220 @@
+{
+  "name": "subcell",
+  "type": "schematic",
+  "hb_top_block": "false",
+  "instances": [
+    {
+      "type_name": "twpa_core_mod",
+      "uid": "TCM1",
+      "parameters": {},
+      "parameter_defaults": {
+        "w": "",
+        "Cg": "Cg",
+        "Cc": "Cc",
+        "Lj": "Lj",
+        "Cj": "Cj",
+        "Cr": "Cr",
+        "Lr": "Lr"
+      },
+      "parameter_order": [
+        "Cg",
+        "Cc",
+        "Lj",
+        "Cj",
+        "Cr",
+        "Lr"
+      ],
+      "parameter_kinds": {
+        "w": "keyword",
+        "Cg": "keyword",
+        "Cc": "keyword",
+        "Lj": "keyword",
+        "Cj": "keyword",
+        "Cr": "keyword",
+        "Lr": "keyword"
+      },
+      "position": [
+        -385.0,
+        -219.0
+      ],
+      "port_count": 3,
+      "port_names": [
+        "P_j",
+        "P_0",
+        "P_j+2"
+      ],
+      "rotation_degrees": 0.0,
+      "repeat_count": 1,
+      "symbol_port_layout": []
+    },
+    {
+      "type_name": "tpwa_core",
+      "uid": "TC1",
+      "parameters": {},
+      "parameter_defaults": {
+        "w": "",
+        "Cg": "Cg",
+        "Lj": "Lj",
+        "Cj": "Cj"
+      },
+      "parameter_order": [
+        "Cg",
+        "Lj",
+        "Cj"
+      ],
+      "parameter_kinds": {
+        "w": "keyword",
+        "Cg": "keyword",
+        "Lj": "keyword",
+        "Cj": "keyword"
+      },
+      "position": [
+        -100.0,
+        -166.0
+      ],
+      "port_count": 3,
+      "port_names": [
+        "P_0",
+        "P_j",
+        "P_j+1"
+      ],
+      "rotation_degrees": 0.0,
+      "repeat_count": 1,
+      "symbol_port_layout": []
+    },
+    {
+      "type_name": "tpwa_core",
+      "uid": "TC2",
+      "parameters": {},
+      "parameter_defaults": {
+        "w": "",
+        "Cg": "Cg",
+        "Lj": "Lj",
+        "Cj": "Cj"
+      },
+      "parameter_order": [
+        "Cg",
+        "Lj",
+        "Cj"
+      ],
+      "parameter_kinds": {
+        "w": "keyword",
+        "Cg": "keyword",
+        "Lj": "keyword",
+        "Cj": "keyword"
+      },
+      "position": [
+        150.0,
+        -166.0
+      ],
+      "port_count": 3,
+      "port_names": [
+        "P_0",
+        "P_j",
+        "P_j+1"
+      ],
+      "rotation_degrees": 0.0,
+      "repeat_count": 1,
+      "symbol_port_layout": []
+    },
+    {
+      "type_name": "tpwa_core",
+      "uid": "TC3",
+      "parameters": {},
+      "parameter_defaults": {
+        "w": "",
+        "Cg": "Cg",
+        "Lj": "Lj",
+        "Cj": "Cj"
+      },
+      "parameter_order": [
+        "Cg",
+        "Lj",
+        "Cj"
+      ],
+      "parameter_kinds": {
+        "w": "keyword",
+        "Cg": "keyword",
+        "Lj": "keyword",
+        "Cj": "keyword"
+      },
+      "position": [
+        400.0,
+        -166.0
+      ],
+      "port_count": 3,
+      "port_names": [
+        "P_0",
+        "P_j",
+        "P_j+1"
+      ],
+      "rotation_degrees": 0.0,
+      "repeat_count": 1,
+      "symbol_port_layout": []
+    }
+  ],
+"wires": [
+  {
+    "source_instance_uid": "TCM1",
+    "source_port": "P_j+2",
+    "target_instance_uid": "TC1",
+    "target_port": "P_j",
+    "name": ""
+  },
+  {
+    "source_instance_uid": "TCM1",
+    "source_port": "P_0",
+    "target_instance_uid": "TC1",
+    "target_port": "P_0",
+    "name": ""
+  },
+  {
+    "source_instance_uid": "TC1",
+    "source_port": "P_j+1",
+    "target_instance_uid": "TC2",
+    "target_port": "P_j",
+    "name": ""
+  },
+  {
+    "source_instance_uid": "TC1",
+    "source_port": "P_0",
+    "target_instance_uid": "TC2",
+    "target_port": "P_0",
+    "name": ""
+  },
+  {
+    "source_instance_uid": "TC2",
+    "source_port": "P_j+1",
+    "target_instance_uid": "TC3",
+    "target_port": "P_j",
+    "name": ""
+  },
+  {
+    "source_instance_uid": "TC2",
+    "source_port": "P_0",
+    "target_instance_uid": "TC3",
+    "target_port": "P_0",
+    "name": ""
+  }
+],
+"pins": [
+  {
+    "name": "P_j",
+    "instance_uid": "TCM1",
+    "port": "P_j"
+  },
+  {
+    "name": "P_j+5",
+    "instance_uid": "TC3",
+    "port": "P_j+1"
+  }
+],
+  "z0": 50.0,
+  "simulation_input_ports": [],
+  "simulation_output_ports": [],
+  "simulation_freq_start": 2.0,
+  "simulation_freq_stop": 20.0,
+  "simulation_freq_points": 200,
+  "simulation_sweep_type": "linear",
+  "simulation_figure_title": ""
+}

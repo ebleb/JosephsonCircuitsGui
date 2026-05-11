@@ -1,0 +1,79 @@
+{
+  "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/P.json": {
+    "class": "hbsolve_primitive",
+    "hb_elements": [
+      "P"
+    ],
+    "sp_elements": []
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/R.json": {
+    "class": "hbsolve_primitive",
+    "hb_elements": [
+      "R"
+    ],
+    "sp_elements": []
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/L.json": {
+    "class": "hbsolve_primitive",
+    "hb_elements": [
+      "L"
+    ],
+    "sp_elements": []
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/C.json": {
+    "class": "hbsolve_primitive",
+    "hb_elements": [
+      "C"
+    ],
+    "sp_elements": []
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/GND.json": {
+    "class": "hbsolve_primitive",
+    "hb_elements": [
+      "GND"
+    ],
+    "sp_elements": []
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/Lj.json": {
+    "class": "hbsolve_primitive",
+    "hb_elements": [
+      "Lj"
+    ],
+    "sp_elements": []
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/Cj.json": {
+    "class": "hbsolve_primitive",
+    "hb_elements": [
+      "Cj"
+    ],
+    "sp_elements": []
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/K.json": {
+    "class": "hbsolve_primitive",
+    "hb_elements": [
+      "K"
+    ],
+    "sp_elements": []
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_90tcg3zw/flux_pumped_JPA.json": {
+    "class": "hbsolve_block",
+    "hb_elements": [
+      "C (HB primitive)",
+      "Cj (HB primitive)",
+      "GND (HB primitive)",
+      "K (HB primitive)",
+      "L (HB primitive)",
+      "Lj (HB primitive)",
+      "P (HB primitive)",
+      "R (HB primitive)"
+    ],
+    "sp_elements": []
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_90tcg3zw/testbench.json": {
+    "class": "hbsolve_block",
+    "hb_elements": [
+      "flux_pumped_JPA (HB block)"
+    ],
+    "sp_elements": []
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "target": "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_78kup2t7/testbench.json",
+  "stage_input": "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_78kup2t7/resolved_variables/testbench.json",
+  "x_params_requested": true,
+  "is_valid": true,
+  "errors": [],
+  "mode": "regular_pipeline",
+  "next_step_code": 0,
+  "reason": "The target itself is an HB top block. Continue through the regular pipeline and use the patched hbsolve at simulation time.",
+  "use_patched_hbsolve": true,
+  "x_settings": {
+    "x-params": true,
+    "x_dc_currents": [
+      "0.000159"
+    ],
+    "x_dc_ports": [
+      "P_out"
+    ],
+    "x_fourwave_mixing": true,
+    "x_modulation_harmonics": [
+      8
+    ],
+    "x_params": true,
+    "x_pump_currents": [
+      "4.4e-6"
+    ],
+    "x_pump_frequencies": [
+      16.0
+    ],
+    "x_pump_harmonics": [
+      16
+    ],
+    "x_pump_ports": [
+      "P_out"
+    ],
+    "x_threewave_mixing": true
+  },
+  "topology": {
+    "top_class": "hbsolve_block",
+    "top_is_hb_top": true,
+    "classes": {
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_78kup2t7/resolved_variables/testbench.json": "hbsolve_block",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_78kup2t7/resolved_variables/snail.json": "hbsolve_block",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/P.json": "hbsolve_primitive",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/R.json": "hbsolve_primitive",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/L.json": "hbsolve_primitive",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/C.json": "hbsolve_primitive",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/Lj.json": "hbsolve_primitive",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/Cj.json": "hbsolve_primitive",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/GND.json": "hbsolve_primitive",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/K.json": "hbsolve_primitive"
+    },
+    "hb_top_blocks": [
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_78kup2t7/resolved_variables/testbench.json"
+    ],
+    "hb_top_block_occurrences": [
+      {
+        "file": "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_78kup2t7/resolved_variables/testbench.json",
+        "instance_path": []
+      }
+    ],
+    "nested_hb_top_block_occurrences": [],
+    "hb_top_block_count": 1,
+    "hbsolve_blocks": [
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_78kup2t7/resolved_variables/snail.json",
+      "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_78kup2t7/resolved_variables/testbench.json"
+    ],
+    "sparam_blocks": [],
+    "mixtures": [],
+    "has_hb": true,
+    "has_sparam": false
+  }
+}

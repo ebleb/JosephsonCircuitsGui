@@ -1,0 +1,70 @@
+{
+  "name": "ABCD_TZ",
+  "type": "built-in",
+  "subtype": "sSolve",
+  "hb_top_block": false,
+  "variables": [
+    {
+      "name": "Z1",
+      "default": "1.0"
+    },
+    {
+      "name": "Z2",
+      "default": "2.0"
+    },
+    {
+      "name": "Z3",
+      "default": "4.0"
+    }
+  ],
+  "port_count": 2,
+  "port_names": [
+    "p1",
+    "p2"
+  ],
+  "about": "ABCD matrix for a T network of impedances.",
+  "sketch": "o--Z1-----Z2--o\n       |\n      Z3\n       |\no-------------o",
+  "matrix_type": "ABCD",
+  "matrix_is_code": true,
+  "matrix_code": "JosephsonCircuits.ABCD_TZ(Z1, Z2, Z3)",
+  "x-equivalent-circuit": {
+    "kind": "lumped_passive_network",
+    "branches": [
+      {
+        "name": "Z1",
+        "between": [
+          "p1",
+          "n_mid"
+        ],
+        "impedance": "Z1"
+      },
+      {
+        "name": "Z2",
+        "between": [
+          "n_mid",
+          "p2"
+        ],
+        "impedance": "Z2"
+      },
+      {
+        "name": "Z3",
+        "between": [
+          "n_mid",
+          "0"
+        ],
+        "impedance": "Z3"
+      }
+    ],
+    "pins": [
+      {
+        "name": "p1",
+        "node": "p1"
+      },
+      {
+        "name": "p2",
+        "node": "p2"
+      }
+    ],
+    "ground": "0"
+  }
+}

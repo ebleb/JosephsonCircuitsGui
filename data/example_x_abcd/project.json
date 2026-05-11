@@ -1,0 +1,31 @@
+{
+  "name": "example_x_abcd",
+  "path": "/home/benedikte/userdata/urop/app_v2/data/example_x_abcd",
+  "version": 1,
+  "default_cell": "first_half",
+  "default_z0": 50.0,
+  "recent_cells": [
+    "example_x_abcd"
+  ],
+  "imports": [
+    {
+      "alias": "example_twpa",
+      "path": "/home/benedikte/userdata/urop/app_v2/data/example_twpa",
+      "enabled": true,
+      "autoResolved": true
+    },
+    {
+      "alias": "example_add_drop",
+      "path": "/home/benedikte/userdata/urop/app_v2/data/example_add_drop",
+      "enabled": true,
+      "autoResolved": true
+    }
+  ],
+  "gui": {
+    "last_open_tabs": [
+      "example_x_abcd",
+      "first_half"
+    ],
+    "layout": {}
+  }
+}

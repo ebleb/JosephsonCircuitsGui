@@ -1,0 +1,29 @@
+{
+  "name": "K",
+  "type": "built-in",
+  "subtype": "hbsolve",
+  "hb_top_block": false,
+  "variables": [
+    {
+      "name": "inductor_a",
+      "default": "L1",
+      "kind": "uid"
+    },
+    {
+      "name": "inductor_b",
+      "default": "L2",
+      "kind": "uid"
+    },
+    {
+      "name": "K",
+      "default": "0.1"
+    }
+  ],
+  "port_count": 0,
+  "port_names": [],
+  "about": "HB mutual coupling annotation between two inductor branch names.",
+  "sketch": "[ K ]  inductor_a <-> inductor_b",
+  "library_group": "HB Primitive Blocks",
+  "symbol_port_layout": [],
+  "julia_string": "(\"K\", string(inductor_a), string(inductor_b), K)"
+}

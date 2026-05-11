@@ -1,0 +1,9 @@
+{
+  "target": "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_kgki9mfn/double_pumped_JPA.json",
+  "stage_input": "/home/benedikte/userdata/urop/app_v2_pub/logic/outputs/guiV2_pipeline_kgki9mfn/resolved_variables/double_pumped_JPA.json",
+  "x_params_requested": false,
+  "mode": "regular_pipeline",
+  "next_step_code": 0,
+  "reason": "x-params is not enabled on the top-level JSON.",
+  "use_patched_hbsolve": false
+}

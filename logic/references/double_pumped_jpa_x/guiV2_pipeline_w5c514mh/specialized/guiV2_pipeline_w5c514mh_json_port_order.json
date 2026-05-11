@@ -1,0 +1,16 @@
+{
+  "double_pumped_JPA": [
+    [
+      "JP1_P1",
+      2
+    ],
+    [
+      "JP1_P1",
+      1
+    ]
+  ],
+  "double_pumped_JPA__hb_input_field": 1,
+  "double_pumped_JPA__hb_input_pin_name": "P_in",
+  "double_pumped_JPA__hb_output_field": 1,
+  "double_pumped_JPA__hb_output_pin_name": "P_out"
+}

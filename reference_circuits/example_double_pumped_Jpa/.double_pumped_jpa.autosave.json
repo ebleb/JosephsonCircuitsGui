@@ -1,0 +1,398 @@
+{
+  "name": "double_pumped_jpa",
+  "type": "schematic",
+  "instances": [
+    {
+      "type_name": "JPA",
+      "uid": "JP1",
+      "parameters": {},
+      "parameter_defaults": {},
+      "parameter_order": [],
+      "parameter_kinds": {},
+      "position": [
+        -200.0,
+        -120.0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "P_in",
+        "P_out"
+      ],
+      "rotation_degrees": 90.0,
+      "repeat_count": 1,
+      "repeat_connections": [],
+      "symbol_port_layout": [
+        {
+          "port": "P_in",
+          "side": "left",
+          "position": 0.5
+        },
+        {
+          "port": "P_out",
+          "side": "right",
+          "position": 0.5
+        }
+      ],
+      "symbol": {
+        "shape": "rectangle",
+        "width": 120,
+        "height": 70,
+        "label_position": "center",
+        "show_type_name": true,
+        "show_uid": true,
+        "port_layout": [
+          {
+            "port": "P_in",
+            "side": "left",
+            "position": 0.5,
+            "label_visible": true
+          },
+          {
+            "port": "P_out",
+            "side": "right",
+            "position": 0.5,
+            "label_visible": true
+          }
+        ]
+      }
+    },
+    {
+      "type_name": "ABCD_shuntY",
+      "uid": "AB1",
+      "parameters": {
+        "Y1": "1/50"
+      },
+      "parameter_defaults": {
+        "Y1": "1/50"
+      },
+      "parameter_order": [
+        "Y1"
+      ],
+      "parameter_kinds": {
+        "Y1": "positional"
+      },
+      "position": [
+        60.0,
+        -100.0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0,
+      "repeat_count": 1,
+      "repeat_connections": [],
+      "symbol_port_layout": [
+        {
+          "port": "p1",
+          "side": "left",
+          "position": 0.5
+        },
+        {
+          "port": "p2",
+          "side": "right",
+          "position": 0.5
+        }
+      ],
+      "symbol": {
+        "shape": "rectangle",
+        "width": 120,
+        "height": 70,
+        "label_position": "center",
+        "show_type_name": true,
+        "show_uid": true,
+        "port_layout": [
+          {
+            "port": "p1",
+            "side": "left",
+            "position": 0.5,
+            "label_visible": true
+          },
+          {
+            "port": "p2",
+            "side": "right",
+            "position": 0.5,
+            "label_visible": true
+          }
+        ]
+      }
+    },
+    {
+      "type_name": "R",
+      "uid": "R1",
+      "parameters": {
+        "R": "50.0"
+      },
+      "parameter_defaults": {
+        "R": "50.0"
+      },
+      "parameter_order": [
+        "R"
+      ],
+      "parameter_kinds": {
+        "R": "positional"
+      },
+      "position": [
+        -240.0,
+        -280.0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0,
+      "repeat_count": 1,
+      "repeat_connections": [],
+      "symbol_port_layout": [
+        {
+          "port": "p1",
+          "side": "left",
+          "position": 0.5
+        },
+        {
+          "port": "p2",
+          "side": "right",
+          "position": 0.5
+        }
+      ],
+      "symbol": {
+        "shape": "rectangle",
+        "width": 120,
+        "height": 70,
+        "label_position": "center",
+        "show_type_name": true,
+        "show_uid": true,
+        "port_layout": [
+          {
+            "port": "p1",
+            "side": "left",
+            "position": 0.5,
+            "label_visible": true
+          },
+          {
+            "port": "p2",
+            "side": "right",
+            "position": 0.5,
+            "label_visible": true
+          }
+        ]
+      }
+    },
+    {
+      "type_name": "R",
+      "uid": "R2",
+      "parameters": {
+        "R": "50.0"
+      },
+      "parameter_defaults": {
+        "R": "50.0"
+      },
+      "parameter_order": [
+        "R"
+      ],
+      "parameter_kinds": {
+        "R": "positional"
+      },
+      "position": [
+        20.0,
+        -260.0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0,
+      "repeat_count": 1,
+      "repeat_connections": [],
+      "symbol_port_layout": [
+        {
+          "port": "p1",
+          "side": "left",
+          "position": 0.5
+        },
+        {
+          "port": "p2",
+          "side": "right",
+          "position": 0.5
+        }
+      ],
+      "symbol": {
+        "shape": "rectangle",
+        "width": 120,
+        "height": 70,
+        "label_position": "center",
+        "show_type_name": true,
+        "show_uid": true,
+        "port_layout": [
+          {
+            "port": "p1",
+            "side": "left",
+            "position": 0.5,
+            "label_visible": true
+          },
+          {
+            "port": "p2",
+            "side": "right",
+            "position": 0.5,
+            "label_visible": true
+          }
+        ]
+      }
+    }
+  ],
+  "wires": [
+    {
+      "source_instance_uid": "JP1",
+      "source_port": "P_out",
+      "target_instance_uid": "AB1",
+      "target_port": "p1",
+      "name": "",
+      "gui_wire_id": "wire_1ea59b6d"
+    },
+    {
+      "source_instance_uid": "R2",
+      "source_port": "p1",
+      "target_instance_uid": "R1",
+      "target_port": "p2",
+      "name": "",
+      "gui_wire_id": "wire_29d3b399"
+    }
+  ],
+  "pins": [
+    {
+      "name": "P_in",
+      "instance_uid": "JP1",
+      "port": "P_in"
+    },
+    {
+      "name": "P_out",
+      "instance_uid": "JP1",
+      "port": "P_out"
+    }
+  ],
+  "labels": [
+    {
+      "name": "net_1",
+      "instance_uid": "JP1",
+      "port": "P_out"
+    }
+  ],
+  "variables": [],
+  "z0": 50.0,
+  "simulation_input_ports": [],
+  "simulation_output_ports": [],
+  "simulation_freq_start": 2.0,
+  "simulation_freq_stop": 20.0,
+  "simulation_freq_points": 200,
+  "simulation_sweep_type": "linear",
+  "simulation_figure_title": "double_pumped_jpa",
+  "hb_top_block": true,
+  "hb_disable_child_top_block": false,
+  "hb_pump_ports": [
+    "1"
+  ],
+  "hb_pump_frequencies": [
+    4.75001
+  ],
+  "hb_pump_currents": [
+    "0.00565e-6"
+  ],
+  "hb_dc_ports": [],
+  "hb_dc_currents": [],
+  "hb_modulation_harmonics": [
+    8
+  ],
+  "hb_pump_harmonics": [
+    16
+  ],
+  "hb_threewave_mixing": true,
+  "hb_fourwave_mixing": true,
+  "gui": {
+    "version": 1,
+    "viewport": {
+      "zoom": 1,
+      "pan": [
+        0,
+        0
+      ]
+    },
+    "wire_routes": [
+      {
+        "net_id": "net_2",
+        "wire_id": "wire_1ea59b6d",
+        "source": {
+          "instance_uid": "JP1",
+          "port": "P_out"
+        },
+        "target": {
+          "instance_uid": "AB1",
+          "port": "p1"
+        },
+        "points": [
+          [
+            -140.0,
+            -120.0
+          ],
+          [
+            -112.0,
+            -120.0
+          ],
+          [
+            -112.0,
+            -100.0
+          ],
+          [
+            -28.0,
+            -100.0
+          ],
+          [
+            0.0,
+            -100.0
+          ]
+        ],
+        "auto": true
+      },
+      {
+        "net_id": "net_3",
+        "wire_id": "wire_29d3b399",
+        "source": {
+          "instance_uid": "R2",
+          "port": "p1"
+        },
+        "target": {
+          "instance_uid": "R1",
+          "port": "p2"
+        },
+        "points": [
+          [
+            -40.0,
+            -260.0
+          ],
+          [
+            -68.0,
+            -260.0
+          ],
+          [
+            -68.0,
+            -280.0
+          ],
+          [
+            -152.0,
+            -280.0
+          ],
+          [
+            -180.0,
+            -280.0
+          ]
+        ],
+        "auto": true
+      }
+    ],
+    "last_selected": [],
+    "initial_port_count": 2
+  },
+  "reference": false
+}

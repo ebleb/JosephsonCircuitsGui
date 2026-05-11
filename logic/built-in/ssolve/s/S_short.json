@@ -1,0 +1,19 @@
+{
+  "name": "S_short",
+  "type": "built-in",
+  "subtype": "sSolve",
+  "hb_top_block": false,
+  "variables": [
+    {
+      "name": "N",
+      "default": "1"
+    }
+  ],
+  "port_count": 0,
+  "port_names": [],
+  "about": "Ideal short. Variable N-port utility.",
+  "sketch": "Variable N-port utility",
+  "matrix_type": "S",
+  "matrix_is_code": true,
+  "matrix_code": "JosephsonCircuits.S_short!(S)"
+}

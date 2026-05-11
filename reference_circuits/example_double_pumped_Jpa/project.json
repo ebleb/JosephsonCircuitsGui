@@ -1,0 +1,22 @@
+{
+  "name": "example_double_pumped_Jpa",
+  "path": "/home/benedikte/userdata/urop/app_v2_pub/data/example_double_pumped_Jpa",
+  "version": 1,
+  "default_cell": "double_pumped_JPA",
+  "default_z0": 50.0,
+  "recent_cells": [],
+  "imports": [
+    {
+      "alias": "example_JPA",
+      "path": "/home/benedikte/userdata/urop/app_v2/data/example_JPA",
+      "enabled": true,
+      "autoResolved": true
+    }
+  ],
+  "gui": {
+    "last_open_tabs": [
+      "double_pumped_JPA"
+    ],
+    "layout": {}
+  }
+}

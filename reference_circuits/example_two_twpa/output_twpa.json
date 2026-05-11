@@ -1,0 +1,156 @@
+{
+  "name": "output_twpa",
+  "type": "schematic",
+  "hb_top_block": "false",
+  "variables": [
+    {
+      "name": "Cg",
+      "default": "45.0e-15"
+    },
+    {
+      "name": "Rright",
+      "default": "50.0"
+    }
+  ],
+  "instances": [
+    {
+      "type_name": "C",
+      "uid": "C1",
+      "parameters": {
+        "C": "Cg/2"
+      },
+      "parameter_defaults": {
+        "C": "1e-12"
+      },
+      "parameter_order": [
+        "C"
+      ],
+      "parameter_kinds": {
+        "C": "keyword"
+      },
+      "position": [
+        -136.0,
+        -220.0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 90.0,
+      "repeat_count": 1,
+      "symbol_port_layout": []
+    },
+    {
+      "type_name": "R",
+      "uid": "R1",
+      "parameters": {
+        "R": "Rright"
+      },
+      "parameter_defaults": {
+        "R": "50.0"
+      },
+      "parameter_order": [
+        "R"
+      ],
+      "parameter_kinds": {
+        "R": "keyword"
+      },
+      "position": [
+        -258.0,
+        -217.0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 90.0,
+      "repeat_count": 1,
+      "symbol_port_layout": []
+    },
+    {
+      "type_name": "P",
+      "uid": "P2",
+      "parameters": {
+        "port": "2"
+      },
+      "parameter_defaults": {
+        "port": "1"
+      },
+      "parameter_order": [
+        "port"
+      ],
+      "parameter_kinds": {
+        "port": "keyword"
+      },
+      "position": [
+        3.0,
+        -223.0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 90.0,
+      "repeat_count": 1,
+      "symbol_port_layout": []
+    }
+  ],
+  "wires": [
+    {
+      "source_instance_uid": "P2",
+      "source_port": "p1",
+      "target_instance_uid": "C1",
+      "target_port": "p1",
+      "name": ""
+    },
+    {
+      "source_instance_uid": "C1",
+      "source_port": "p1",
+      "target_instance_uid": "R1",
+      "target_port": "p1",
+      "name": ""
+    },
+    {
+      "source_instance_uid": "P2",
+      "source_port": "p2",
+      "target_instance_uid": "C1",
+      "target_port": "p2",
+      "name": ""
+    },
+    {
+      "source_instance_uid": "C1",
+      "source_port": "p2",
+      "target_instance_uid": "R1",
+      "target_port": "p2",
+      "name": ""
+    }
+  ],
+  "pins": [
+    {
+      "name": "P_N",
+      "instance_uid": "P2",
+      "port": "p1"
+    },
+    {
+      "name": "P_0",
+      "instance_uid": "P2",
+      "port": "p2"
+    }
+  ],
+  "z0": 50.0,
+  "simulation_input_ports": [
+    "P4"
+  ],
+  "simulation_output_ports": [
+    "P4"
+  ],
+  "simulation_freq_start": 2.0,
+  "simulation_freq_stop": 20.0,
+  "simulation_freq_points": 200,
+  "simulation_sweep_type": "linear",
+  "simulation_figure_title": "output_twpa",
+  "reference": true
+}

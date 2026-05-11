@@ -1,0 +1,49 @@
+{
+  "name": "ABCD_shuntY",
+  "type": "built-in",
+  "subtype": "sSolve",
+  "hb_top_block": false,
+  "variables": [
+    {
+      "name": "Y1",
+      "default": "1/50"
+    }
+  ],
+  "port_count": 2,
+  "port_names": [
+    "p1",
+    "p2"
+  ],
+  "about": "ABCD matrix for a shunt admittance.",
+  "sketch": "o---------o\n     |\n     Y1\n     |\no---------o",
+  "matrix_type": "ABCD",
+  "matrix_is_code": true,
+  "matrix_code": "JosephsonCircuits.ABCD_shuntY(Y1)",
+  "x-equivalent-circuit": {
+    "kind": "lumped_passive_network",
+    "node_aliases": {
+      "p2": "p1"
+    },
+    "branches": [
+      {
+        "name": "Y1",
+        "between": [
+          "p1",
+          "0"
+        ],
+        "admittance": "Y1"
+      }
+    ],
+    "pins": [
+      {
+        "name": "p1",
+        "node": "p1"
+      },
+      {
+        "name": "p2",
+        "node": "p2"
+      }
+    ],
+    "ground": "0"
+  }
+}

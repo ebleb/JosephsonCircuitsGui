@@ -1,0 +1,22 @@
+{
+  "name": "example_add_drop_shunt",
+  "path": "/home/benedikte/userdata/urop/app_v2_pub/data/example_add_drop_shunt",
+  "version": 1,
+  "default_cell": "add_drop_shunt",
+  "default_z0": 50.0,
+  "recent_cells": [],
+  "imports": [
+    {
+      "alias": "example_add_drop",
+      "path": "/home/benedikte/userdata/urop/app_v2_pub/data/example_add_drop",
+      "enabled": true,
+      "autoResolved": true
+    }
+  ],
+  "gui": {
+    "last_open_tabs": [
+      "add_drop_shunt"
+    ],
+    "layout": {}
+  }
+}

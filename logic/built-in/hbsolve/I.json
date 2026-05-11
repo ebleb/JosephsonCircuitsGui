@@ -1,0 +1,31 @@
+{
+  "name": "I",
+  "type": "built-in",
+  "subtype": "hbsolve",
+  "hb_top_block": false,
+  "variables": [
+    {
+      "name": "I",
+      "default": "1.0"
+    }
+  ],
+  "port_count": 2,
+  "port_names": [
+    "p1",
+    "p2"
+  ],
+  "about": "HB current source element.",
+  "sketch": "p1 o---[ I ]---o p2",
+  "library_group": "HB Primitive Blocks",
+  "symbol_port_layout": [
+    {
+      "side": "left",
+      "port": "p1"
+    },
+    {
+      "side": "right",
+      "port": "p2"
+    }
+  ],
+  "julia_string": "(\"I\", string(n1), string(n2), I)"
+}

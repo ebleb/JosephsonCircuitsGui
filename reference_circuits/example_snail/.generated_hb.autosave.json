@@ -1,0 +1,889 @@
+{
+  "name": "generated_hb",
+  "type": "schematic",
+  "instances": [
+    {
+      "type_name": "P",
+      "uid": "P1",
+      "parameters": {
+        "port": "1"
+      },
+      "parameter_defaults": {
+        "port": "1"
+      },
+      "parameter_order": [
+        "port"
+      ],
+      "parameter_kinds": {
+        "port": "positional"
+      },
+      "position": [
+        0,
+        0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0,
+      "repeat_count": 1,
+      "repeat_connections": []
+    },
+    {
+      "type_name": "R",
+      "uid": "R1",
+      "parameters": {
+        "R": "R"
+      },
+      "parameter_defaults": {
+        "R": "R"
+      },
+      "parameter_order": [
+        "R"
+      ],
+      "parameter_kinds": {
+        "R": "positional"
+      },
+      "position": [
+        0,
+        0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0,
+      "repeat_count": 1,
+      "repeat_connections": []
+    },
+    {
+      "type_name": "L",
+      "uid": "L0",
+      "parameters": {
+        "L": "Lg"
+      },
+      "parameter_defaults": {
+        "L": "Lg"
+      },
+      "parameter_order": [
+        "L"
+      ],
+      "parameter_kinds": {
+        "L": "positional"
+      },
+      "position": [
+        0,
+        0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0,
+      "repeat_count": 1,
+      "repeat_connections": []
+    },
+    {
+      "type_name": "C",
+      "uid": "C1",
+      "parameters": {
+        "C": "Cc"
+      },
+      "parameter_defaults": {
+        "C": "Cc"
+      },
+      "parameter_order": [
+        "C"
+      ],
+      "parameter_kinds": {
+        "C": "positional"
+      },
+      "position": [
+        0,
+        0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0,
+      "repeat_count": 1,
+      "repeat_connections": []
+    },
+    {
+      "type_name": "L",
+      "uid": "L1",
+      "parameters": {
+        "L": "Lr"
+      },
+      "parameter_defaults": {
+        "L": "Lr"
+      },
+      "parameter_order": [
+        "L"
+      ],
+      "parameter_kinds": {
+        "L": "positional"
+      },
+      "position": [
+        0,
+        0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0,
+      "repeat_count": 1,
+      "repeat_connections": []
+    },
+    {
+      "type_name": "C",
+      "uid": "C2",
+      "parameters": {
+        "C": "Cr"
+      },
+      "parameter_defaults": {
+        "C": "Cr"
+      },
+      "parameter_order": [
+        "C"
+      ],
+      "parameter_kinds": {
+        "C": "positional"
+      },
+      "position": [
+        0,
+        0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0,
+      "repeat_count": 1,
+      "repeat_connections": []
+    },
+    {
+      "type_name": "Lj",
+      "uid": "Lj1",
+      "parameters": {
+        "Lj": "Lj / 0.29"
+      },
+      "parameter_defaults": {
+        "Lj": "Lj / 0.29"
+      },
+      "parameter_order": [
+        "Lj"
+      ],
+      "parameter_kinds": {
+        "Lj": "positional"
+      },
+      "position": [
+        0,
+        0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0,
+      "repeat_count": 1,
+      "repeat_connections": []
+    },
+    {
+      "type_name": "Cj",
+      "uid": "Cj1",
+      "parameters": {
+        "Cj": "Cj / 0.29"
+      },
+      "parameter_defaults": {
+        "Cj": "Cj / 0.29"
+      },
+      "parameter_order": [
+        "Cj"
+      ],
+      "parameter_kinds": {
+        "Cj": "positional"
+      },
+      "position": [
+        0,
+        0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0,
+      "repeat_count": 1,
+      "repeat_connections": []
+    },
+    {
+      "type_name": "L",
+      "uid": "L2",
+      "parameters": {
+        "L": "Ll"
+      },
+      "parameter_defaults": {
+        "L": "Ll"
+      },
+      "parameter_order": [
+        "L"
+      ],
+      "parameter_kinds": {
+        "L": "positional"
+      },
+      "position": [
+        0,
+        0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0,
+      "repeat_count": 1,
+      "repeat_connections": []
+    },
+    {
+      "type_name": "Lj",
+      "uid": "Lj2",
+      "parameters": {
+        "Lj": "Lj"
+      },
+      "parameter_defaults": {
+        "Lj": "Lj"
+      },
+      "parameter_order": [
+        "Lj"
+      ],
+      "parameter_kinds": {
+        "Lj": "positional"
+      },
+      "position": [
+        0,
+        0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0,
+      "repeat_count": 1,
+      "repeat_connections": []
+    },
+    {
+      "type_name": "Cj",
+      "uid": "Cj2",
+      "parameters": {
+        "Cj": "Cj"
+      },
+      "parameter_defaults": {
+        "Cj": "Cj"
+      },
+      "parameter_order": [
+        "Cj"
+      ],
+      "parameter_kinds": {
+        "Cj": "positional"
+      },
+      "position": [
+        0,
+        0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0,
+      "repeat_count": 1,
+      "repeat_connections": []
+    },
+    {
+      "type_name": "Lj",
+      "uid": "Lj3",
+      "parameters": {
+        "Lj": "Lj"
+      },
+      "parameter_defaults": {
+        "Lj": "Lj"
+      },
+      "parameter_order": [
+        "Lj"
+      ],
+      "parameter_kinds": {
+        "Lj": "positional"
+      },
+      "position": [
+        0,
+        0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0,
+      "repeat_count": 1,
+      "repeat_connections": []
+    },
+    {
+      "type_name": "Cj",
+      "uid": "Cj3",
+      "parameters": {
+        "Cj": "Cj"
+      },
+      "parameter_defaults": {
+        "Cj": "Cj"
+      },
+      "parameter_order": [
+        "Cj"
+      ],
+      "parameter_kinds": {
+        "Cj": "positional"
+      },
+      "position": [
+        0,
+        0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0,
+      "repeat_count": 1,
+      "repeat_connections": []
+    },
+    {
+      "type_name": "Lj",
+      "uid": "Lj4",
+      "parameters": {
+        "Lj": "Lj"
+      },
+      "parameter_defaults": {
+        "Lj": "Lj"
+      },
+      "parameter_order": [
+        "Lj"
+      ],
+      "parameter_kinds": {
+        "Lj": "positional"
+      },
+      "position": [
+        0,
+        0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0,
+      "repeat_count": 1,
+      "repeat_connections": []
+    },
+    {
+      "type_name": "Cj",
+      "uid": "Cj4",
+      "parameters": {
+        "Cj": "Cj"
+      },
+      "parameter_defaults": {
+        "Cj": "Cj"
+      },
+      "parameter_order": [
+        "Cj"
+      ],
+      "parameter_kinds": {
+        "Cj": "positional"
+      },
+      "position": [
+        0,
+        0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0,
+      "repeat_count": 1,
+      "repeat_connections": []
+    },
+    {
+      "type_name": "L",
+      "uid": "L3",
+      "parameters": {
+        "L": "Ldc"
+      },
+      "parameter_defaults": {
+        "L": "Ldc"
+      },
+      "parameter_order": [
+        "L"
+      ],
+      "parameter_kinds": {
+        "L": "positional"
+      },
+      "position": [
+        0,
+        0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0,
+      "repeat_count": 1,
+      "repeat_connections": []
+    },
+    {
+      "type_name": "P",
+      "uid": "P2",
+      "parameters": {
+        "port": "2"
+      },
+      "parameter_defaults": {
+        "port": "2"
+      },
+      "parameter_order": [
+        "port"
+      ],
+      "parameter_kinds": {
+        "port": "positional"
+      },
+      "position": [
+        0,
+        0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0,
+      "repeat_count": 1,
+      "repeat_connections": []
+    },
+    {
+      "type_name": "R",
+      "uid": "R2",
+      "parameters": {
+        "R": "1000.0"
+      },
+      "parameter_defaults": {
+        "R": "1000.0"
+      },
+      "parameter_order": [
+        "R"
+      ],
+      "parameter_kinds": {
+        "R": "positional"
+      },
+      "position": [
+        0,
+        0
+      ],
+      "port_count": 2,
+      "port_names": [
+        "p1",
+        "p2"
+      ],
+      "rotation_degrees": 0,
+      "repeat_count": 1,
+      "repeat_connections": []
+    },
+    {
+      "type_name": "K",
+      "uid": "K1",
+      "parameters": {
+        "inductor_a": "L2",
+        "inductor_b": "L3",
+        "K": "K"
+      },
+      "parameter_defaults": {
+        "inductor_a": "L2",
+        "inductor_b": "L3",
+        "K": "K"
+      },
+      "parameter_order": [
+        "inductor_a",
+        "inductor_b",
+        "K"
+      ],
+      "parameter_kinds": {
+        "inductor_a": "uid",
+        "inductor_b": "uid",
+        "K": "positional"
+      },
+      "position": [
+        0,
+        0
+      ],
+      "port_count": 0,
+      "port_names": [],
+      "rotation_degrees": 0,
+      "repeat_count": 1,
+      "repeat_connections": []
+    }
+  ],
+  "wires": [
+    {
+      "source_instance_uid": "P1",
+      "source_port": "p1",
+      "target_instance_uid": "R1",
+      "target_port": "p1",
+      "name": "n__1",
+      "gui_wire_id": "wire_1"
+    },
+    {
+      "source_instance_uid": "P1",
+      "source_port": "p1",
+      "target_instance_uid": "L0",
+      "target_port": "p1",
+      "name": "n__1",
+      "gui_wire_id": "wire_2"
+    },
+    {
+      "source_instance_uid": "P1",
+      "source_port": "p1",
+      "target_instance_uid": "C1",
+      "target_port": "p1",
+      "name": "n__1",
+      "gui_wire_id": "wire_3"
+    },
+    {
+      "source_instance_uid": "C1",
+      "source_port": "p2",
+      "target_instance_uid": "L1",
+      "target_port": "p1",
+      "name": "n__2",
+      "gui_wire_id": "wire_4"
+    },
+    {
+      "source_instance_uid": "C1",
+      "source_port": "p2",
+      "target_instance_uid": "C2",
+      "target_port": "p1",
+      "name": "n__2",
+      "gui_wire_id": "wire_5"
+    },
+    {
+      "source_instance_uid": "L1",
+      "source_port": "p2",
+      "target_instance_uid": "Lj1",
+      "target_port": "p1",
+      "name": "n__3",
+      "gui_wire_id": "wire_6"
+    },
+    {
+      "source_instance_uid": "L1",
+      "source_port": "p2",
+      "target_instance_uid": "Cj1",
+      "target_port": "p1",
+      "name": "n__3",
+      "gui_wire_id": "wire_7"
+    },
+    {
+      "source_instance_uid": "L1",
+      "source_port": "p2",
+      "target_instance_uid": "L2",
+      "target_port": "p1",
+      "name": "n__3",
+      "gui_wire_id": "wire_8"
+    },
+    {
+      "source_instance_uid": "L2",
+      "source_port": "p2",
+      "target_instance_uid": "Lj2",
+      "target_port": "p1",
+      "name": "n__4",
+      "gui_wire_id": "wire_9"
+    },
+    {
+      "source_instance_uid": "L2",
+      "source_port": "p2",
+      "target_instance_uid": "Cj2",
+      "target_port": "p1",
+      "name": "n__4",
+      "gui_wire_id": "wire_10"
+    },
+    {
+      "source_instance_uid": "Lj2",
+      "source_port": "p2",
+      "target_instance_uid": "Cj2",
+      "target_port": "p2",
+      "name": "n__5",
+      "gui_wire_id": "wire_11"
+    },
+    {
+      "source_instance_uid": "Lj2",
+      "source_port": "p2",
+      "target_instance_uid": "Lj3",
+      "target_port": "p1",
+      "name": "n__5",
+      "gui_wire_id": "wire_12"
+    },
+    {
+      "source_instance_uid": "Lj2",
+      "source_port": "p2",
+      "target_instance_uid": "Cj3",
+      "target_port": "p1",
+      "name": "n__5",
+      "gui_wire_id": "wire_13"
+    },
+    {
+      "source_instance_uid": "Lj3",
+      "source_port": "p2",
+      "target_instance_uid": "Cj3",
+      "target_port": "p2",
+      "name": "n__6",
+      "gui_wire_id": "wire_14"
+    },
+    {
+      "source_instance_uid": "Lj3",
+      "source_port": "p2",
+      "target_instance_uid": "Lj4",
+      "target_port": "p1",
+      "name": "n__6",
+      "gui_wire_id": "wire_15"
+    },
+    {
+      "source_instance_uid": "Lj3",
+      "source_port": "p2",
+      "target_instance_uid": "Cj4",
+      "target_port": "p1",
+      "name": "n__6",
+      "gui_wire_id": "wire_16"
+    },
+    {
+      "source_instance_uid": "L3",
+      "source_port": "p1",
+      "target_instance_uid": "P2",
+      "target_port": "p1",
+      "name": "n__7",
+      "gui_wire_id": "wire_17"
+    },
+    {
+      "source_instance_uid": "L3",
+      "source_port": "p1",
+      "target_instance_uid": "R2",
+      "target_port": "p1",
+      "name": "n__7",
+      "gui_wire_id": "wire_18"
+    }
+  ],
+  "pins": [
+    {
+      "name": "P1",
+      "instance_uid": "P1",
+      "port": "p1"
+    },
+    {
+      "name": "P2",
+      "instance_uid": "P2",
+      "port": "p1"
+    }
+  ],
+  "labels": [
+    {
+      "name": "0",
+      "instance_uid": "P1",
+      "port": "p2",
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "0",
+      "instance_uid": "R1",
+      "port": "p2",
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "0",
+      "instance_uid": "L0",
+      "port": "p2",
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "0",
+      "instance_uid": "C2",
+      "port": "p2",
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "0",
+      "instance_uid": "Lj1",
+      "port": "p2",
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "0",
+      "instance_uid": "Cj1",
+      "port": "p2",
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "0",
+      "instance_uid": "Lj4",
+      "port": "p2",
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "0",
+      "instance_uid": "Cj4",
+      "port": "p2",
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "0",
+      "instance_uid": "L3",
+      "port": "p2",
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "0",
+      "instance_uid": "P2",
+      "port": "p2",
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "0",
+      "instance_uid": "R2",
+      "port": "p2",
+      "position": [
+        0,
+        0
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "name": "Cc",
+      "default": "4.8e-14"
+    },
+    {
+      "name": "Cj",
+      "default": "1.0e-14"
+    },
+    {
+      "name": "Cr",
+      "default": "5.0e-13"
+    },
+    {
+      "name": "K",
+      "default": "0.999"
+    },
+    {
+      "name": "Ldc",
+      "default": "7.4e-13"
+    },
+    {
+      "name": "Lg",
+      "default": "1.0e-7"
+    },
+    {
+      "name": "Lj",
+      "default": "6.0e-11"
+    },
+    {
+      "name": "Ll",
+      "default": "3.4e-11"
+    },
+    {
+      "name": "Lr",
+      "default": "5.33e-10"
+    },
+    {
+      "name": "R",
+      "default": "50.0"
+    }
+  ],
+  "z0": 50.0,
+  "simulation_input_ports": [],
+  "simulation_output_ports": [
+    "P2"
+  ],
+  "simulation_freq_start": 7.8,
+  "simulation_freq_stop": 8.2,
+  "simulation_freq_points": 401,
+  "simulation_sweep_type": "linear",
+  "simulation_figure_title": "generated_hb",
+  "hb_top_block": true,
+  "hb_pump_ports": [],
+  "hb_pump_frequencies": [
+    16.0
+  ],
+  "hb_pump_currents": [],
+  "hb_dc_ports": [],
+  "hb_dc_currents": [],
+  "hb_modulation_harmonics": [
+    8
+  ],
+  "hb_pump_harmonics": [
+    16
+  ],
+  "hb_threewave_mixing": true,
+  "hb_fourwave_mixing": true,
+  "generated_from": "trusted_julia",
+  "generated_summary": {
+    "component_count": 19,
+    "node_count": 8,
+    "primitive_counts": {
+      "P": 2,
+      "R": 2,
+      "L": 4,
+      "C": 2,
+      "Lj": 4,
+      "Cj": 4,
+      "K": 1
+    },
+    "ports": [
+      "P1",
+      "P2"
+    ],
+    "warnings": []
+  }
+}

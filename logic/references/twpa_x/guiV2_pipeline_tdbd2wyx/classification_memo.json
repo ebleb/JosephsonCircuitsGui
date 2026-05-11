@@ -1,0 +1,98 @@
+{
+  "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/C.json": {
+    "class": "hbsolve_primitive",
+    "hb_elements": [
+      "C"
+    ],
+    "sp_elements": []
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/R.json": {
+    "class": "hbsolve_primitive",
+    "hb_elements": [
+      "R"
+    ],
+    "sp_elements": []
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/P.json": {
+    "class": "hbsolve_primitive",
+    "hb_elements": [
+      "P"
+    ],
+    "sp_elements": []
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_tdbd2wyx/output_twpa.json": {
+    "class": "hbsolve_block",
+    "hb_elements": [
+      "C (HB primitive)",
+      "P (HB primitive)",
+      "R (HB primitive)"
+    ],
+    "sp_elements": []
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/Lj.json": {
+    "class": "hbsolve_primitive",
+    "hb_elements": [
+      "Lj"
+    ],
+    "sp_elements": []
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/L.json": {
+    "class": "hbsolve_primitive",
+    "hb_elements": [
+      "L"
+    ],
+    "sp_elements": []
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_tdbd2wyx/twpa_core_mod.json": {
+    "class": "hbsolve_block",
+    "hb_elements": [
+      "C (HB primitive)",
+      "L (HB primitive)",
+      "Lj (HB primitive)"
+    ],
+    "sp_elements": []
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_tdbd2wyx/tpwa_core.json": {
+    "class": "hbsolve_block",
+    "hb_elements": [
+      "C (HB primitive)",
+      "Lj (HB primitive)"
+    ],
+    "sp_elements": []
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_tdbd2wyx/subcell.json": {
+    "class": "hbsolve_block",
+    "hb_elements": [
+      "tpwa_core (HB block)",
+      "twpa_core_mod (HB block)"
+    ],
+    "sp_elements": []
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_tdbd2wyx/input_twpa.json": {
+    "class": "hbsolve_block",
+    "hb_elements": [
+      "C (HB primitive)",
+      "Lj (HB primitive)",
+      "P (HB primitive)",
+      "R (HB primitive)"
+    ],
+    "sp_elements": []
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/logic/built-in/hbsolve/GND.json": {
+    "class": "hbsolve_primitive",
+    "hb_elements": [
+      "GND"
+    ],
+    "sp_elements": []
+  },
+  "/home/benedikte/userdata/urop/app_v2_pub/data/guiV2_pipeline_runs/guiV2_pipeline_tdbd2wyx/twpa.json": {
+    "class": "hbsolve_block",
+    "hb_elements": [
+      "GND (HB primitive)",
+      "input_twpa (HB block)",
+      "output_twpa (HB block)",
+      "subcell (HB block)"
+    ],
+    "sp_elements": []
+  }
+}

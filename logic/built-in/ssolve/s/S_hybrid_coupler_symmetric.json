@@ -1,0 +1,19 @@
+{
+  "name": "S_hybrid_coupler_symmetric",
+  "type": "built-in",
+  "subtype": "sSolve",
+  "hb_top_block": false,
+  "variables": [],
+  "port_count": 4,
+  "port_names": [
+    "p1",
+    "p2",
+    "p3",
+    "p4"
+  ],
+  "about": "Ideal 3 dB 90-degree hybrid coupler.",
+  "sketch": "port 1 --> through port 2\nport 3 coupled\nport 4 isolated",
+  "matrix_type": "S",
+  "matrix_is_code": true,
+  "matrix_code": "JosephsonCircuits.S_hybrid_coupler_symmetric()"
+}
